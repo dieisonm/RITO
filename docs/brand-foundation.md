@@ -52,31 +52,29 @@ A RITO Sistemas cria software sob medida, automacoes e controles personalizados 
 
 ## Direcao visual
 
-- Poucas cores
-- Bastante espaco em branco
-- Blocos claros
-- Tipografia forte e limpa
-- Icones simples e lineares
-- Linguagem mais empresarial do que "startup da moda"
+- Interface editorial e wireframe leve (evitar "caixas" e sombras duras)
+- Bastante espaco organico para respiro visual (margens e paddings controlados, sem estender muito a rolagem)
+- Esquema "Boutique/Premium" separando a marca de templates genericos de SaaS
+- Tipografia dominante e estruturada
 
 ## Paleta sugerida
 
 ### Primarias
 
-- Azul petroleo escuro
-- Grafite
-- Off-white
+- Off-White Quente (#f4f0e9 / #fbf7f1) como base global do ambiente
+- Azul petroleo escuro (#173847) para contrastes fortes e elegantes (CTA, Footer, Destaques)
+- Tinta Grafite (#152733) para letreiros e textos principais
 
 ### Secundarias
 
-- Azul aco
-- Cinza claro frio
+- Dourado/Areia Suave (para acentos e detalhes, ex: #b89163)
+- Azul Aco / Cinza Perola (para divisoes estruturais e linhas, ex: rgba(21, 39, 51, 0.08))
 
-## Tipografia sugerida
+## Tipografia oficial
 
-- Titulos: Manrope ou Sora
-- Texto corrido: Inter
-- Opcoes secundarias: Plus Jakarta Sans
+- Titulos impactantes (H1, H2, H3): Sora
+- Corpo de texto e textos corridos: Manrope
+- Elementos estrturais (Eyebrows, Marcadores, Índices numericos): IBM Plex Mono
 
 ## Logo
 
