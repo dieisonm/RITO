@@ -1,5 +1,17 @@
 # Hostinger Deploy
 
+## Observacao importante sobre a Hostinger
+
+O site da RITO e um site estatico em HTML/CSS/JS.
+
+Por isso:
+
+- nao deve ser publicado pelo fluxo de `Node.js` ou `Frameworks`
+- nao deve ser tratado como projeto React, Vite, Next.js ou similar
+- deve ser publicado na `hospedagem comum`, em `public_html`
+
+Se a Hostinger mostrar erro de `estrutura de projeto invalida` ou `framework nao compativel`, isso indica que o fluxo de deploy aberto foi o de frameworks JavaScript, e nao o de hospedagem estatica comum.
+
 ## Estrutura pronta
 
 O projeto gera uma pasta `dist/` com tudo o que a Hostinger precisa para publicar o site estatico:
@@ -50,6 +62,19 @@ Na Hostinger, configure:
 - Ramo: `hostinger`
 - Diretorio: `public_html`
 
+## Estrategia adotada no projeto
+
+Para facilitar manutencao e deploy:
+
+- `main` guarda o projeto completo
+- `hostinger` guarda apenas a publicacao estatica pronta
+
+Motivo:
+
+- a Hostinger precisa que o `index.html` esteja diretamente em `public_html`
+- o projeto em `main` tem estrutura interna adicional, como `docs/`, `scripts/` e arquivos de organizacao
+- a branch `hostinger` evita reorganizacao manual a cada deploy
+
 ## Como publicar na Hostinger
 
 1. Gere a pasta `dist/`.
@@ -83,6 +108,25 @@ git push
 
 Se a Hostinger estiver com auto deploy ativado para a branch `hostinger`, ela publica sozinha.
 
+## Fluxo operacional recomendado
+
+Sempre que houver mudancas no site:
+
+1. Editar normalmente o projeto
+2. Publicar a `main`
+3. Publicar a branch `hostinger`
+
+Comandos:
+
+```bash
+git add .
+git commit -m "Sua mensagem"
+git push
+bash scripts/publish_hostinger_branch.sh
+```
+
+Se o auto deploy nao estiver ativo na Hostinger, depois disso basta clicar em `Deploy` no painel.
+
 ## Dominio principal
 
 - Dominio principal: `ritosistemas.com`
@@ -107,3 +151,17 @@ Na Hostinger, configure um redirecionamento 301 permanente de:
 3. Confirmar carregamento de logo, favicon e CSS.
 4. Confirmar que `https://ritosistemas.com/sitemap.xml` abre corretamente.
 5. Confirmar que `https://ritosistemas.com/robots.txt` abre corretamente.
+
+## Observacao sobre seguranca e bloqueio corporativo
+
+Durante o inicio da publicacao, o dominio pode ser bloqueado em redes corporativas com Cisco Umbrella pela categoria:
+
+- `Newly Seen Domains`
+
+Isso nao significa necessariamente problema no site ou no DNS.
+
+Se acontecer:
+
+- esperar a reputacao inicial do dominio amadurecer
+- testar em rede/dispositivo sem perfil corporativo
+- evitar concluir diagnostico apenas com dispositivos gerenciados pela empresa

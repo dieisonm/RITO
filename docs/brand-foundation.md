@@ -7,6 +7,7 @@
 - Dominio principal: `ritosistemas.com`
 - Dominio secundario: `ritosistemas.com.br` redirecionando para o `.com`
 - Hospedagem: Hostinger
+- Repositorio principal: `https://github.com/dieisonm/RITO`
 
 ## Contato inicial
 

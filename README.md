@@ -34,6 +34,27 @@ Para publicar a branch pronta para Git Deployment na Hostinger:
 ./scripts/publish_hostinger_branch.sh
 ```
 
+## Fluxo recomendado de publicacao
+
+### Repositorio principal
+
+- Branch principal de desenvolvimento: `main`
+- Repositorio GitHub: `https://github.com/dieisonm/RITO`
+
+### Branch de deploy da Hostinger
+
+- Branch de deploy estatico: `hostinger`
+- Essa branch contem apenas os arquivos publicos do site
+- Objetivo: permitir deploy direto na Hostinger sem expor `docs/`, `scripts/` e outros arquivos internos
+
+### Configuracao na Hostinger
+
+Se estiver usando `Git Deployment` na hospedagem comum, usar:
+
+- Repositorio: `https://github.com/dieisonm/RITO.git`
+- Ramo: `hostinger`
+- Diretorio: `public_html`
+
 ## Documentos principais
 
 - `docs/brand-foundation.md`: posicionamento, tom, identidade, dominios e contatos.
