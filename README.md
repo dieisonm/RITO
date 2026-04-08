@@ -12,10 +12,27 @@ Base inicial da empresa RITO Sistemas, pensada para organizar marca, site instit
 
 Abra `site/index.html` no navegador.
 
+## Como gerar a versao de deploy
+
+Execute:
+
+```bash
+./scripts/build_dist.sh
+```
+
+Depois publique o conteudo da pasta `dist/` na Hostinger.
+
+Para gerar um `.zip` pronto para upload:
+
+```bash
+./scripts/package_hostinger.sh
+```
+
 ## Documentos principais
 
 - `docs/brand-foundation.md`: posicionamento, tom, identidade, dominios e contatos.
 - `docs/site-content.md`: estrutura editorial e textos-base do site.
+- `docs/hostinger-deploy.md`: passo a passo para publicacao na Hostinger.
 
 ## Informacoes iniciais cadastradas
 
