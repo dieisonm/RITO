@@ -62,6 +62,22 @@ Na Hostinger, configure:
 - Ramo: `hostinger`
 - Diretorio: `public_html`
 
+## Webhook de implantacao automatica
+
+O projeto ja esta com webhook configurado no GitHub para acionar a Hostinger automaticamente.
+
+Configuracao atual:
+
+- Repositorio: `dieisonm/RITO`
+- Evento: `push`
+- Branch usada no deploy: `hostinger`
+- Status: ativo
+
+Na pratica:
+
+- `push` na `main` nao publica o site
+- `push` na `hostinger` dispara a implantacao automatica
+
 ## Estrategia adotada no projeto
 
 Para facilitar manutencao e deploy:

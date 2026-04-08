@@ -54,6 +54,7 @@ Se estiver usando `Git Deployment` na hospedagem comum, usar:
 - Repositorio: `https://github.com/dieisonm/RITO.git`
 - Ramo: `hostinger`
 - Diretorio: `public_html`
+- Implantacao automatica: webhook do GitHub ativo para `push` na branch `hostinger`
 
 ## Documentos principais
 
