@@ -30,6 +30,26 @@ Isso cria:
 
 - `release/ritosistemas-hostinger.zip`
 
+## Fluxo recomendado para atualizacoes
+
+Use uma branch dedicada para a Hostinger, contendo apenas os arquivos publicos do site:
+
+```bash
+./scripts/publish_hostinger_branch.sh
+```
+
+Esse comando:
+
+- gera `dist/`
+- cria uma publicacao limpa
+- envia somente os arquivos do site para a branch `hostinger`
+
+Na Hostinger, configure:
+
+- Repositorio: `https://github.com/dieisonm/RITO.git`
+- Ramo: `hostinger`
+- Diretorio: `public_html`
+
 ## Como publicar na Hostinger
 
 1. Gere a pasta `dist/`.
@@ -41,6 +61,27 @@ Isso cria:
 Ou:
 
 5. Envie o arquivo `release/ritosistemas-hostinger.zip` e extraia dentro de `public_html`.
+
+## Se for usar Git Deployment na Hostinger
+
+Depois de configurar o repositório uma vez, as proximas atualizacoes ficam assim:
+
+1. Atualize o projeto localmente.
+2. Suba a `main` normalmente:
+
+```bash
+git add .
+git commit -m "Sua mensagem"
+git push
+```
+
+3. Publique a branch de deploy:
+
+```bash
+./scripts/publish_hostinger_branch.sh
+```
+
+Se a Hostinger estiver com auto deploy ativado para a branch `hostinger`, ela publica sozinha.
 
 ## Dominio principal
 

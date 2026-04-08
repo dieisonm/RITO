@@ -28,6 +28,12 @@ Para gerar um `.zip` pronto para upload:
 ./scripts/package_hostinger.sh
 ```
 
+Para publicar a branch pronta para Git Deployment na Hostinger:
+
+```bash
+./scripts/publish_hostinger_branch.sh
+```
+
 ## Documentos principais
 
 - `docs/brand-foundation.md`: posicionamento, tom, identidade, dominios e contatos.
