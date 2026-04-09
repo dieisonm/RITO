@@ -59,40 +59,146 @@
 
         <section class="contact-layout">
           <div class="contact-form">
-            <h2>Como iniciar o contato</h2>
+            <p class="eyebrow">Solicitar orçamento</p>
+            <h2>Preencha o formulário e fale com a RITO pelo próprio site</h2>
             <p>
-              Hoje o canal oficial de contato é o e-mail. Enquanto finalizamos WhatsApp e perfis
-              sociais, você já pode nos escrever para apresentar a sua necessidade.
+              Para facilitar o primeiro contato, você já pode enviar sua solicitação por aqui.
             </p>
-            <p>Se quiser, vale incluir estas informações na mensagem:</p>
-            <ul class="detail-list">
-              <li>Seu nome e o nome do negócio</li>
-              <li>Cidade e estado</li>
-              <li>Qual processo hoje mais gera retrabalho, atraso ou falta de controle</li>
-              <li>Se você é MEI, microempresa ou pequena empresa</li>
-              <li>O que você gostaria de organizar, automatizar ou acompanhar melhor</li>
-            </ul>
-            <a
-              class="button primary full"
-              href="mailto:contato@ritosistemas.com?subject=Solicitação%20de%20análise%20inicial%20-%20RITO"
-            >
-              Enviar e-mail para a RITO
-            </a>
+            <div id="contact-status" class="form-status" aria-live="polite"></div>
+            <form id="quote-form" action="../contact.php" method="post" novalidate>
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-name">
+                    Nome <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Seu nome"
+                    autocomplete="name"
+                    required
+                  />
+                  <p class="field-error" id="error-name"></p>
+                </div>
+                <div class="field-group">
+                  <label for="contact-business">
+                    Empresa ou negócio <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-business"
+                    type="text"
+                    name="business"
+                    placeholder="Nome da empresa ou atividade"
+                    autocomplete="organization"
+                    required
+                  />
+                  <p class="field-error" id="error-business"></p>
+                </div>
+              </div>
+
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-email">E-mail</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="voce@empresa.com"
+                    autocomplete="email"
+                  />
+                  <p class="field-hint">Opcional. Se preferir, podemos retornar só por WhatsApp.</p>
+                  <p class="field-error" id="error-email"></p>
+                </div>
+                <div class="field-group">
+                  <label for="contact-whatsapp">
+                    Telefone ou WhatsApp <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-whatsapp"
+                    type="text"
+                    name="whatsapp"
+                    placeholder="51 99999 9999"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    required
+                  />
+                  <p class="field-hint">Digite só os números se preferir. Os espaços entram automaticamente.</p>
+                  <p class="field-error" id="error-whatsapp"></p>
+                </div>
+              </div>
+
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-business-profile">Perfil do negócio</label>
+                  <select id="contact-business-profile" name="business_profile">
+                    <option value="">Selecione, se quiser</option>
+                    <option value="MEI">MEI</option>
+                    <option value="Microempresa">Microempresa</option>
+                    <option value="Pequena empresa">Pequena empresa</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <fieldset>
+                  <legend>Como prefere receber o primeiro retorno?</legend>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="email" />
+                    E-mail
+                  </label>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="whatsapp" checked />
+                    WhatsApp
+                  </label>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="telefone" />
+                    Telefone
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="field-group">
+                <label for="contact-message">
+                  O que você precisa resolver? <span class="field-required">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="7"
+                  placeholder="Explique sua ideia, o processo atual ou a dificuldade que você quer organizar, automatizar ou acompanhar melhor."
+                  required
+                ></textarea>
+                <p class="field-error" id="error-message"></p>
+              </div>
+
+              <div class="hp-field" aria-hidden="true">
+                <label>
+                  Deixe este campo em branco
+                  <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                </label>
+              </div>
+
+              <div class="contact-actions">
+                <button type="submit" class="button primary full">Enviar pedido de orçamento</button>
+              </div>
+            </form>
             <p class="form-note">
-              Análise inicial gratuita e sem compromisso. WhatsApp oficial, Instagram e LinkedIn
-              estão em implantação.
+              Os campos com <span class="field-required">*</span> são obrigatórios. A análise inicial
+              é gratuita e sem compromisso.
+            </p>
+            <p class="form-note">
+              O retorno inicial pode ser feito por WhatsApp, telefone ou e-mail, conforme o canal que
+              você indicar.
             </p>
           </div>
 
           <aside class="contact-card">
             <h2>Canais e presença</h2>
+            <p><strong>Formulário no site:</strong> disponível</p>
             <p><strong>E-mail:</strong> contato@ritosistemas.com</p>
             <p><strong>Atendimento:</strong> Novo Hamburgo - RS e formato remoto</p>
             <p><strong>WhatsApp oficial:</strong> em implantação</p>
             <p><strong>Instagram:</strong> perfil em implantação</p>
             <p><strong>LinkedIn:</strong> perfil em implantação</p>
-            <p><strong>Domínio principal:</strong> ritosistemas.com</p>
-            <p>Hospedagem: Hostinger</p>
           </aside>
         </section>
 
