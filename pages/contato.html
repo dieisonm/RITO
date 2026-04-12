@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RITO Sistemas | Contato</title>
+    <meta
+      name="description"
+      content="Entre em contato com a RITO Sistemas para solicitar uma análise inicial gratuita ou conversar sobre a sua necessidade."
+    />
+    <link rel="canonical" href="https://ritosistemas.com/pages/contato.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../../logos/rito_monogram_r_01.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="contato">
+    <div class="site-wrap">
+      <header class="topbar">
+        <a class="brand" href="../index.html">
+          <img
+            class="brand-mark-image"
+            src="../../logos/rito_monogram_r_01.png"
+            alt="Monograma RITO Sistemas"
+          />
+          <span class="brand-copy brand-copy-image brand-copy-minimal">
+            <img
+              class="brand-wordmark"
+              src="../../logos/rito_sistemas_wordmark_01.png"
+              alt="RITO Sistemas"
+            />
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="../index.html">Início</a>
+          <a href="solucoes.html">Soluções</a>
+          <a href="como-funciona.html">Como funciona</a>
+          <a href="para-quem.html">Para quem é</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+        <a class="button primary compact" href="contato.html">Solicitar orçamento grátis</a>
+      </header>
+
+      <main class="inner-page">
+        <section class="page-hero">
+          <p class="eyebrow">Contato</p>
+          <h1>Fale com a RITO Sistemas</h1>
+          <p class="lead">
+            Quer solicitar uma análise inicial gratuita, validar uma ideia ou entender se sua
+            necessidade pode virar uma solução? Entre em contato e descreva, da forma mais simples
+            possível, o que a sua empresa precisa.
+          </p>
+        </section>
+
+        <section class="contact-layout">
+          <div class="contact-form">
+            <p class="eyebrow">Solicitar orçamento</p>
+            <h2>Preencha o formulário e fale com a RITO pelo próprio site</h2>
+            <p>
+              Para facilitar o primeiro contato, você já pode enviar sua solicitação por aqui.
+            </p>
+            <div id="contact-status" class="form-status" aria-live="polite"></div>
+            <form id="quote-form" action="../contact.php" method="post" novalidate>
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-name">
+                    Nome <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Seu nome"
+                    autocomplete="name"
+                    required
+                  />
+                  <p class="field-error" id="error-name"></p>
+                </div>
+                <div class="field-group">
+                  <label for="contact-business">
+                    Empresa ou negócio <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-business"
+                    type="text"
+                    name="business"
+                    placeholder="Nome da empresa ou atividade"
+                    autocomplete="organization"
+                    required
+                  />
+                  <p class="field-error" id="error-business"></p>
+                </div>
+              </div>
+
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-email">E-mail</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="voce@empresa.com"
+                    autocomplete="email"
+                  />
+                  <p class="field-hint">Opcional. Se preferir, podemos retornar só por WhatsApp.</p>
+                  <p class="field-error" id="error-email"></p>
+                </div>
+                <div class="field-group">
+                  <label for="contact-whatsapp">
+                    Telefone ou WhatsApp <span class="field-required">*</span>
+                  </label>
+                  <input
+                    id="contact-whatsapp"
+                    type="text"
+                    name="whatsapp"
+                    placeholder="51 99999 9999"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    required
+                  />
+                  <p class="field-hint">Digite só os números se preferir. Os espaços entram automaticamente.</p>
+                  <p class="field-error" id="error-whatsapp"></p>
+                </div>
+              </div>
+
+              <div class="form-grid two-columns">
+                <div class="field-group">
+                  <label for="contact-business-profile">Perfil do negócio</label>
+                  <select id="contact-business-profile" name="business_profile">
+                    <option value="">Selecione, se quiser</option>
+                    <option value="MEI">MEI</option>
+                    <option value="Microempresa">Microempresa</option>
+                    <option value="Pequena empresa">Pequena empresa</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <fieldset>
+                  <legend>Como prefere receber o primeiro retorno?</legend>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="email" />
+                    E-mail
+                  </label>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="whatsapp" checked />
+                    WhatsApp
+                  </label>
+                  <label class="inline-option">
+                    <input type="radio" name="preferred_contact" value="telefone" />
+                    Telefone
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="field-group">
+                <label for="contact-message">
+                  O que você precisa resolver? <span class="field-required">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="7"
+                  placeholder="Explique sua ideia, o processo atual ou a dificuldade que você quer organizar, automatizar ou acompanhar melhor."
+                  required
+                ></textarea>
+                <p class="field-error" id="error-message"></p>
+              </div>
+
+              <div class="hp-field" aria-hidden="true">
+                <label>
+                  Deixe este campo em branco
+                  <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                </label>
+              </div>
+
+              <div class="contact-actions">
+                <button type="submit" class="button primary full">Enviar pedido de orçamento</button>
+              </div>
+            </form>
+            <p class="form-note">
+              Os campos com <span class="field-required">*</span> são obrigatórios. A análise inicial
+              é gratuita e sem compromisso.
+            </p>
+            <p class="form-note">
+              O retorno inicial pode ser feito por WhatsApp, telefone ou e-mail, conforme o canal que
+              você indicar.
+            </p>
+          </div>
+
+          <aside class="contact-card">
+            <h2>Canais e presença</h2>
+            <p><strong>Formulário no site:</strong> disponível</p>
+            <p><strong>E-mail:</strong> contato@ritosistemas.com</p>
+            <p><strong>Atendimento:</strong> Novo Hamburgo - RS e formato remoto</p>
+            <p>
+              <strong>Telefone e WhatsApp:</strong>
+              <a
+                class="contact-link"
+                href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir conversa no WhatsApp da RITO Sistemas no número (51) 99659-9049"
+                >(51) 99659-9049</a
+              >
+            </p>
+            <div class="channel-icons" aria-label="Canais digitais da RITO Sistemas">
+              <a
+                class="channel-icon is-whatsapp"
+                href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir conversa no WhatsApp da RITO Sistemas"
+                title="WhatsApp"
+              >
+                <img class="channel-glyph" src="../assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
+                <span class="sr-only">WhatsApp</span>
+              </a>
+              <span
+                class="channel-icon is-instagram is-pending"
+                role="img"
+                aria-label="Instagram da RITO Sistemas em breve"
+                title="Instagram em breve"
+              >
+                <img class="channel-glyph" src="../assets/icons/instagram.svg" alt="" aria-hidden="true" />
+                <span class="sr-only">Instagram em breve</span>
+              </span>
+              <span
+                class="channel-icon is-linkedin is-pending"
+                role="img"
+                aria-label="LinkedIn da RITO Sistemas em breve"
+                title="LinkedIn em breve"
+              >
+                <img class="channel-glyph" src="../assets/icons/linkedin.svg" alt="" aria-hidden="true" />
+                <span class="sr-only">LinkedIn em breve</span>
+              </span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item">
+              <h3>Que tipo de solução a RITO Sistemas desenvolve?</h3>
+              <p>Criamos sistemas, automações, controles e ferramentas sob medida para rotinas operacionais e administrativas.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Vocês atendem MEI?</h3>
+              <p>Sim. Atendemos MEI, microempresas e pequenas empresas que precisam de tecnologia mais próxima e viável.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Vocês trabalham apenas com empresas grandes?</h3>
+              <p>Não. O foco atual da RITO está em negócios menores, operações locais e empresas em organização ou crescimento.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Como funcionam os valores dos projetos?</h3>
+              <p>Cada proposta é personalizada. A ideia é montar algo compatível com a necessidade e com o porte do negócio, sem empurrar solução maior do que o necessário.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Vocês fazem soluções personalizadas?</h3>
+              <p>Sim. Nosso trabalho é justamente entender a necessidade e desenvolver algo adaptado à realidade de cada empresa.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Tenho só uma ideia inicial. Posso entrar em contato?</h3>
+              <p>Sim. Você pode nos enviar sua ideia mesmo que ela ainda não esteja totalmente estruturada.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Vocês também fazem melhorias em processos existentes?</h3>
+              <p>Sim. Em muitos casos, a melhor solução é melhorar e automatizar um processo que já existe.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>RITO Sistemas</strong>
+          <p>RITO significa Rotinas Inteligentes de Tecnologia e Operação.</p>
+          <p>Análise inicial gratuita. Sem compromisso.</p>
+        </div>
+        <div>
+          <strong>Navegação</strong>
+          <a href="../index.html">Início</a>
+          <a href="solucoes.html">Soluções</a>
+          <a href="para-quem.html">Para quem é</a>
+          <a href="sobre.html">Sobre</a>
+        </div>
+        <div>
+          <strong>Contato e presença</strong>
+          <p>contato@ritosistemas.com</p>
+          <p>Novo Hamburgo - RS | atendimento remoto</p>
+          <a
+            class="contact-link"
+            href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir conversa no WhatsApp da RITO Sistemas no número (51) 99659-9049"
+            >(51) 99659-9049</a
+          >
+          <div class="channel-icons" aria-label="Canais digitais da RITO Sistemas">
+            <a
+              class="channel-icon is-whatsapp"
+              href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir conversa no WhatsApp da RITO Sistemas"
+              title="WhatsApp"
+            >
+              <img class="channel-glyph" src="../assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">WhatsApp</span>
+            </a>
+            <span
+              class="channel-icon is-instagram is-pending"
+              role="img"
+              aria-label="Instagram da RITO Sistemas em breve"
+              title="Instagram em breve"
+            >
+              <img class="channel-glyph" src="../assets/icons/instagram.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">Instagram em breve</span>
+            </span>
+            <span
+              class="channel-icon is-linkedin is-pending"
+              role="img"
+              aria-label="LinkedIn da RITO Sistemas em breve"
+              title="LinkedIn em breve"
+            >
+              <img class="channel-glyph" src="../assets/icons/linkedin.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">LinkedIn em breve</span>
+            </span>
+          </div>
+          <p class="footer-note">© <span id="year"></span> RITO Sistemas</p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
