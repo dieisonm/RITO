@@ -53,8 +53,13 @@ Se estiver usando `Git Deployment` na hospedagem comum, usar:
 
 - Repositorio: `https://github.com/dieisonm/RITO.git`
 - Ramo: `hostinger`
-- Diretorio: `public_html`
+- Install Path: vazio, para publicar diretamente em `/public_html`
 - Implantacao automatica: webhook do GitHub ativo para `push` na branch `hostinger`
+
+Importante:
+
+- a branch `hostinger` precisa manter historico linear
+- nao usar `push -f` recorrente nessa branch, porque a Hostinger tende a fazer `pull/merge` no deploy automatico
 
 ## Documentos principais
 
