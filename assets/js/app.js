@@ -1,7 +1,72 @@
 const yearNode = document.getElementById("year");
+const topbar = document.querySelector(".topbar");
+const navToggle = document.querySelector(".nav-toggle");
+const navigation = document.getElementById("site-nav");
+const mobileNavigationQuery = window.matchMedia("(max-width: 900px)");
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
+}
+
+function closeMobileNavigation() {
+  if (!topbar || !navToggle) {
+    return;
+  }
+
+  topbar.classList.remove("is-menu-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Abrir navegação principal");
+}
+
+function openMobileNavigation() {
+  if (!topbar || !navToggle) {
+    return;
+  }
+
+  topbar.classList.add("is-menu-open");
+  navToggle.setAttribute("aria-expanded", "true");
+  navToggle.setAttribute("aria-label", "Fechar navegação principal");
+}
+
+if (topbar && navToggle && navigation) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = topbar.classList.contains("is-menu-open");
+
+    if (isOpen) {
+      closeMobileNavigation();
+      return;
+    }
+
+    openMobileNavigation();
+  });
+
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileNavigationQuery.matches) {
+        closeMobileNavigation();
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileNavigation();
+    }
+  });
+
+  const syncNavigationLayout = (event) => {
+    if (!event.matches) {
+      closeMobileNavigation();
+    }
+  };
+
+  syncNavigationLayout(mobileNavigationQuery);
+
+  if (typeof mobileNavigationQuery.addEventListener === "function") {
+    mobileNavigationQuery.addEventListener("change", syncNavigationLayout);
+  } else if (typeof mobileNavigationQuery.addListener === "function") {
+    mobileNavigationQuery.addListener(syncNavigationLayout);
+  }
 }
 
 const contactForm = document.getElementById("quote-form");
