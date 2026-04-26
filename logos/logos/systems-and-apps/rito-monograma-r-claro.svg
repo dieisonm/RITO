@@ -1,0 +1,23 @@
+<svg id="mono-light" viewBox="0 0 400 400" width="220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="rgrad-l" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e3f52"/>
+            <stop offset="100%" stop-color="#0d2430"/>
+          </linearGradient>
+        </defs>
+        <!-- R glyph — geometric construction -->
+        <!-- Main body: left vertical bar -->
+        <rect x="52" y="52" width="72" height="296" rx="8" fill="url(#rgrad-l)"/>
+        <!-- Bowl top bar -->
+        <rect x="52" y="52" width="220" height="72" rx="8" fill="url(#rgrad-l)"/>
+        <!-- Bowl mid bar -->
+        <rect x="52" y="176" width="200" height="64" rx="8" fill="url(#rgrad-l)"/>
+        <!-- Bowl right curve (pill) -->
+        <rect x="240" y="52" width="68" height="188" rx="34" fill="url(#rgrad-l)"/>
+        <!-- Leg diagonal — goes bottom right -->
+        <polygon points="124,240 252,240 348,348 220,348" fill="url(#rgrad-l)"/>
+        <!-- Triangle cutout bottom-left of leg (the arrow/diagonal cut) -->
+        <polygon points="52,240 124,240 124,348 52,348" fill="#f4f0e9"/>
+        <!-- Inner triangle accent (dark, fills the arrow shape) -->
+        <polygon points="60,320 116,240 116,340" fill="url(#rgrad-l)"/>
+      </svg>
