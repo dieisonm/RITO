@@ -124,6 +124,33 @@ git push
 
 Se a Hostinger estiver com auto deploy ativado para a branch `hostinger`, ela publica sozinha.
 
+## Automacao recomendada com GitHub Actions
+
+O repositorio agora pode automatizar tambem a publicacao da branch `hostinger` via GitHub Actions.
+
+Workflow:
+
+- arquivo: `.github/workflows/deploy-hostinger.yml`
+- gatilho principal: `push` na branch `main`
+- efeito: gera `dist/` e faz `push -f` da publicacao pronta para a branch `hostinger`
+
+Na pratica, o fluxo ideal fica assim:
+
+1. voce sobe mudancas para a `main`;
+2. o GitHub Actions monta a publicacao estatica;
+3. a branch `hostinger` e atualizada automaticamente;
+4. a Hostinger recebe o webhook e dispara o deploy.
+
+Isso elimina a necessidade de rodar `bash scripts/publish_hostinger_branch.sh` manualmente depois de cada alteracao na `main`.
+
+Se o site continuar sem atualizar mesmo apos o workflow e o webhook responderem `200`, o ponto a conferir passa a ser o painel da Hostinger:
+
+- repositorio correto;
+- branch `hostinger`;
+- install path vazio para publicar em `public_html`;
+- botao de `Auto Deployment` ativado;
+- `Latest build output` sem erro.
+
 ## Fluxo operacional recomendado
 
 Sempre que houver mudancas no site:

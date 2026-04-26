@@ -1,0 +1,54 @@
+name: Deploy Hostinger
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "site/**"
+      - "logos/**"
+      - "scripts/build_dist.sh"
+      - ".github/workflows/deploy-hostinger.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
+
+jobs:
+  publish-hostinger-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Build static dist
+        run: bash scripts/build_dist.sh
+
+      - name: Publish hostinger branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          TMP_DIR="$(mktemp -d)"
+          trap 'rm -rf "$TMP_DIR"' EXIT
+
+          cp -R dist/. "$TMP_DIR/"
+
+          git -C "$TMP_DIR" init -b hostinger
+          git -C "$TMP_DIR" config user.name "github-actions[bot]"
+          git -C "$TMP_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$TMP_DIR" add .
+          git -C "$TMP_DIR" commit -m "Deploy Hostinger site from ${SOURCE_SHA}" >/dev/null
+          git -C "$TMP_DIR" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
+          git -C "$TMP_DIR" push -f origin hostinger
