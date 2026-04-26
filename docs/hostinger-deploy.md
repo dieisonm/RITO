@@ -60,7 +60,7 @@ Na Hostinger, configure:
 
 - Repositorio: `https://github.com/dieisonm/RITO.git`
 - Ramo: `hostinger`
-- Diretorio: `public_html`
+- Install Path: vazio, para publicar diretamente em `/public_html`
 
 ## Webhook de implantacao automatica
 
@@ -132,7 +132,7 @@ Workflow:
 
 - arquivo: `.github/workflows/deploy-hostinger.yml`
 - gatilho principal: `push` na branch `main`
-- efeito: gera `dist/` e faz `push -f` da publicacao pronta para a branch `hostinger`
+- efeito: gera `dist/` e publica a branch `hostinger` preservando historico linear
 
 Na pratica, o fluxo ideal fica assim:
 
@@ -142,6 +142,16 @@ Na pratica, o fluxo ideal fica assim:
 4. a Hostinger recebe o webhook e dispara o deploy.
 
 Isso elimina a necessidade de rodar `bash scripts/publish_hostinger_branch.sh` manualmente depois de cada alteracao na `main`.
+
+## Regra importante para o auto deploy funcionar
+
+Nao reescrever a branch `hostinger` em publicacoes normais.
+
+Motivo:
+
+- a Hostinger costuma trabalhar com `pull` ou `merge` no repositório configurado
+- se a branch `hostinger` for atualizada com `push -f` e historico sem ancestral comum, o `.git` pode receber atualizacoes, mas o checkout publicado pode nao avancar
+- por isso, a branch de deploy precisa seguir com historico linear entre uma publicacao e outra
 
 Se o site continuar sem atualizar mesmo apos o workflow e o webhook responderem `200`, o ponto a conferir passa a ser o painel da Hostinger:
 
