@@ -35,7 +35,21 @@
             />
           </span>
         </a>
-        <nav class="nav">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir navegação principal"
+        >
+          <span class="nav-toggle-box" aria-hidden="true">
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </span>
+          <span class="nav-toggle-label">Menu</span>
+        </button>
+        <nav class="nav" id="site-nav">
           <a href="../index.html">Início</a>
           <a href="solucoes.html">Soluções</a>
           <a href="como-funciona.html">Como funciona</a>
@@ -127,11 +141,67 @@
           <strong>Contato e presença</strong>
           <p>contato@ritosistemas.com</p>
           <p>Novo Hamburgo - RS | atendimento remoto</p>
-          <p>WhatsApp oficial em implantação</p>
-          <p>Instagram e LinkedIn em implantação</p>
+          <a
+            class="contact-link"
+            href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir conversa no WhatsApp da RITO Sistemas no número (51) 99659-9049"
+            >(51) 99659-9049</a
+          >
+          <div class="channel-icons" aria-label="Canais digitais da RITO Sistemas">
+            <a
+              class="channel-icon is-whatsapp"
+              href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir conversa no WhatsApp da RITO Sistemas"
+              title="WhatsApp"
+            >
+              <img class="channel-glyph" src="../assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">WhatsApp</span>
+            </a>
+            <a
+              class="channel-icon is-instagram"
+              href="https://www.instagram.com/ritosistemas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir Instagram da RITO Sistemas"
+              title="Instagram"
+            >
+              <img class="channel-glyph" src="../assets/icons/instagram.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">Instagram</span>
+            </a>
+            <span
+              class="channel-icon is-linkedin is-pending"
+              role="img"
+              aria-label="LinkedIn da RITO Sistemas em breve"
+              title="LinkedIn em breve"
+            >
+              <img class="channel-glyph" src="../assets/icons/linkedin.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">LinkedIn em breve</span>
+            </span>
+          </div>
           <p class="footer-note">© <span id="year"></span> RITO Sistemas</p>
         </div>
       </footer>
+
+      <a
+        class="floating-whatsapp"
+        href="https://wa.me/5551996599049?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RITO%20Sistemas%20e%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20para%20a%20minha%20empresa."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir conversa no WhatsApp da RITO Sistemas"
+        title="Falar no WhatsApp"
+      >
+        <span class="floating-whatsapp__icon-wrap" aria-hidden="true">
+          <img class="floating-whatsapp__icon" src="../assets/icons/whatsapp.svg" alt="" />
+        </span>
+        <span class="floating-whatsapp__copy" aria-hidden="true">
+          <span class="floating-whatsapp__eyebrow">Atendimento direto</span>
+          <span class="floating-whatsapp__label">Fale no WhatsApp</span>
+        </span>
+      </a>
     </div>
     <script src="../assets/js/app.js"></script>
   </body>
