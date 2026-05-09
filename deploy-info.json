@@ -2,5 +2,8 @@
   "source_sha": "ff4a836746059c17b325b71e2f85f91ca82dfc6c",
   "source_short_sha": "ff4a836",
   "source_branch": "codex-canva-brand-assets",
-  "source_committed_at": "2026-04-26T20:44:02-03:00"
+  "source_committed_at": "2026-04-26T20:44:02-03:00",
+  "source_dirty": true,
+  "asset_version": "debe6dfe789a",
+  "built_at": "2026-05-09T20:51:51Z"
 }
