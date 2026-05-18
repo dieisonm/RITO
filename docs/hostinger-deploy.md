@@ -1,220 +1,117 @@
 # Hostinger Deploy
 
-## Observacao importante sobre a Hostinger
+## Regra principal
 
-O site da RITO e um site estatico em HTML/CSS/JS.
+O deploy do site da RITO deve ser feito somente por Git.
 
-Por isso:
+Fluxo canonico:
 
-- nao deve ser publicado pelo fluxo de `Node.js` ou `Frameworks`
-- nao deve ser tratado como projeto React, Vite, Next.js ou similar
-- deve ser publicado na `hospedagem comum`, em `public_html`
+1. `main` guarda o projeto completo.
+2. GitHub Actions roda apenas quando arquivos do site mudam.
+3. O workflow gera a pasta `dist/`.
+4. O workflow publica os arquivos estaticos na branch `hostinger`.
+5. A Hostinger recebe o webhook de `push` na branch `hostinger`.
+6. A Hostinger faz o checkout da branch em `public_html`.
 
-Se a Hostinger mostrar erro de `estrutura de projeto invalida` ou `framework nao compativel`, isso indica que o fluxo de deploy aberto foi o de frameworks JavaScript, e nao o de hospedagem estatica comum.
+Nao usar publicacao direta na hospedagem como rotina. Se algum arquivo local sugerir upload direto para publicar o site, tratar como legado invalido e remover antes de commitar.
 
-## Estrutura pronta
+## Configuracao da Hostinger
 
-O projeto gera uma pasta `dist/` com tudo o que a Hostinger precisa para publicar o site estatico:
+No Git Deployment da Hostinger:
 
-- `index.html`
-- `pages/`
-- `assets/`
-- `logos/`
-- `robots.txt`
-- `sitemap.xml`
-- `404.html`
+- Repositorio: `https://github.com/dieisonm/RITO.git`
+- Ramo: `hostinger`
+- Install Path: vazio, para publicar diretamente em `/public_html`
+- Auto Deployment: ativo
 
-## Como gerar a pasta de deploy
+O site da RITO e estatico em HTML/CSS/JS. Nao usar fluxo de `Node.js`, `Frameworks`, React, Vite, Next.js ou similar.
 
-No terminal, dentro da pasta do projeto:
+## Workflow do GitHub
 
-```bash
-./scripts/build_dist.sh
+Arquivo:
+
+```text
+.github/workflows/deploy-hostinger.yml
 ```
 
-## Como gerar um .zip pronto para upload
+Gatilho:
+
+- `push` na branch `main`
+- apenas quando houver mudancas em:
+  - `site/**`
+  - `logos/**`
+  - `scripts/build_dist.sh`
+  - `.github/workflows/deploy-hostinger.yml`
+
+Isso evita que alteracoes em documentacao, memoria, operacao, agentes ou assets externos disparem deploy do site.
+
+## Branches
+
+- `main`: projeto completo, incluindo docs, scripts, memoria e operacao.
+- `hostinger`: artefato estatico publicado, contendo apenas arquivos publicos do site.
+
+A branch `hostinger` deve manter historico linear para a Hostinger conseguir atualizar o checkout sem conflitos.
+
+## Publicacao automatica
+
+Em publicacoes normais:
 
 ```bash
-./scripts/package_hostinger.sh
+git add .
+git commit -m "Mensagem"
+git push origin main
 ```
 
-Isso cria:
+Se a mudanca tocar arquivos do site, o GitHub Actions publica a branch `hostinger` automaticamente.
 
-- `release/ritosistemas-hostinger.zip`
+Se a mudanca tocar apenas `docs/`, `operations/`, `memory/`, `assets/drive/` ou outros arquivos administrativos, o deploy do site nao deve rodar.
 
-## Fluxo recomendado para atualizacoes
+## Publicacao manual da branch hostinger
 
-Use uma branch dedicada para a Hostinger, contendo apenas os arquivos publicos do site:
+Use apenas quando precisar regerar a branch de deploy localmente:
 
 ```bash
-./scripts/publish_hostinger_branch.sh
+bash scripts/publish_hostinger_branch.sh
 ```
 
 Esse comando:
 
 - gera `dist/`
 - cria uma publicacao limpa
-- envia somente os arquivos do site para a branch `hostinger`
+- envia somente arquivos publicos para a branch `hostinger`
 
-Na Hostinger, configure:
+Depois, confirmar no GitHub e na Hostinger que o webhook foi recebido.
 
-- Repositorio: `https://github.com/dieisonm/RITO.git`
-- Ramo: `hostinger`
-- Install Path: vazio, para publicar diretamente em `/public_html`
+## Verificacao
 
-## Webhook de implantacao automatica
+O deploy so esta concluido quando:
 
-O projeto ja esta com webhook configurado no GitHub para acionar a Hostinger automaticamente.
-
-Configuracao atual:
-
-- Repositorio: `dieisonm/RITO`
-- Evento: `push`
-- Branch usada no deploy: `hostinger`
-- Status: ativo
-
-Na pratica:
-
-- `push` na `main` nao publica o site
-- `push` na `hostinger` dispara a implantacao automatica
-
-## Estrategia adotada no projeto
-
-Para facilitar manutencao e deploy:
-
-- `main` guarda o projeto completo
-- `hostinger` guarda apenas a publicacao estatica pronta
-
-Motivo:
-
-- a Hostinger precisa que o `index.html` esteja diretamente em `public_html`
-- o projeto em `main` tem estrutura interna adicional, como `docs/`, `scripts/` e arquivos de organizacao
-- a branch `hostinger` evita reorganizacao manual a cada deploy
-
-## Como publicar na Hostinger
-
-1. Gere a pasta `dist/`.
-2. No painel da Hostinger, abra o `File Manager` do dominio.
-3. Entre na pasta `public_html`.
-4. Apague os arquivos padrao que estiverem la.
-5. Envie o conteudo inteiro da pasta `dist/` para `public_html`.
-
-Ou:
-
-5. Envie o arquivo `release/ritosistemas-hostinger.zip` e extraia dentro de `public_html`.
-
-## Se for usar Git Deployment na Hostinger
-
-Depois de configurar o repositório uma vez, as proximas atualizacoes ficam assim:
-
-1. Atualize o projeto localmente.
-2. Suba a `main` normalmente:
-
-```bash
-git add .
-git commit -m "Sua mensagem"
-git push
+```text
+https://ritosistemas.com/deploy-info.json
 ```
 
-3. Publique a branch de deploy:
+mostrar a mesma `asset_version` gerada no build.
 
-```bash
-./scripts/publish_hostinger_branch.sh
-```
+Tambem conferir:
 
-Se a Hostinger estiver com auto deploy ativado para a branch `hostinger`, ela publica sozinha.
+- `https://ritosistemas.com/`
+- `https://ritosistemas.com/pages/projeto-piloto.html`, quando a landing estiver em uso
 
-## Automacao recomendada com GitHub Actions
+## Diagnostico quando o site nao atualizar
 
-O repositorio agora pode automatizar tambem a publicacao da branch `hostinger` via GitHub Actions.
-
-Workflow:
-
-- arquivo: `.github/workflows/deploy-hostinger.yml`
-- gatilho principal: `push` na branch `main`
-- efeito: gera `dist/` e publica a branch `hostinger` preservando historico linear
-
-Na pratica, o fluxo ideal fica assim:
-
-1. voce sobe mudancas para a `main`;
-2. o GitHub Actions monta a publicacao estatica;
-3. a branch `hostinger` e atualizada automaticamente;
-4. a Hostinger recebe o webhook e dispara o deploy.
-
-Isso elimina a necessidade de rodar `bash scripts/publish_hostinger_branch.sh` manualmente depois de cada alteracao na `main`.
-
-## Regra importante para o auto deploy funcionar
-
-Nao reescrever a branch `hostinger` em publicacoes normais.
-
-Motivo:
-
-- a Hostinger costuma trabalhar com `pull` ou `merge` no repositório configurado
-- se a branch `hostinger` for atualizada com `push -f` e historico sem ancestral comum, o `.git` pode receber atualizacoes, mas o checkout publicado pode nao avancar
-- por isso, a branch de deploy precisa seguir com historico linear entre uma publicacao e outra
-
-Se o site continuar sem atualizar mesmo apos o workflow e o webhook responderem `200`, o ponto a conferir passa a ser o painel da Hostinger:
+Se a branch `hostinger` foi atualizada, mas o dominio nao mudou, investigar no painel da Hostinger:
 
 - repositorio correto;
 - branch `hostinger`;
-- install path vazio para publicar em `public_html`;
-- botao de `Auto Deployment` ativado;
-- `Latest build output` sem erro.
+- install path vazio;
+- Auto Deployment ativo;
+- ultimo log de deploy sem erro.
 
-## Fluxo operacional recomendado
+Se o problema persistir, corrigir a configuracao do Git Deployment na Hostinger. Nao criar fluxo paralelo de publicacao direta como solucao permanente.
 
-Sempre que houver mudancas no site:
-
-1. Editar normalmente o projeto
-2. Publicar a `main`
-3. Publicar a branch `hostinger`
-
-Comandos:
-
-```bash
-git add .
-git commit -m "Sua mensagem"
-git push
-bash scripts/publish_hostinger_branch.sh
-```
-
-Se o auto deploy nao estiver ativo na Hostinger, depois disso basta clicar em `Deploy` no painel.
-
-## Dominio principal
+## Dominio
 
 - Dominio principal: `ritosistemas.com`
 - Dominio secundario: `ritosistemas.com.br`
 
-## Redirecionamento do .com.br
-
-Na Hostinger, configure um redirecionamento 301 permanente de:
-
-- `https://ritosistemas.com.br`
-- para `https://ritosistemas.com`
-
-## Verificacoes apos publicar
-
-1. Abrir `https://ritosistemas.com`
-2. Testar as paginas internas:
-   - `/pages/solucoes.html`
-   - `/pages/como-funciona.html`
-   - `/pages/para-quem.html`
-   - `/pages/sobre.html`
-   - `/pages/contato.html`
-3. Confirmar carregamento de logo, favicon e CSS.
-4. Confirmar que `https://ritosistemas.com/sitemap.xml` abre corretamente.
-5. Confirmar que `https://ritosistemas.com/robots.txt` abre corretamente.
-
-## Observacao sobre seguranca e bloqueio corporativo
-
-Durante o inicio da publicacao, o dominio pode ser bloqueado em redes corporativas com Cisco Umbrella pela categoria:
-
-- `Newly Seen Domains`
-
-Isso nao significa necessariamente problema no site ou no DNS.
-
-Se acontecer:
-
-- esperar a reputacao inicial do dominio amadurecer
-- testar em rede/dispositivo sem perfil corporativo
-- evitar concluir diagnostico apenas com dispositivos gerenciados pela empresa
+Na Hostinger, manter redirecionamento 301 de `ritosistemas.com.br` para `ritosistemas.com`.

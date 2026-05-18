@@ -1,5 +1,32 @@
 .DS_Store
 dist/
 release/
+.colima/
 site/storage/contact_requests.jsonl
+.hostinger-ftp.env
 rito-smtp.php
+operations/instagram/instagram-access.local.md
+operations/ai-os/whatsapp/.session/
+operations/ai-os/whatsapp/runs/
+operations/ai-os/whatsapp/waha/.sessions/
+operations/ai-os/whatsapp/waha/.env
+operations/ai-os/whatsapp/waha/.docker-config/
+operations/ai-os/whatsapp/inbox/raw/*.jsonl
+operations/ai-os/whatsapp/inbox/conversations/*.jsonl
+operations/ai-os/whatsapp/inbox/pending/*.jsonl
+operations/ai-os/whatsapp/runtime/
+operations/ai-os/asset-sync/upload-queue/*.json
+
+# Arquivos criativos pesados ficam no Google Drive e entram no Git apenas
+# pelo manifesto em assets/drive/asset-manifest.json.
+deliverables/**/*.png
+deliverables/**/*.jpg
+deliverables/**/*.jpeg
+deliverables/**/*.webp
+deliverables/**/*.gif
+deliverables/**/*.mp4
+deliverables/**/*.mov
+deliverables/**/*.pdf
+deliverables/**/*.zip
+!deliverables/**/*.md
+!deliverables/**/*.json
