@@ -73,8 +73,6 @@ const contactForm = document.getElementById("quote-form");
 const contactStatus = document.getElementById("contact-status");
 const phoneField = contactForm ? contactForm.querySelector('input[name="whatsapp"]') : null;
 const emailField = contactForm ? contactForm.querySelector('input[name="email"]') : null;
-const solutionTypeField = contactForm ? contactForm.querySelector('select[name="solution_type"]') : null;
-const casePermissionField = contactForm ? contactForm.querySelector('input[name="case_permission"]') : null;
 const preferredContactFields = contactForm
   ? Array.from(contactForm.querySelectorAll('input[name="preferred_contact"]'))
   : [];
@@ -174,14 +172,6 @@ function validateField(field) {
     }
   }
 
-  if (name === "solution_type" && field.hasAttribute("required") && value === "") {
-    errorMessage = "Selecione o tipo de solução que parece fazer mais sentido.";
-  }
-
-  if (name === "case_permission" && field.hasAttribute("required") && !field.checked) {
-    errorMessage = "Confirme a condição do projeto piloto para continuar.";
-  }
-
   setFieldError(field, errorMessage);
   return errorMessage === "";
 }
@@ -192,7 +182,7 @@ function validateContactForm() {
   }
 
   const fieldsToValidate = Array.from(
-    contactForm.querySelectorAll('input[name="name"], input[name="business"], input[name="email"], input[name="whatsapp"], select[name="solution_type"], input[name="case_permission"], textarea[name="message"]')
+    contactForm.querySelectorAll('input[name="name"], input[name="business"], input[name="email"], input[name="whatsapp"], textarea[name="message"]')
   );
 
   const results = fieldsToValidate.map(validateField);
@@ -226,7 +216,7 @@ if (contactForm) {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const defaultButtonLabel = submitButton ? submitButton.textContent : "";
   const fields = Array.from(
-    contactForm.querySelectorAll('input[name="name"], input[name="business"], input[name="email"], input[name="whatsapp"], select[name="solution_type"], input[name="case_permission"], textarea[name="message"]')
+    contactForm.querySelectorAll('input[name="name"], input[name="business"], input[name="email"], input[name="whatsapp"], textarea[name="message"]')
   );
 
   if (phoneField) {
@@ -254,26 +244,12 @@ if (contactForm) {
     });
   });
 
-  if (solutionTypeField) {
-    solutionTypeField.addEventListener("change", () => {
-      validateField(solutionTypeField);
-    });
-  }
-
-  if (casePermissionField) {
-    casePermissionField.addEventListener("change", () => {
-      validateField(casePermissionField);
-    });
-  }
-
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     clearContactStatus();
 
     if (!validateContactForm()) {
-      const firstInvalidField = contactForm.querySelector(
-        ".field-group.is-invalid input, .field-group.is-invalid select, .field-group.is-invalid textarea"
-      );
+      const firstInvalidField = contactForm.querySelector(".field-group.is-invalid input, .field-group.is-invalid textarea");
 
       if (firstInvalidField) {
         firstInvalidField.focus();
@@ -287,8 +263,6 @@ if (contactForm) {
       return;
     }
 
-    const formData = new FormData(contactForm);
-
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = "Enviando...";
@@ -297,7 +271,7 @@ if (contactForm) {
     try {
       const response = await fetch(contactForm.action, {
         method: "POST",
-        body: formData,
+        body: new FormData(contactForm),
         headers: {
           Accept: "application/json",
           "X-Requested-With": "XMLHttpRequest",
@@ -311,16 +285,6 @@ if (contactForm) {
           result.message ||
             "Não conseguimos enviar sua solicitação agora. Tente novamente em instantes."
         );
-      }
-
-      if (typeof window.ritoTrack === "function") {
-        window.ritoTrack("generate_lead_form", {
-          form_id: contactForm.id || "",
-          campaign: formData.get("campaign") || formData.get("utm_campaign") || "",
-          lead_source: formData.get("lead_source") || "",
-          preferred_contact: formData.get("preferred_contact") || "",
-          solution_type: formData.get("solution_type") || "",
-        });
       }
 
       contactForm.reset();

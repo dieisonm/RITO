@@ -155,8 +155,7 @@ body[data-page="solucoes"] .nav a[href="solucoes.html"],
 body[data-page="como-funciona"] .nav a[href="como-funciona.html"],
 body[data-page="para-quem"] .nav a[href="para-quem.html"],
 body[data-page="sobre"] .nav a[href="sobre.html"],
-body[data-page="contato"] .nav a[href="contato.html"],
-body[data-page="projeto-piloto"] .nav a[href="solucoes.html"] {
+body[data-page="contato"] .nav a[href="contato.html"] {
   background: rgba(21, 39, 51, 0.06);
   color: var(--ink);
 }
@@ -485,214 +484,6 @@ h3 {
 
 .page-hero h1 {
   max-width: 24ch;
-}
-
-/* Projeto Piloto */
-.pilot-page {
-  --pilot-deep: #0d2430;
-  --pilot-blue: #173847;
-  --pilot-paper: #fffdf9;
-}
-
-.pilot-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.72fr);
-  gap: 34px;
-  align-items: stretch;
-  margin-top: 28px;
-}
-
-.pilot-hero__copy {
-  min-height: 620px;
-  padding: 76px 64px;
-  border-radius: var(--radius-xl);
-  background:
-    linear-gradient(135deg, rgba(255, 253, 249, 0.96), rgba(246, 240, 231, 0.9)),
-    repeating-linear-gradient(90deg, rgba(23, 56, 71, 0.035) 0 1px, transparent 1px 44px);
-  border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.pilot-hero__copy::before {
-  content: "";
-  position: absolute;
-  inset: 22px 22px auto;
-  height: 7px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--brand), var(--brand-soft), var(--accent));
-}
-
-.pilot-hero__copy h1 {
-  max-width: 12ch;
-  font-size: clamp(2.8rem, 6.5vw, 5.8rem);
-  line-height: 0.98;
-}
-
-.pilot-hero__copy .lead {
-  max-width: 58ch;
-}
-
-.pilot-hero__panel {
-  padding: 48px 38px;
-  border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, rgba(13, 36, 48, 0.98), rgba(23, 56, 71, 0.96)),
-    var(--pilot-deep);
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 22px 70px rgba(13, 36, 48, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.pilot-hero__panel h2 {
-  margin-top: 34px;
-  color: #FFFFFF;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  line-height: 1.1;
-}
-
-.pilot-hero__panel p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.pilot-status {
-  align-self: flex-start;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(184, 145, 99, 0.22);
-  color: #f3d4ad;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.pilot-list {
-  list-style: none;
-  padding: 0;
-  margin: 36px 0 0;
-  display: grid;
-  gap: 12px;
-}
-
-.pilot-list li {
-  padding: 14px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 700;
-}
-
-.pilot-strip {
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 42px;
-  align-items: center;
-  padding: 42px 48px;
-  background: var(--surface-strong);
-  border: 1px solid var(--line);
-  box-shadow: 0 10px 40px rgba(13, 36, 48, 0.035);
-}
-
-.pilot-strip h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-}
-
-.pilot-strip p {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.pilot-example-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.pilot-example {
-  min-height: 220px;
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
-}
-
-.pilot-example:hover {
-  transform: translateY(-3px);
-  border-color: var(--line-strong);
-  box-shadow: var(--shadow);
-}
-
-.pilot-example span {
-  font-family: "IBM Plex Mono", monospace;
-  color: var(--accent);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-}
-
-.pilot-example h3 {
-  margin-top: 28px;
-}
-
-.pilot-example p {
-  margin-bottom: 0;
-}
-
-.pilot-form-layout {
-  align-items: start;
-}
-
-.pilot-consent {
-  padding: 18px 18px 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line);
-  background: rgba(184, 145, 99, 0.08);
-  margin: 20px 0;
-}
-
-.pilot-consent .inline-option {
-  align-items: flex-start;
-  margin-bottom: 0;
-}
-
-.pilot-consent input {
-  margin-top: 5px;
-}
-
-.pilot-side-note {
-  position: sticky;
-  top: 112px;
-}
-
-.pilot-mini-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 28px;
-  align-items: center;
-  margin-top: 10px;
-  padding: 34px 38px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
-  box-shadow: 0 10px 34px rgba(13, 36, 48, 0.035);
-}
-
-.pilot-mini-banner h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-}
-
-.pilot-mini-banner p {
-  max-width: 72ch;
-  margin-bottom: 0;
 }
 
 /* Forms */
@@ -1199,22 +990,7 @@ h3 {
   .brand-wordmark {
     height: 20px;
   }
-  .hero-split, .split-section, .contact-layout, .pilot-hero, .pilot-strip, .pilot-mini-banner,
-  .three-up, .two-up, .four-up, .two-column-copy { grid-template-columns: 1fr; }
-  .pilot-example-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pilot-hero__copy {
-    min-height: auto;
-    padding: 58px 34px;
-  }
-  .pilot-hero__copy h1 {
-    max-width: 13ch;
-  }
-  .pilot-hero__panel {
-    padding: 36px 30px;
-  }
-  .pilot-side-note {
-    position: static;
-  }
+  .hero-split, .split-section, .contact-layout, .three-up, .two-up, .four-up, .two-column-copy { grid-template-columns: 1fr; }
   .form-grid.two-columns { grid-template-columns: 1fr; }
   .hero-split {
     gap: 24px;
@@ -1250,22 +1026,6 @@ h3 {
 @media (max-width: 600px) {
   .hero-actions, .cta-actions { flex-direction: column; width: 100%; }
   .button, .hero-actions .button, .cta-actions .button { width: 100%; }
-  .pilot-hero__copy,
-  .pilot-hero__panel,
-  .pilot-strip,
-  .pilot-mini-banner {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .pilot-hero__copy h1 {
-    font-size: clamp(2.35rem, 13vw, 3.5rem);
-  }
-  .pilot-example-grid {
-    grid-template-columns: 1fr;
-  }
-  .pilot-example {
-    min-height: auto;
-  }
   .site-wrap {
     width: calc(100% - 24px);
     padding-top: 12px;

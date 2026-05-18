@@ -368,18 +368,6 @@ $email = cleanLine((string) ($_POST['email'] ?? ''));
 $whatsapp = cleanLine((string) ($_POST['whatsapp'] ?? ''));
 $businessProfile = cleanLine((string) ($_POST['business_profile'] ?? ''));
 $preferredContact = cleanLine((string) ($_POST['preferred_contact'] ?? 'email'));
-$solutionType = cleanLine((string) ($_POST['solution_type'] ?? ''));
-$leadSource = cleanLine((string) ($_POST['lead_source'] ?? 'site_form'));
-$campaign = cleanLine((string) ($_POST['campaign'] ?? ''));
-$sourcePage = cleanLine((string) ($_POST['source_page'] ?? ''));
-$utmSource = cleanLine((string) ($_POST['utm_source'] ?? ''));
-$utmMedium = cleanLine((string) ($_POST['utm_medium'] ?? ''));
-$utmCampaign = cleanLine((string) ($_POST['utm_campaign'] ?? ''));
-$utmContent = cleanLine((string) ($_POST['utm_content'] ?? ''));
-$utmTerm = cleanLine((string) ($_POST['utm_term'] ?? ''));
-$landingPage = cleanLine((string) ($_POST['landing_page'] ?? ''));
-$referrer = cleanLine((string) ($_POST['referrer'] ?? ''));
-$casePermission = cleanLine((string) ($_POST['case_permission'] ?? ''));
 $message = trim((string) ($_POST['message'] ?? ''));
 $honeypot = trim((string) ($_POST['website'] ?? ''));
 
@@ -405,33 +393,16 @@ if ($preferredContact === 'email' && $email === '') {
     respond(false, 'Se preferir retorno por e-mail, informe um e-mail válido.');
 }
 
-if ($campaign === 'projeto_piloto_mei' && $casePermission !== 'accepted') {
-    respond(false, 'Para participar do projeto piloto, confirme a condição de documentação do caso com aprovação prévia.');
-}
-
 $name = shorten($name, 120);
 $business = shorten($business, 160);
 $email = shorten($email, 160);
 $whatsapp = shorten(formatPhone($whatsappDigits), 60);
 $businessProfile = shorten($businessProfile, 80);
 $preferredContact = shorten($preferredContact, 40);
-$solutionType = shorten($solutionType, 120);
-$leadSource = shorten($leadSource !== '' ? $leadSource : 'site_form', 120);
-$campaign = shorten($campaign, 120);
-$sourcePage = shorten($sourcePage, 240);
-$utmSource = shorten($utmSource, 120);
-$utmMedium = shorten($utmMedium, 120);
-$utmCampaign = shorten($utmCampaign, 160);
-$utmContent = shorten($utmContent, 160);
-$utmTerm = shorten($utmTerm, 160);
-$landingPage = shorten($landingPage, 400);
-$referrer = shorten($referrer, 400);
-$casePermission = shorten($casePermission, 40);
 $message = shorten($message, 5000);
 
 $subjectName = $business !== '' ? $business : $name;
-$subjectPrefix = $campaign === 'projeto_piloto_mei' ? 'Novo candidato ao Projeto Piloto' : 'Novo pedido de orçamento';
-$subjectText = "{$subjectPrefix} - {$subjectName}";
+$subjectText = "Novo pedido de orçamento - {$subjectName}";
 $subject = mimeHeader($subjectText);
 
 $bodyLines = [
@@ -442,22 +413,12 @@ $bodyLines = [
     'E-mail: ' . ($email !== '' ? $email : 'Não informado'),
     'WhatsApp: ' . $whatsapp,
     'Perfil do negócio: ' . ($businessProfile !== '' ? $businessProfile : 'Não informado'),
-    'Tipo de solução desejada: ' . ($solutionType !== '' ? $solutionType : 'Não informado'),
     'Canal preferido para retorno: ' . ($preferredContact !== '' ? $preferredContact : 'email'),
-    'Origem: ' . $leadSource,
-    'Campanha: ' . ($campaign !== '' ? $campaign : 'Não informada'),
-    'Página de origem: ' . ($sourcePage !== '' ? $sourcePage : 'Não informada'),
-    'UTM source: ' . ($utmSource !== '' ? $utmSource : 'Não informado'),
-    'UTM medium: ' . ($utmMedium !== '' ? $utmMedium : 'Não informado'),
-    'UTM campaign: ' . ($utmCampaign !== '' ? $utmCampaign : 'Não informado'),
-    'UTM content: ' . ($utmContent !== '' ? $utmContent : 'Não informado'),
-    'UTM term: ' . ($utmTerm !== '' ? $utmTerm : 'Não informado'),
-    'Landing page: ' . ($landingPage !== '' ? $landingPage : 'Não informada'),
-    'Referrer: ' . ($referrer !== '' ? $referrer : 'Não informado'),
-    'Autorização para case com aprovação prévia: ' . ($casePermission === 'accepted' ? 'Sim' : 'Não informada'),
     '',
     'Necessidade informada:',
     $message,
+    '',
+    'Origem: formulário do site RITO',
 ];
 
 $headers = [
@@ -478,19 +439,7 @@ $leadPayload = [
     'email' => $email !== '' ? $email : null,
     'whatsapp' => $whatsapp,
     'business_profile' => $businessProfile !== '' ? $businessProfile : null,
-    'solution_type' => $solutionType !== '' ? $solutionType : null,
     'preferred_contact' => $preferredContact !== '' ? $preferredContact : 'email',
-    'lead_source' => $leadSource,
-    'campaign' => $campaign !== '' ? $campaign : null,
-    'source_page' => $sourcePage !== '' ? $sourcePage : null,
-    'utm_source' => $utmSource !== '' ? $utmSource : null,
-    'utm_medium' => $utmMedium !== '' ? $utmMedium : null,
-    'utm_campaign' => $utmCampaign !== '' ? $utmCampaign : null,
-    'utm_content' => $utmContent !== '' ? $utmContent : null,
-    'utm_term' => $utmTerm !== '' ? $utmTerm : null,
-    'landing_page' => $landingPage !== '' ? $landingPage : null,
-    'referrer' => $referrer !== '' ? $referrer : null,
-    'case_permission' => $casePermission === 'accepted',
     'message' => $message,
     'ip' => cleanLine((string) ($_SERVER['REMOTE_ADDR'] ?? '')),
     'user_agent' => cleanLine((string) ($_SERVER['HTTP_USER_AGENT'] ?? '')),
