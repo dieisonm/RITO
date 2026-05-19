@@ -19,6 +19,7 @@ cleanup() {
 trap cleanup EXIT
 
 bash "$ROOT_DIR/scripts/build_dist.sh"
+python3 "$ROOT_DIR/scripts/validate_dist.py" --dist "$ROOT_DIR/dist"
 
 if git ls-remote --exit-code --heads "$REMOTE_URL" "$HOSTINGER_BRANCH" >/dev/null 2>&1; then
   git clone --branch "$HOSTINGER_BRANCH" --single-branch "$REMOTE_URL" "$TMP_DIR" >/dev/null 2>&1
@@ -45,3 +46,4 @@ git -C "$TMP_DIR" commit -m "Deploy Hostinger site from ${SOURCE_SHA}" >/dev/nul
 git -C "$TMP_DIR" push origin "$HOSTINGER_BRANCH"
 
 echo "Branch $HOSTINGER_BRANCH publicada com sucesso."
+echo "Proximo passo: rode python3 scripts/verify_live_site.py para confirmar se a Hostinger aplicou o deploy."

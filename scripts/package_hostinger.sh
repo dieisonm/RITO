@@ -6,6 +6,7 @@ RELEASE_DIR="$ROOT_DIR/release"
 ZIP_PATH="$RELEASE_DIR/ritosistemas-hostinger.zip"
 
 bash "$ROOT_DIR/scripts/build_dist.sh"
+python3 "$ROOT_DIR/scripts/validate_dist.py" --dist "$ROOT_DIR/dist"
 
 rm -rf "$RELEASE_DIR"
 mkdir -p "$RELEASE_DIR"
