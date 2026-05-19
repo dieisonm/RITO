@@ -1,8 +1,40 @@
 (function () {
+  const GA_MEASUREMENT_ID = "G-ZTLGY2QWVR";
   const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  const CLICK_ID_KEYS = ["gclid", "gbraid", "wbraid", "fbclid", "msclkid"];
+  const ATTRIBUTION_KEYS = [...UTM_KEYS, ...CLICK_ID_KEYS];
   const STORAGE_KEY = "rito_attribution";
 
   window.dataLayer = window.dataLayer || [];
+
+  function installGoogleAnalytics() {
+    if (!GA_MEASUREMENT_ID) {
+      return;
+    }
+
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID, {
+      send_page_view: false,
+    });
+
+    if (document.querySelector(`script[data-rito-ga4="${GA_MEASUREMENT_ID}"]`)) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
+      GA_MEASUREMENT_ID
+    )}`;
+    script.dataset.ritoGa4 = GA_MEASUREMENT_ID;
+    document.head.appendChild(script);
+  }
 
   function readStoredAttribution() {
     try {
@@ -28,9 +60,9 @@
     const params = new URLSearchParams(window.location.search);
     const stored = readStoredAttribution();
     const current = {};
-    const hasCampaignParams = UTM_KEYS.some((key) => params.has(key));
+    const hasCampaignParams = ATTRIBUTION_KEYS.some((key) => params.has(key));
 
-    UTM_KEYS.forEach((key) => {
+    ATTRIBUTION_KEYS.forEach((key) => {
       const value = params.get(key);
 
       if (value) {
@@ -58,6 +90,30 @@
 
   const attribution = currentAttribution();
 
+  installGoogleAnalytics();
+
+  function gaEventName(eventName) {
+    if (eventName === "rito_page_view") {
+      return "page_view";
+    }
+
+    return eventName;
+  }
+
+  function sendToGoogleAnalytics(eventName, eventPayload) {
+    if (typeof window.gtag !== "function") {
+      return;
+    }
+
+    const { event, ...params } = eventPayload;
+
+    window.gtag("event", gaEventName(eventName), {
+      event_category: "rito_site",
+      page_location: window.location.href,
+      ...params,
+    });
+  }
+
   function pushEvent(eventName, payload) {
     const eventPayload = {
       event: eventName,
@@ -68,6 +124,7 @@
     };
 
     window.dataLayer.push(eventPayload);
+    sendToGoogleAnalytics(eventName, eventPayload);
     return eventPayload;
   }
 
@@ -92,7 +149,7 @@
 
   function enrichForms() {
     document.querySelectorAll('form[method="post"], form:not([method])').forEach((form) => {
-      UTM_KEYS.forEach((key) => {
+      ATTRIBUTION_KEYS.forEach((key) => {
         setHiddenValue(form, key, attribution[key]);
       });
 

@@ -377,6 +377,11 @@ $utmMedium = cleanLine((string) ($_POST['utm_medium'] ?? ''));
 $utmCampaign = cleanLine((string) ($_POST['utm_campaign'] ?? ''));
 $utmContent = cleanLine((string) ($_POST['utm_content'] ?? ''));
 $utmTerm = cleanLine((string) ($_POST['utm_term'] ?? ''));
+$gclid = cleanLine((string) ($_POST['gclid'] ?? ''));
+$gbraid = cleanLine((string) ($_POST['gbraid'] ?? ''));
+$wbraid = cleanLine((string) ($_POST['wbraid'] ?? ''));
+$fbclid = cleanLine((string) ($_POST['fbclid'] ?? ''));
+$msclkid = cleanLine((string) ($_POST['msclkid'] ?? ''));
 $landingPage = cleanLine((string) ($_POST['landing_page'] ?? ''));
 $referrer = cleanLine((string) ($_POST['referrer'] ?? ''));
 $casePermission = cleanLine((string) ($_POST['case_permission'] ?? ''));
@@ -424,6 +429,11 @@ $utmMedium = shorten($utmMedium, 120);
 $utmCampaign = shorten($utmCampaign, 160);
 $utmContent = shorten($utmContent, 160);
 $utmTerm = shorten($utmTerm, 160);
+$gclid = shorten($gclid, 220);
+$gbraid = shorten($gbraid, 220);
+$wbraid = shorten($wbraid, 220);
+$fbclid = shorten($fbclid, 400);
+$msclkid = shorten($msclkid, 220);
 $landingPage = shorten($landingPage, 400);
 $referrer = shorten($referrer, 400);
 $casePermission = shorten($casePermission, 40);
@@ -452,6 +462,11 @@ $bodyLines = [
     'UTM campaign: ' . ($utmCampaign !== '' ? $utmCampaign : 'Não informado'),
     'UTM content: ' . ($utmContent !== '' ? $utmContent : 'Não informado'),
     'UTM term: ' . ($utmTerm !== '' ? $utmTerm : 'Não informado'),
+    'GCLID: ' . ($gclid !== '' ? $gclid : 'Não informado'),
+    'GBRAID: ' . ($gbraid !== '' ? $gbraid : 'Não informado'),
+    'WBRAID: ' . ($wbraid !== '' ? $wbraid : 'Não informado'),
+    'FBCLID: ' . ($fbclid !== '' ? $fbclid : 'Não informado'),
+    'MSCLKID: ' . ($msclkid !== '' ? $msclkid : 'Não informado'),
     'Landing page: ' . ($landingPage !== '' ? $landingPage : 'Não informada'),
     'Referrer: ' . ($referrer !== '' ? $referrer : 'Não informado'),
     'Autorização para case com aprovação prévia: ' . ($casePermission === 'accepted' ? 'Sim' : 'Não informada'),
@@ -488,6 +503,11 @@ $leadPayload = [
     'utm_campaign' => $utmCampaign !== '' ? $utmCampaign : null,
     'utm_content' => $utmContent !== '' ? $utmContent : null,
     'utm_term' => $utmTerm !== '' ? $utmTerm : null,
+    'gclid' => $gclid !== '' ? $gclid : null,
+    'gbraid' => $gbraid !== '' ? $gbraid : null,
+    'wbraid' => $wbraid !== '' ? $wbraid : null,
+    'fbclid' => $fbclid !== '' ? $fbclid : null,
+    'msclkid' => $msclkid !== '' ? $msclkid : null,
     'landing_page' => $landingPage !== '' ? $landingPage : null,
     'referrer' => $referrer !== '' ? $referrer : null,
     'case_permission' => $casePermission === 'accepted',
