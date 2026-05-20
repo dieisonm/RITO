@@ -1,9 +1,20 @@
 (function () {
   const GA_MEASUREMENT_ID = "G-ZTLGY2QWVR";
-  const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-  const CLICK_ID_KEYS = ["gclid", "gbraid", "wbraid", "fbclid", "msclkid"];
+  const UTM_KEYS = [
+    "utm_id",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_source_platform",
+    "utm_content",
+    "utm_term",
+    "utm_creative_format",
+    "utm_marketing_tactic",
+  ];
+  const CLICK_ID_KEYS = ["gclid", "gbraid", "wbraid", "fbclid", "msclkid", "li_fat_id", "ttclid"];
   const ATTRIBUTION_KEYS = [...UTM_KEYS, ...CLICK_ID_KEYS];
   const STORAGE_KEY = "rito_attribution";
+  const STORAGE_TTL_MS = 90 * 24 * 60 * 60 * 1000;
 
   window.dataLayer = window.dataLayer || [];
 
@@ -37,6 +48,22 @@
   }
 
   function readStoredAttribution() {
+    const now = Date.now();
+
+    try {
+      const stored = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "{}") || {};
+
+      if (stored.expires_at && stored.expires_at < now) {
+        window.localStorage.removeItem(STORAGE_KEY);
+      } else if (stored.values) {
+        return stored.values || {};
+      } else if (Object.keys(stored).length > 0) {
+        return stored;
+      }
+    } catch (error) {
+      // localStorage can be blocked; fall back to sessionStorage below.
+    }
+
     try {
       return JSON.parse(window.sessionStorage.getItem(STORAGE_KEY) || "{}") || {};
     } catch (error) {
@@ -45,6 +72,18 @@
   }
 
   function writeStoredAttribution(attribution) {
+    const stored = {
+      values: attribution,
+      updated_at: Date.now(),
+      expires_at: Date.now() + STORAGE_TTL_MS,
+    };
+
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
+    } catch (error) {
+      // Some browsers block localStorage; tracking should never break the page.
+    }
+
     try {
       window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(attribution));
     } catch (error) {
@@ -83,6 +122,22 @@
       hasCampaignParams || !stored.landing_page
         ? { ...stored, ...current }
         : { ...current, ...stored };
+
+    if (!attribution.first_landing_page) {
+      attribution.first_landing_page = stored.first_landing_page || stored.landing_page || current.landing_page;
+    }
+
+    if (!attribution.first_referrer && (stored.first_referrer || stored.referrer || current.referrer)) {
+      attribution.first_referrer = stored.first_referrer || stored.referrer || current.referrer;
+    }
+
+    ATTRIBUTION_KEYS.forEach((key) => {
+      const firstKey = `first_${key}`;
+
+      if (!attribution[firstKey] && (stored[firstKey] || stored[key] || current[key])) {
+        attribution[firstKey] = stored[firstKey] || stored[key] || current[key];
+      }
+    });
 
     writeStoredAttribution(attribution);
     return attribution;
@@ -155,6 +210,12 @@
 
       setHiddenValue(form, "landing_page", attribution.landing_page);
       setHiddenValue(form, "referrer", attribution.referrer);
+      setHiddenValue(form, "first_landing_page", attribution.first_landing_page);
+      setHiddenValue(form, "first_referrer", attribution.first_referrer);
+
+      ATTRIBUTION_KEYS.forEach((key) => {
+        setHiddenValue(form, `first_${key}`, attribution[`first_${key}`]);
+      });
     });
   }
 
