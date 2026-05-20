@@ -19,12 +19,39 @@ SOURCE_BRANCH="unknown"
 SOURCE_COMMITTED_AT=""
 SOURCE_DIRTY="unknown"
 
-if git -C "$ROOT_DIR" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  SOURCE_SHA="$(git -C "$ROOT_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
-  SOURCE_SHORT_SHA="$(git -C "$ROOT_DIR" rev-parse --short HEAD 2>/dev/null || echo unknown)"
-  SOURCE_BRANCH="$(git -C "$ROOT_DIR" rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)"
-  SOURCE_COMMITTED_AT="$(git -C "$ROOT_DIR" show -s --format=%cI HEAD 2>/dev/null || echo "")"
-  if [[ -n "$(git -C "$ROOT_DIR" status --porcelain -- site logos scripts/build_dist.sh 2>/dev/null || true)" ]]; then
+git_with_timeout() {
+  local timeout_seconds="${GIT_METADATA_TIMEOUT_SECONDS:-4}"
+  local tmp_file pid watcher status
+
+  tmp_file="$(mktemp)"
+  (GIT_OPTIONAL_LOCKS=0 git -C "$ROOT_DIR" "$@" >"$tmp_file" 2>/dev/null) &
+  pid="$!"
+  (sleep "$timeout_seconds"; kill "$pid" 2>/dev/null || true) &
+  watcher="$!"
+
+  if wait "$pid"; then
+    status=0
+  else
+    status="$?"
+  fi
+
+  kill "$watcher" 2>/dev/null || true
+  wait "$watcher" 2>/dev/null || true
+
+  if [[ "$status" -eq 0 ]]; then
+    cat "$tmp_file"
+  fi
+
+  rm -f "$tmp_file"
+  return "$status"
+}
+
+if [[ "${SKIP_GIT_METADATA:-0}" != "1" ]] && git_with_timeout rev-parse --is-inside-work-tree >/dev/null; then
+  SOURCE_SHA="$(git_with_timeout rev-parse HEAD || echo unknown)"
+  SOURCE_SHORT_SHA="$(git_with_timeout rev-parse --short HEAD || echo unknown)"
+  SOURCE_BRANCH="$(git_with_timeout rev-parse --abbrev-ref HEAD || echo unknown)"
+  SOURCE_COMMITTED_AT="$(git_with_timeout show -s --format=%cI HEAD || echo "")"
+  if [[ -n "$(git_with_timeout status --porcelain -- site logos scripts/build_dist.sh || true)" ]]; then
     SOURCE_DIRTY="true"
   else
     SOURCE_DIRTY="false"
