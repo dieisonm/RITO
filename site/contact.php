@@ -372,18 +372,33 @@ $solutionType = cleanLine((string) ($_POST['solution_type'] ?? ''));
 $leadSource = cleanLine((string) ($_POST['lead_source'] ?? 'site_form'));
 $campaign = cleanLine((string) ($_POST['campaign'] ?? ''));
 $sourcePage = cleanLine((string) ($_POST['source_page'] ?? ''));
+$utmId = cleanLine((string) ($_POST['utm_id'] ?? ''));
 $utmSource = cleanLine((string) ($_POST['utm_source'] ?? ''));
 $utmMedium = cleanLine((string) ($_POST['utm_medium'] ?? ''));
 $utmCampaign = cleanLine((string) ($_POST['utm_campaign'] ?? ''));
+$utmSourcePlatform = cleanLine((string) ($_POST['utm_source_platform'] ?? ''));
 $utmContent = cleanLine((string) ($_POST['utm_content'] ?? ''));
 $utmTerm = cleanLine((string) ($_POST['utm_term'] ?? ''));
+$utmCreativeFormat = cleanLine((string) ($_POST['utm_creative_format'] ?? ''));
+$utmMarketingTactic = cleanLine((string) ($_POST['utm_marketing_tactic'] ?? ''));
 $gclid = cleanLine((string) ($_POST['gclid'] ?? ''));
 $gbraid = cleanLine((string) ($_POST['gbraid'] ?? ''));
 $wbraid = cleanLine((string) ($_POST['wbraid'] ?? ''));
 $fbclid = cleanLine((string) ($_POST['fbclid'] ?? ''));
 $msclkid = cleanLine((string) ($_POST['msclkid'] ?? ''));
+$liFatId = cleanLine((string) ($_POST['li_fat_id'] ?? ''));
+$ttclid = cleanLine((string) ($_POST['ttclid'] ?? ''));
 $landingPage = cleanLine((string) ($_POST['landing_page'] ?? ''));
 $referrer = cleanLine((string) ($_POST['referrer'] ?? ''));
+$firstLandingPage = cleanLine((string) ($_POST['first_landing_page'] ?? ''));
+$firstReferrer = cleanLine((string) ($_POST['first_referrer'] ?? ''));
+$firstUtmId = cleanLine((string) ($_POST['first_utm_id'] ?? ''));
+$firstUtmSource = cleanLine((string) ($_POST['first_utm_source'] ?? ''));
+$firstUtmMedium = cleanLine((string) ($_POST['first_utm_medium'] ?? ''));
+$firstUtmCampaign = cleanLine((string) ($_POST['first_utm_campaign'] ?? ''));
+$firstUtmSourcePlatform = cleanLine((string) ($_POST['first_utm_source_platform'] ?? ''));
+$firstUtmContent = cleanLine((string) ($_POST['first_utm_content'] ?? ''));
+$firstUtmTerm = cleanLine((string) ($_POST['first_utm_term'] ?? ''));
 $casePermission = cleanLine((string) ($_POST['case_permission'] ?? ''));
 $message = trim((string) ($_POST['message'] ?? ''));
 $honeypot = trim((string) ($_POST['website'] ?? ''));
@@ -424,18 +439,33 @@ $solutionType = shorten($solutionType, 120);
 $leadSource = shorten($leadSource !== '' ? $leadSource : 'site_form', 120);
 $campaign = shorten($campaign, 120);
 $sourcePage = shorten($sourcePage, 240);
+$utmId = shorten($utmId, 160);
 $utmSource = shorten($utmSource, 120);
 $utmMedium = shorten($utmMedium, 120);
 $utmCampaign = shorten($utmCampaign, 160);
+$utmSourcePlatform = shorten($utmSourcePlatform, 120);
 $utmContent = shorten($utmContent, 160);
 $utmTerm = shorten($utmTerm, 160);
+$utmCreativeFormat = shorten($utmCreativeFormat, 160);
+$utmMarketingTactic = shorten($utmMarketingTactic, 160);
 $gclid = shorten($gclid, 220);
 $gbraid = shorten($gbraid, 220);
 $wbraid = shorten($wbraid, 220);
 $fbclid = shorten($fbclid, 400);
 $msclkid = shorten($msclkid, 220);
+$liFatId = shorten($liFatId, 220);
+$ttclid = shorten($ttclid, 220);
 $landingPage = shorten($landingPage, 400);
 $referrer = shorten($referrer, 400);
+$firstLandingPage = shorten($firstLandingPage, 400);
+$firstReferrer = shorten($firstReferrer, 400);
+$firstUtmId = shorten($firstUtmId, 160);
+$firstUtmSource = shorten($firstUtmSource, 120);
+$firstUtmMedium = shorten($firstUtmMedium, 120);
+$firstUtmCampaign = shorten($firstUtmCampaign, 160);
+$firstUtmSourcePlatform = shorten($firstUtmSourcePlatform, 120);
+$firstUtmContent = shorten($firstUtmContent, 160);
+$firstUtmTerm = shorten($firstUtmTerm, 160);
 $casePermission = shorten($casePermission, 40);
 $message = shorten($message, 5000);
 
@@ -457,18 +487,33 @@ $bodyLines = [
     'Origem: ' . $leadSource,
     'Campanha: ' . ($campaign !== '' ? $campaign : 'Não informada'),
     'Página de origem: ' . ($sourcePage !== '' ? $sourcePage : 'Não informada'),
+    'UTM ID: ' . ($utmId !== '' ? $utmId : 'Não informado'),
     'UTM source: ' . ($utmSource !== '' ? $utmSource : 'Não informado'),
     'UTM medium: ' . ($utmMedium !== '' ? $utmMedium : 'Não informado'),
     'UTM campaign: ' . ($utmCampaign !== '' ? $utmCampaign : 'Não informado'),
+    'UTM source platform: ' . ($utmSourcePlatform !== '' ? $utmSourcePlatform : 'Não informado'),
     'UTM content: ' . ($utmContent !== '' ? $utmContent : 'Não informado'),
     'UTM term: ' . ($utmTerm !== '' ? $utmTerm : 'Não informado'),
+    'UTM creative format: ' . ($utmCreativeFormat !== '' ? $utmCreativeFormat : 'Não informado'),
+    'UTM marketing tactic: ' . ($utmMarketingTactic !== '' ? $utmMarketingTactic : 'Não informado'),
     'GCLID: ' . ($gclid !== '' ? $gclid : 'Não informado'),
     'GBRAID: ' . ($gbraid !== '' ? $gbraid : 'Não informado'),
     'WBRAID: ' . ($wbraid !== '' ? $wbraid : 'Não informado'),
     'FBCLID: ' . ($fbclid !== '' ? $fbclid : 'Não informado'),
     'MSCLKID: ' . ($msclkid !== '' ? $msclkid : 'Não informado'),
+    'LI FAT ID: ' . ($liFatId !== '' ? $liFatId : 'Não informado'),
+    'TTCLID: ' . ($ttclid !== '' ? $ttclid : 'Não informado'),
     'Landing page: ' . ($landingPage !== '' ? $landingPage : 'Não informada'),
     'Referrer: ' . ($referrer !== '' ? $referrer : 'Não informado'),
+    'Primeira landing page: ' . ($firstLandingPage !== '' ? $firstLandingPage : 'Não informada'),
+    'Primeiro referrer: ' . ($firstReferrer !== '' ? $firstReferrer : 'Não informado'),
+    'Primeira UTM ID: ' . ($firstUtmId !== '' ? $firstUtmId : 'Não informada'),
+    'Primeira UTM source: ' . ($firstUtmSource !== '' ? $firstUtmSource : 'Não informada'),
+    'Primeira UTM medium: ' . ($firstUtmMedium !== '' ? $firstUtmMedium : 'Não informada'),
+    'Primeira UTM campaign: ' . ($firstUtmCampaign !== '' ? $firstUtmCampaign : 'Não informada'),
+    'Primeira UTM source platform: ' . ($firstUtmSourcePlatform !== '' ? $firstUtmSourcePlatform : 'Não informada'),
+    'Primeira UTM content: ' . ($firstUtmContent !== '' ? $firstUtmContent : 'Não informada'),
+    'Primeira UTM term: ' . ($firstUtmTerm !== '' ? $firstUtmTerm : 'Não informada'),
     'Autorização para case com aprovação prévia: ' . ($casePermission === 'accepted' ? 'Sim' : 'Não informada'),
     '',
     'Necessidade informada:',
@@ -498,18 +543,33 @@ $leadPayload = [
     'lead_source' => $leadSource,
     'campaign' => $campaign !== '' ? $campaign : null,
     'source_page' => $sourcePage !== '' ? $sourcePage : null,
+    'utm_id' => $utmId !== '' ? $utmId : null,
     'utm_source' => $utmSource !== '' ? $utmSource : null,
     'utm_medium' => $utmMedium !== '' ? $utmMedium : null,
     'utm_campaign' => $utmCampaign !== '' ? $utmCampaign : null,
+    'utm_source_platform' => $utmSourcePlatform !== '' ? $utmSourcePlatform : null,
     'utm_content' => $utmContent !== '' ? $utmContent : null,
     'utm_term' => $utmTerm !== '' ? $utmTerm : null,
+    'utm_creative_format' => $utmCreativeFormat !== '' ? $utmCreativeFormat : null,
+    'utm_marketing_tactic' => $utmMarketingTactic !== '' ? $utmMarketingTactic : null,
     'gclid' => $gclid !== '' ? $gclid : null,
     'gbraid' => $gbraid !== '' ? $gbraid : null,
     'wbraid' => $wbraid !== '' ? $wbraid : null,
     'fbclid' => $fbclid !== '' ? $fbclid : null,
     'msclkid' => $msclkid !== '' ? $msclkid : null,
+    'li_fat_id' => $liFatId !== '' ? $liFatId : null,
+    'ttclid' => $ttclid !== '' ? $ttclid : null,
     'landing_page' => $landingPage !== '' ? $landingPage : null,
     'referrer' => $referrer !== '' ? $referrer : null,
+    'first_landing_page' => $firstLandingPage !== '' ? $firstLandingPage : null,
+    'first_referrer' => $firstReferrer !== '' ? $firstReferrer : null,
+    'first_utm_id' => $firstUtmId !== '' ? $firstUtmId : null,
+    'first_utm_source' => $firstUtmSource !== '' ? $firstUtmSource : null,
+    'first_utm_medium' => $firstUtmMedium !== '' ? $firstUtmMedium : null,
+    'first_utm_campaign' => $firstUtmCampaign !== '' ? $firstUtmCampaign : null,
+    'first_utm_source_platform' => $firstUtmSourcePlatform !== '' ? $firstUtmSourcePlatform : null,
+    'first_utm_content' => $firstUtmContent !== '' ? $firstUtmContent : null,
+    'first_utm_term' => $firstUtmTerm !== '' ? $firstUtmTerm : null,
     'case_permission' => $casePermission === 'accepted',
     'message' => $message,
     'ip' => cleanLine((string) ($_SERVER['REMOTE_ADDR'] ?? '')),
