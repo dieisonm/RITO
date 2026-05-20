@@ -152,6 +152,10 @@
       return "page_view";
     }
 
+    if (eventName === "generate_lead_form") {
+      return "generate_lead";
+    }
+
     return eventName;
   }
 
