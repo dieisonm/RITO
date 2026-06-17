@@ -72,7 +72,7 @@ def resolve_local_url(dist_dir: Path, html_file: Path, raw_url: str) -> Path | N
         return None
 
     if url_path == "/":
-        url_path = "/index.html"
+        return dist_dir / "index.html"
 
     if raw_url.endswith("/"):
         url_path = posixpath.join(url_path, "index.html")
