@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Canonical host/protocol for SEO: keep one indexable version of every URL.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.ritosistemas\.com$ [NC]
+RewriteRule ^(.*)$ https://ritosistemas.com/$1 [R=301,L]
+
+# Avoid indexing /index.html as a duplicate of the homepage.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://ritosistemas.com/ [R=301,L]
