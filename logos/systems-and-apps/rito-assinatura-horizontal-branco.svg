@@ -1,0 +1,18 @@
+<svg id="sig-dark" viewBox="0 0 800 180" width="520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="rgrad-sig2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2a5570"/>
+            <stop offset="100%" stop-color="#173847"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="10" width="28" height="108" rx="3" fill="url(#rgrad-sig2)"/>
+        <rect x="10" y="10" width="82" height="28" rx="3" fill="url(#rgrad-sig2)"/>
+        <rect x="10" y="68" width="74" height="24" rx="3" fill="url(#rgrad-sig2)"/>
+        <rect x="88" y="10" width="26" height="70" rx="13" fill="url(#rgrad-sig2)"/>
+        <polygon points="38,92 96,92 130,130 82,130" fill="url(#rgrad-sig2)"/>
+        <polygon points="10,92 38,92 38,130 10,130" fill="#0d2430"/>
+        <polygon points="12,118 36,92 36,128" fill="url(#rgrad-sig2)"/>
+        <rect x="168" y="24" width="1" height="100" fill="rgba(244,240,233,0.12)"/>
+        <text x="196" y="82" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="68" font-weight="900" letter-spacing="-1" fill="#f4f0e9">RITO</text>
+        <text x="198" y="128" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="22" font-weight="400" letter-spacing="10" fill="rgba(244,240,233,0.4)">SISTEMAS</text>
+      </svg>

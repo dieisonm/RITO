@@ -1,0 +1,33 @@
+services:
+  waha:
+    image: ${WAHA_IMAGE:-devlikeapro/waha:arm}
+    container_name: rito-waha
+    restart: unless-stopped
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      WAHA_WORKER_ID: ${WAHA_WORKER_ID:-rito-waha}
+      WHATSAPP_DEFAULT_ENGINE: ${WHATSAPP_DEFAULT_ENGINE:-WEBJS}
+      WAHA_PRINT_QR: ${WAHA_PRINT_QR:-True}
+    volumes:
+      - ./.sessions:/app/.sessions
+    depends_on:
+      - webhook
+
+  webhook:
+    image: python:3.12-slim
+    container_name: rito-waha-webhook
+    restart: unless-stopped
+    working_dir: /workspace
+    command: python3 -u scripts/whatsapp_waha_webhook.py serve --host 0.0.0.0 --port 8787
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ../../../../:/workspace

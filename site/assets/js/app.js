@@ -287,6 +287,10 @@ if (contactForm) {
       return;
     }
 
+    if (typeof window.ritoRefreshTrackingFields === "function") {
+      window.ritoRefreshTrackingFields();
+    }
+
     const formData = new FormData(contactForm);
 
     if (submitButton) {

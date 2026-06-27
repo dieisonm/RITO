@@ -3,6 +3,7 @@
 ## Identidade
 
 - Nome comercial: RITO Sistemas
+- CNPJ: `66.723.374/0001-43`
 - Assinatura institucional: Rotinas Inteligentes de Tecnologia e Operacao
 - Dominio principal: `ritosistemas.com`
 - Dominio secundario: `ritosistemas.com.br` redirecionando para o `.com`
@@ -17,16 +18,16 @@
 
 ## Posicionamento
 
-A RITO Sistemas desenvolve software sob medida, automacoes e controles personalizados para resolver problemas reais de micro e pequenas empresas.
+A RITO Sistemas desenvolve solucoes sob medida, como software, automacoes, controles personalizados e sites institucionais, para resolver problemas reais de micro e pequenas empresas.
 
 ## Proposta de valor resumida
 
-A RITO Sistemas cria software sob medida, automacoes e controles personalizados para ajudar micro e pequenas empresas a organizar rotinas, reduzir trabalho manual e operar com mais clareza e eficiencia.
+A RITO Sistemas cria solucoes sob medida, como software, automacoes, controles personalizados e sites institucionais, para ajudar micro e pequenas empresas a organizar rotinas, reduzir trabalho manual, fortalecer sua presenca digital e operar com mais clareza e eficiencia.
 
 ## Proposta central
 
 1. Entender uma rotina que hoje e manual, confusa ou demorada.
-2. Transformar isso em um sistema, painel, automacao ou ferramenta pratica.
+2. Transformar isso em um sistema, site, painel, automacao ou ferramenta pratica.
 3. Entregar uma solucao acessivel, objetiva e util no dia a dia.
 
 ## Slogans e headlines
@@ -36,6 +37,7 @@ A RITO Sistemas cria software sob medida, automacoes e controles personalizados 
 - Apoio: Solucoes inteligentes para rotinas e operacoes
 - Apoio: Menos trabalho manual, mais controle
 - Apoio: Tecnologia sob medida para problemas reais
+- Apoio: Sites institucionais e solucoes sob medida para pequenos negocios
 - Alternativa: Tecnologia sob medida para simplificar a rotina da sua empresa
 - Alternativa: Sistemas e automacoes para resolver problemas reais do dia a dia
 - Alternativa: Menos trabalho manual. Mais controle. Mais eficiencia.

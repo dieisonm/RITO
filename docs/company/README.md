@@ -53,9 +53,9 @@ Centralizar os documentos que sustentam a empresa em frentes complementares:
 
 Os documentos que continuam como base principal do projeto são:
 
-- [`docs/brand-foundation.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/brand-foundation.md)
-- [`docs/site-content.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/site-content.md)
-- [`README.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/README.md)
+- [`docs/brand-foundation.md`](../../docs/brand-foundation.md)
+- [`docs/site-content.md`](../../docs/site-content.md)
+- [`README.md`](../../README.md)
 
 ## Regra de manutenção
 

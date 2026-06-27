@@ -1,0 +1,35 @@
+{
+  "businessId": "1604102843981120",
+  "assetId": "1081810898346900",
+  "shareToAccount": "ritosistemas",
+  "timezoneId": "America/Sao_Paulo",
+  "profileDir": "../../scripts/meta-story-scheduler/.auth/rito-meta-profile",
+  "headless": false,
+  "slowMoMs": 120,
+  "pacing": {
+    "afterComposerLoadMs": 1200,
+    "afterMediaClearMs": 500,
+    "afterMediaUploadMs": 1500,
+    "afterScheduleToggleMs": 400,
+    "afterDateSetMs": 400,
+    "afterTimeSetMs": 400,
+    "beforeScheduleClickMs": 1200,
+    "afterScheduleSuccessMs": 1000,
+    "betweenStoriesMs": 2000,
+    "stepPauseMs": 180
+  },
+  "stories": [
+    {
+      "label": "Bastidor bom evita retrabalho",
+      "date": "2026-05-20",
+      "time": "09:00",
+      "imagePath": "../../deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/01-bastidor-bom-evita-retrabalho.png"
+    },
+    {
+      "label": "Projeto piloto",
+      "date": "2026-05-20",
+      "time": "17:00",
+      "imagePath": "../../deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test/01-projeto-piloto-story-codex-imagegen-1080x1920.png"
+    }
+  ]
+}

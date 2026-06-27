@@ -1,11 +1,19 @@
 .DS_Store
+__pycache__/
+*.py[cod]
+.codex-root-access-test
+**/.codex-access-test
 dist/
 release/
 .colima/
 site/storage/contact_requests.jsonl
 .hostinger-ftp.env
+rito-secrets.local.php
 rito-smtp.php
+rito-brevo.php
 operations/instagram/instagram-access.local.md
+operations/instagram/story-schedule.*.json
+!operations/instagram/story-schedule.plan.template.json
 operations/ai-os/whatsapp/.session/
 operations/ai-os/whatsapp/runs/
 operations/ai-os/whatsapp/waha/.sessions/
@@ -14,8 +22,14 @@ operations/ai-os/whatsapp/waha/.docker-config/
 operations/ai-os/whatsapp/inbox/raw/*.jsonl
 operations/ai-os/whatsapp/inbox/conversations/*.jsonl
 operations/ai-os/whatsapp/inbox/pending/*.jsonl
+operations/ai-os/whatsapp/inbox/session-events.jsonl
 operations/ai-os/whatsapp/runtime/
 operations/ai-os/asset-sync/upload-queue/*.json
+operations/ai-os/email/previews/
+operations/ai-os/growth/prospecting/territories/*/batches/
+scripts/meta-story-scheduler/node_modules/
+scripts/meta-story-scheduler/.auth/
+scripts/meta-story-scheduler/.playwright/
 
 # Arquivos criativos pesados ficam no Google Drive e entram no Git apenas
 # pelo manifesto em assets/drive/asset-manifest.json.

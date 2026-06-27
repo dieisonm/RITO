@@ -20,8 +20,8 @@
 ### Hero
 
 - Titulo: Software sob medida para a rotina da sua empresa
-- Subtitulo: Criamos sistemas, automacoes e controles personalizados para resolver problemas reais de micro e pequenas empresas.
-- Texto: Se a sua empresa perde tempo com planilhas confusas, controles manuais, retrabalho, comparacoes demoradas de dados ou processos sem padrao, a RITO Sistemas pode transformar isso em uma solucao simples, acessivel e feita para a sua realidade.
+- Subtitulo: Criamos sistemas, sites institucionais, automacoes e controles personalizados para resolver problemas reais de micro e pequenas empresas.
+- Texto: Se a sua empresa perde tempo com planilhas confusas, controles manuais, retrabalho, comparacoes demoradas de dados, processos sem padrao ou ainda nao tem um site claro para apresentar o negocio, a RITO Sistemas pode transformar isso em uma solucao simples, acessivel e feita para a sua realidade.
 
 ### Bloco de confianca
 
@@ -33,11 +33,12 @@
 ### O que fazemos
 
 - Titulo: Solucoes praticas para rotinas e operacoes
-- Texto: Cada empresa tem seus proprios desafios. Por isso, em vez de oferecer uma ferramenta generica, desenvolvemos solucoes sob medida para organizar, automatizar e simplificar tarefas do dia a dia.
+- Texto: Cada empresa tem seus proprios desafios. Por isso, em vez de oferecer uma ferramenta generica, desenvolvemos solucoes sob medida para organizar, automatizar, apresentar melhor a empresa e simplificar tarefas do dia a dia.
 
 ### Exemplos de solucao
 
 - Controle de documentos
+- Sites institucionais e paginas de captacao
 - Comparacao de relatorios
 - Calculos operacionais
 - Rotinas financeiras
@@ -61,6 +62,7 @@
 - Dependencia excessiva de trabalho manual
 - Processos que funcionam, mas sem organizacao
 - Atividades importantes sem padrao ou rastreabilidade
+- Empresa sem site proprio ou com presenca digital fraca
 
 ### Como funciona
 
@@ -113,7 +115,7 @@
 ### Solucoes
 
 - Titulo: Solucoes sob medida para rotinas e operacoes
-- Blocos: Automacoes operacionais, Sistemas de controle, Paineis e consolidacoes, Calculos e regras de negocio, Integracoes e processos
+- Blocos: Automacoes operacionais, Sistemas de controle, Sites institucionais e paginas de captacao, Paineis e consolidacoes, Calculos e regras de negocio, Integracoes e processos
 
 ### Como funciona
 
@@ -137,5 +139,6 @@
 - Voces trabalham apenas com empresas grandes?
 - O orcamento e pago?
 - Voces fazem solucoes personalizadas?
+- Voces tambem fazem sites institucionais?
 - Tenho so uma ideia inicial. Posso entrar em contato?
 - Voces tambem fazem melhorias em processos existentes?
