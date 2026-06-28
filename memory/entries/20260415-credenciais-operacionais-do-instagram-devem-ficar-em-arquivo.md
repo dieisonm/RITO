@@ -4,14 +4,14 @@ project: "RITO"
 type: "decision"
 status: "active"
 title: "Credenciais operacionais do Instagram devem ficar em arquivo local ignorado pelo Git"
-summary: "As credenciais do Instagram da RITO passaram a ser guardadas em um arquivo local privado dentro de `operations/instagram`, com documentação de uso no README da frente e sem replicar senha em arquivos versionados ou na memória persistente."
+summary: "As credenciais do Instagram da RITO devem ser guardadas em um arquivo local privado dentro de `ops/instagram`, com documentação de uso no README da frente e sem replicar senha em arquivos versionados ou na memória persistente."
 why: "Isso permite manter o acesso operacional registrado no projeto sem expor credenciais reais no repositório, nos documentos públicos ou na memória persistente."
 source: "codex"
 created_at: "2026-04-15T22:16:23.013Z"
-updated_at: "2026-04-15T22:16:23.013Z"
+updated_at: "2026-06-28T12:20:00.000Z"
 tags: ["security","instagram","credentials","operations"]
 files: [".gitignore","ops/instagram/README.md"]
-related_ids: []
+related_ids: ["20260628-repositorio-foi-enxugado-e-outros-pcs-devem-usar-main-drive-e-caminhos-canonicos"]
 issue: ""
 pr: ""
 commit: ""
