@@ -9,7 +9,7 @@ mkdir -p "$DIST_DIR"
 
 cp -R "$ROOT_DIR/site/." "$DIST_DIR/"
 rm -rf "$DIST_DIR/logos"
-cp -R "$ROOT_DIR/logos" "$DIST_DIR/logos"
+cp -R "$ROOT_DIR/site/logos" "$DIST_DIR/logos"
 find "$DIST_DIR" -name .DS_Store -delete
 find "$DIST_DIR/storage" -type f -name '*.jsonl' -delete 2>/dev/null || true
 
@@ -51,7 +51,7 @@ if [[ "${SKIP_GIT_METADATA:-0}" != "1" ]] && git_with_timeout rev-parse --is-ins
   SOURCE_SHORT_SHA="$(git_with_timeout rev-parse --short HEAD || echo unknown)"
   SOURCE_BRANCH="$(git_with_timeout rev-parse --abbrev-ref HEAD || echo unknown)"
   SOURCE_COMMITTED_AT="$(git_with_timeout show -s --format=%cI HEAD || echo "")"
-  if [[ -n "$(git_with_timeout status --porcelain -- site logos scripts/build_dist.sh || true)" ]]; then
+  if [[ -n "$(git_with_timeout status --porcelain -- site scripts/build_dist.sh || true)" ]]; then
     SOURCE_DIRTY="true"
   else
     SOURCE_DIRTY="false"

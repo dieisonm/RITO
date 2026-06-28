@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-05-18T14:34:46-03:00",
+  "updated_at": "2026-06-28T11:52:57-03:00",
   "drive_root": {
     "name": "RITO_Files",
     "folder_id": "1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o",
@@ -35,8 +35,416 @@
   },
   "assets": [
     {
+      "asset_id": "8173d72c0635-rito-monograma-branco-4x",
+      "relative_path": "assets/brand/logos/site-and-institutional-high-res/rito-monograma-branco-4x.png",
+      "filename": "rito-monograma-branco-4x.png",
+      "campaign": "assets",
+      "mime_type": "image/png",
+      "size_bytes": 1147835,
+      "sha256": "8173d72c0635a1c81e673bcd325a0e71ba1626758c5ca0b119363bc0e28e8c87",
+      "dimensions": {
+        "width": 2040,
+        "height": 1480
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "18JdthLOIzmFQ1o_j7t9WRHuX8tPEtlZ4",
+        "url": "https://drive.google.com/file/d/18JdthLOIzmFQ1o_j7t9WRHuX8tPEtlZ4/view",
+        "folder": "assets/brand/logos/site-and-institutional-high-res"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-20T21:33:49-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "a35e051bb6ea-rito-monograma-petroleo-4x",
+      "relative_path": "assets/brand/logos/site-and-institutional-high-res/rito-monograma-petroleo-4x.png",
+      "filename": "rito-monograma-petroleo-4x.png",
+      "campaign": "assets",
+      "mime_type": "image/png",
+      "size_bytes": 1513014,
+      "sha256": "a35e051bb6ea95f7832201ef2cafa309a4a0460c6ec939721bd0b42b1808ef56",
+      "dimensions": {
+        "width": 2040,
+        "height": 1480
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1Jn_LtIHxr_FC88mmHx1KdgBZiQ-Eeng0",
+        "url": "https://drive.google.com/file/d/1Jn_LtIHxr_FC88mmHx1KdgBZiQ-Eeng0/view",
+        "folder": "assets/brand/logos/site-and-institutional-high-res"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-20T21:33:49-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "6b929332da8b-rito-wordmark-branco-4x",
+      "relative_path": "assets/brand/logos/site-and-institutional-high-res/rito-wordmark-branco-4x.png",
+      "filename": "rito-wordmark-branco-4x.png",
+      "campaign": "assets",
+      "mime_type": "image/png",
+      "size_bytes": 1373134,
+      "sha256": "6b929332da8bb0664497a3510ee81246bf52c34d1bbcb90224b7bdce200342f2",
+      "dimensions": {
+        "width": 3408,
+        "height": 1280
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1jc3yKdloMvdiA_4NF8f4pqIpNgeiIdq9",
+        "url": "https://drive.google.com/file/d/1jc3yKdloMvdiA_4NF8f4pqIpNgeiIdq9/view",
+        "folder": "assets/brand/logos/site-and-institutional-high-res"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-20T21:33:49-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "57aadaeeab9e-rito-wordmark-petroleo-4x",
+      "relative_path": "assets/brand/logos/site-and-institutional-high-res/rito-wordmark-petroleo-4x.png",
+      "filename": "rito-wordmark-petroleo-4x.png",
+      "campaign": "assets",
+      "mime_type": "image/png",
+      "size_bytes": 1920178,
+      "sha256": "57aadaeeab9e9bba82f2fff6d515ca3d63cb43cbe52ccea108b37066883fc856",
+      "dimensions": {
+        "width": 3408,
+        "height": 1280
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1ztG_T5726JLEPG-_P1aexHIZ5hW0Ylbi",
+        "url": "https://drive.google.com/file/d/1ztG_T5726JLEPG-_P1aexHIZ5hW0Ylbi/view",
+        "folder": "assets/brand/logos/site-and-institutional-high-res"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-20T21:33:49-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "f7cd1ed4c356-rito-client-briefing-form",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-client-briefing-form.docx",
+      "filename": "rito-client-briefing-form.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 199070,
+      "sha256": "f7cd1ed4c356f5da376b6b8cd4f2da64335c5a7a16f7c1ae8fd10013e3a5ef42",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1haA81f2ewmlLx8HNLE4BQvrwUY8FFA_r",
+        "url": "https://drive.google.com/file/d/1haA81f2ewmlLx8HNLE4BQvrwUY8FFA_r/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:47-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "97cf41c503d7-rito-commercial-proposal-template",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-commercial-proposal-template.docx",
+      "filename": "rito-commercial-proposal-template.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 190050,
+      "sha256": "97cf41c503d76c1d670066757bb57574892f18115b00f6a1efd6ddfd327d4fe2",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1AT85ZXAMlgHq8bdlG8IVVY6T_gJAkAS-",
+        "url": "https://drive.google.com/file/d/1AT85ZXAMlgHq8bdlG8IVVY6T_gJAkAS-/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:45-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "1d6bd88ab0f4-rito-contract-template",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-contract-template.docx",
+      "filename": "rito-contract-template.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 194151,
+      "sha256": "1d6bd88ab0f4ea76b3797da3c56f3f07342394702eddd4a543a4d92e21b7ad7f",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1CkzM5Wh8vgKLSd4sNwsuqYEgjiG_Bf9P",
+        "url": "https://drive.google.com/file/d/1CkzM5Wh8vgKLSd4sNwsuqYEgjiG_Bf9P/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:47-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "9e0fcb90fbfd-rito-estimate-template",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-estimate-template.docx",
+      "filename": "rito-estimate-template.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 197986,
+      "sha256": "9e0fcb90fbfdc33a8ced9286b9093f1cce0ad5ee9bcef8d7e76beada376b6ae6",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1YCy3Qk1Q-qPIce83HMIFy90LeHFfs3gL",
+        "url": "https://drive.google.com/file/d/1YCy3Qk1Q-qPIce83HMIFy90LeHFfs3gL/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:46-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "f100948b5174-rito-first-contact-playbook",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-first-contact-playbook.docx",
+      "filename": "rito-first-contact-playbook.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 198539,
+      "sha256": "f100948b517497097af517d298eaef3e9c16ce75a0750f5afff6fd40f5ce373c",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1kiL_VTcjYyz9FedkYftKcz8y5jUK67K4",
+        "url": "https://drive.google.com/file/d/1kiL_VTcjYyz9FedkYftKcz8y5jUK67K4/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:47-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "bd582bb7aaad-rito-follow-up-sequence",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-follow-up-sequence.docx",
+      "filename": "rito-follow-up-sequence.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 198289,
+      "sha256": "bd582bb7aaad8448d74a9b075fde02cd8bd7398e220b50cda5d49d0c6733eeea",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1Ga5ovOIiUMJJyvXWM8vUFkdGuaIjxA3P",
+        "url": "https://drive.google.com/file/d/1Ga5ovOIiUMJJyvXWM8vUFkdGuaIjxA3P/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:46-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "fc866fd18d17-rito-pricing-guide",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-pricing-guide.docx",
+      "filename": "rito-pricing-guide.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 191838,
+      "sha256": "fc866fd18d17f63a1092d2285020d90fc05dfe3b28d62d8270824424ea40d2d9",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1XjGGLEGTpXyR8qHhj7DWqTyBCm2H7ZXo",
+        "url": "https://drive.google.com/file/d/1XjGGLEGTpXyR8qHhj7DWqTyBCm2H7ZXo/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:45-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "3e4672754ec9-rito-proposal-send-checklist",
+      "relative_path": "assets/deliverables/business-kit/editable-docx/rito-proposal-send-checklist.docx",
+      "filename": "rito-proposal-send-checklist.docx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 197575,
+      "sha256": "3e4672754ec9264e63d7e5254887259efbb83dc848f325579132629070478d42",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "152IUonlH__KP0I0quEt4VAATJnRP9htq",
+        "url": "https://drive.google.com/file/d/152IUonlH__KP0I0quEt4VAATJnRP9htq/view",
+        "folder": "assets/deliverables/business-kit/editable-docx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:43-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "d9767fbe205a-rito-pricing-calculator",
+      "relative_path": "assets/deliverables/business-kit/editable-xlsx/rito-pricing-calculator.xlsx",
+      "filename": "rito-pricing-calculator.xlsx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size_bytes": 16628,
+      "sha256": "d9767fbe205affa9145a5d14b82cd21a4a6d8e61e1bb320d6007f1a5d135be6e",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1S7Rh3JlpAyXhyyqAp4ntuWaEq01pCBsm",
+        "url": "https://drive.google.com/file/d/1S7Rh3JlpAyXhyyqAp4ntuWaEq01pCBsm/view",
+        "folder": "assets/deliverables/business-kit/editable-xlsx"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:44-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "79520f171cc5-rito-branding-guide",
+      "relative_path": "assets/deliverables/business-kit/pdf/rito-branding-guide.pdf",
+      "filename": "rito-branding-guide.pdf",
+      "campaign": "business-kit",
+      "mime_type": "application/pdf",
+      "size_bytes": 450239,
+      "sha256": "79520f171cc59386981b3e554b1bd8523f6245df54df213a8fd136ced375ed6f",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1LOqXpPZ_ORYnvEBnRtSo4Z5gN9G10J_P",
+        "url": "https://drive.google.com/file/d/1LOqXpPZ_ORYnvEBnRtSo4Z5gN9G10J_P/view",
+        "folder": "assets/deliverables/business-kit/pdf"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:45-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "ee250d5a3f40-rito-company-onepager",
+      "relative_path": "assets/deliverables/business-kit/pdf/rito-company-onepager.pdf",
+      "filename": "rito-company-onepager.pdf",
+      "campaign": "business-kit",
+      "mime_type": "application/pdf",
+      "size_bytes": 444606,
+      "sha256": "ee250d5a3f406c4124cf6e934c5d99c99dc5b8c9b21d02034982ae32c96fb4ed",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1hG8UrmoSzqIQKmxVgWzkd5JKKr8X7m6G",
+        "url": "https://drive.google.com/file/d/1hG8UrmoSzqIQKmxVgWzkd5JKKr8X7m6G/view",
+        "folder": "assets/deliverables/business-kit/pdf"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:43-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "8ce29b861b24-rito-company-presentation",
+      "relative_path": "assets/deliverables/business-kit/pdf/rito-company-presentation.pdf",
+      "filename": "rito-company-presentation.pdf",
+      "campaign": "business-kit",
+      "mime_type": "application/pdf",
+      "size_bytes": 471131,
+      "sha256": "8ce29b861b24cfb03ad9bf08d1c0d4f05b76d4bc5cd8f5f95930902ca635509e",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1zTDG0KmLDj0JTeGj9SqzKZq9R_d6EZiL",
+        "url": "https://drive.google.com/file/d/1zTDG0KmLDj0JTeGj9SqzKZq9R_d6EZiL/view",
+        "folder": "assets/deliverables/business-kit/pdf"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:47-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "b989661c03bd-rito-software-brand-system",
+      "relative_path": "assets/deliverables/business-kit/pdf/rito-software-brand-system.pdf",
+      "filename": "rito-software-brand-system.pdf",
+      "campaign": "business-kit",
+      "mime_type": "application/pdf",
+      "size_bytes": 450971,
+      "sha256": "b989661c03bdc0cc08b77bc2d6a35547fef19c8e30a39ed779bc08ffe68d3f89",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "17egRyYB-asMNjt1RpgLUm-IxzBUOIFYB",
+        "url": "https://drive.google.com/file/d/17egRyYB-asMNjt1RpgLUm-IxzBUOIFYB/view",
+        "folder": "assets/deliverables/business-kit/pdf"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:43-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "42d02f1a71ad-rito-company-presentation",
+      "relative_path": "assets/deliverables/business-kit/presentation/rito-company-presentation.pptx",
+      "filename": "rito-company-presentation.pptx",
+      "campaign": "business-kit",
+      "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size_bytes": 340620,
+      "sha256": "42d02f1a71ad47f85e41c8f90b59713403ef9f39ea9c7bb670e625b4b6c2ef85",
+      "dimensions": null,
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1lOPP8eWWd27Npc5RA10x0S1l6EQXHxgp",
+        "url": "https://drive.google.com/file/d/1lOPP8eWWd27Npc5RA10x0S1l6EQXHxgp/view",
+        "folder": "assets/deliverables/business-kit/presentation"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:43-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
       "asset_id": "67b558623e76-01-rito-apresentacao-static",
-      "relative_path": "deliverables/social-assets/instagram-launch/01-rito-apresentacao-static.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-launch/01-rito-apresentacao-static.png",
       "filename": "01-rito-apresentacao-static.png",
       "campaign": "instagram-launch",
       "mime_type": "image/png",
@@ -50,18 +458,18 @@
         "status": "uploaded",
         "file_id": "1WtTw1V_5LrwFMG9tRiGzC1m0q9BzCDw1",
         "url": "https://drive.google.com/file/d/1WtTw1V_5LrwFMG9tRiGzC1m0q9BzCDw1/view",
-        "folder": "deliverables/social-assets/instagram-launch"
+        "folder": "assets/deliverables/social-assets/instagram-launch"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T23:58:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "3ec2cc0afb28-02-rito-dor-planilhas-static",
-      "relative_path": "deliverables/social-assets/instagram-launch/02-rito-dor-planilhas-static.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-launch/02-rito-dor-planilhas-static.png",
       "filename": "02-rito-dor-planilhas-static.png",
       "campaign": "instagram-launch",
       "mime_type": "image/png",
@@ -75,18 +483,18 @@
         "status": "uploaded",
         "file_id": "1BTBllWDtuqs3ccPnFq9B98_btksMDzv2",
         "url": "https://drive.google.com/file/d/1BTBllWDtuqs3ccPnFq9B98_btksMDzv2/view",
-        "folder": "deliverables/social-assets/instagram-launch"
+        "folder": "assets/deliverables/social-assets/instagram-launch"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T23:58:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "6a341868888e-03-rito-carrossel-slide-01",
-      "relative_path": "deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-01.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-01.png",
       "filename": "03-rito-carrossel-slide-01.png",
       "campaign": "instagram-launch",
       "mime_type": "image/png",
@@ -100,18 +508,18 @@
         "status": "uploaded",
         "file_id": "12p6gGGCFlPsa-Q_nEFAOn1jnMzEm6l2L",
         "url": "https://drive.google.com/file/d/12p6gGGCFlPsa-Q_nEFAOn1jnMzEm6l2L/view",
-        "folder": "deliverables/social-assets/instagram-launch"
+        "folder": "assets/deliverables/social-assets/instagram-launch"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T23:58:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "76de3389f1cd-03-rito-carrossel-slide-02",
-      "relative_path": "deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-02.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-02.png",
       "filename": "03-rito-carrossel-slide-02.png",
       "campaign": "instagram-launch",
       "mime_type": "image/png",
@@ -125,18 +533,18 @@
         "status": "uploaded",
         "file_id": "1dsk1uRRD20Dyrpbwk4rp-HWwF1OWsmFV",
         "url": "https://drive.google.com/file/d/1dsk1uRRD20Dyrpbwk4rp-HWwF1OWsmFV/view",
-        "folder": "deliverables/social-assets/instagram-launch"
+        "folder": "assets/deliverables/social-assets/instagram-launch"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T23:58:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "463ceaa1e9e8-03-rito-carrossel-slide-03",
-      "relative_path": "deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-03.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-03.png",
       "filename": "03-rito-carrossel-slide-03.png",
       "campaign": "instagram-launch",
       "mime_type": "image/png",
@@ -150,18 +558,18 @@
         "status": "uploaded",
         "file_id": "173_nuWGwYbju0APhEEePfPd7ZL6LeGWI",
         "url": "https://drive.google.com/file/d/173_nuWGwYbju0APhEEePfPd7ZL6LeGWI/view",
-        "folder": "deliverables/social-assets/instagram-launch"
+        "folder": "assets/deliverables/social-assets/instagram-launch"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T23:58:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "8e3bcd6f5915-01-bastidor-bom-evita-retrabalho",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/01-bastidor-bom-evita-retrabalho.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/01-bastidor-bom-evita-retrabalho.png",
       "filename": "01-bastidor-bom-evita-retrabalho.png",
       "campaign": "instagram-stories/2026-05-12-bastidores-batch-003",
       "mime_type": "image/png",
@@ -175,18 +583,18 @@
         "status": "uploaded",
         "file_id": "1TIhp9C5TFOImm5YUE61tMV5Hjue9gmCh",
         "url": "https://drive.google.com/file/d/1TIhp9C5TFOImm5YUE61tMV5Hjue9gmCh/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T22:01:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "634a4782d83f-02-organizacao-comeca-no-processo-flatlay",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/02-organizacao-comeca-no-processo-flatlay.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/02-organizacao-comeca-no-processo-flatlay.png",
       "filename": "02-organizacao-comeca-no-processo-flatlay.png",
       "campaign": "instagram-stories/2026-05-12-bastidores-batch-003",
       "mime_type": "image/png",
@@ -200,18 +608,18 @@
         "status": "uploaded",
         "file_id": "10hhPh4kQdgDtuikYYvKpm6bRFATOY0m8",
         "url": "https://drive.google.com/file/d/10hhPh4kQdgDtuikYYvKpm6bRFATOY0m8/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T22:01:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "3cb28a884c72-03-controle-mora-nos-detalhes",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/03-controle-mora-nos-detalhes.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003/03-controle-mora-nos-detalhes.png",
       "filename": "03-controle-mora-nos-detalhes.png",
       "campaign": "instagram-stories/2026-05-12-bastidores-batch-003",
       "mime_type": "image/png",
@@ -225,18 +633,18 @@
         "status": "uploaded",
         "file_id": "14LHe-Ots2yaClBBs9Zdyj_kLP8rpDEp3",
         "url": "https://drive.google.com/file/d/14LHe-Ots2yaClBBs9Zdyj_kLP8rpDEp3/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-bastidores-batch-003"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T22:01:11-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "de83060ffd12-00-batch-overview-contact-sheet",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/00-batch-overview-contact-sheet.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/00-batch-overview-contact-sheet.png",
       "filename": "00-batch-overview-contact-sheet.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -250,18 +658,18 @@
         "status": "uploaded",
         "file_id": "1JSYS1SkxBjm8328wWzAbt7KZzLZ9BHrl",
         "url": "https://drive.google.com/file/d/1JSYS1SkxBjm8328wWzAbt7KZzLZ9BHrl/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:41:01-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "bea4edb526d9-01-atendimento-e-rotina-cliente-chama",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/01-atendimento-e-rotina-cliente-chama.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/01-atendimento-e-rotina-cliente-chama.png",
       "filename": "01-atendimento-e-rotina-cliente-chama.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -275,18 +683,18 @@
         "status": "uploaded",
         "file_id": "1dEWZg__-zqAZfAnH4gkz0AUD06tx3HN8",
         "url": "https://drive.google.com/file/d/1dEWZg__-zqAZfAnH4gkz0AUD06tx3HN8/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:12:14-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "cbf5e0b33c72-02-orcamentos-e-follow-up-memoria",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/02-orcamentos-e-follow-up-memoria.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/02-orcamentos-e-follow-up-memoria.png",
       "filename": "02-orcamentos-e-follow-up-memoria.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -300,18 +708,18 @@
         "status": "uploaded",
         "file_id": "1269HTGz4fKBx_8KhSuU1Ykcxg46S2weR",
         "url": "https://drive.google.com/file/d/1269HTGz4fKBx_8KhSuU1Ykcxg46S2weR/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:38:59-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c2da39c51321-03-site-e-presenca-digital-site-claro",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/03-site-e-presenca-digital-site-claro.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/03-site-e-presenca-digital-site-claro.png",
       "filename": "03-site-e-presenca-digital-site-claro.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -325,18 +733,18 @@
         "status": "uploaded",
         "file_id": "107JxyMd_7CxmBZ4J1OElCn1oXA0rYKsM",
         "url": "https://drive.google.com/file/d/107JxyMd_7CxmBZ4J1OElCn1oXA0rYKsM/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:38:59-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "d8aa23b0ea97-04-pedidos-e-operacao-organize-sua-rotina",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/04-pedidos-e-operacao-organize-sua-rotina.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/04-pedidos-e-operacao-organize-sua-rotina.png",
       "filename": "04-pedidos-e-operacao-organize-sua-rotina.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -350,18 +758,18 @@
         "status": "uploaded",
         "file_id": "1BDpgypnPY4SEMF9BD7gtrP4j3BzgQCkZ",
         "url": "https://drive.google.com/file/d/1BDpgypnPY4SEMF9BD7gtrP4j3BzgQCkZ/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:38:59-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c931c99c6d02-05-controle-e-visao-chame-no-whatsapp",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/05-controle-e-visao-chame-no-whatsapp.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001/05-controle-e-visao-chame-no-whatsapp.png",
       "filename": "05-controle-e-visao-chame-no-whatsapp.png",
       "campaign": "instagram-stories/2026-05-12-cta-batch-001",
       "mime_type": "image/png",
@@ -375,18 +783,18 @@
         "status": "uploaded",
         "file_id": "1_WJe-oQ_bMg9AwzRqtPlJYwxZlXxO9Ip",
         "url": "https://drive.google.com/file/d/1_WJe-oQ_bMg9AwzRqtPlJYwxZlXxO9Ip/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-cta-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:38:59-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "fa8f08df22b1-01-rotina-nao-precisa-continuar-manual",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/01-rotina-nao-precisa-continuar-manual.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/01-rotina-nao-precisa-continuar-manual.png",
       "filename": "01-rotina-nao-precisa-continuar-manual.png",
       "campaign": "instagram-stories/2026-05-12-light-batch-001",
       "mime_type": "image/png",
@@ -400,18 +808,18 @@
         "status": "uploaded",
         "file_id": "1MNRaUcjp5G0D-adMkT-fOOutTQRw8UzJ",
         "url": "https://drive.google.com/file/d/1MNRaUcjp5G0D-adMkT-fOOutTQRw8UzJ/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:45:30-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c66799a07d87-02-operacao-mais-clara-dia-rende-melhor",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/02-operacao-mais-clara-dia-rende-melhor.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/02-operacao-mais-clara-dia-rende-melhor.png",
       "filename": "02-operacao-mais-clara-dia-rende-melhor.png",
       "campaign": "instagram-stories/2026-05-12-light-batch-001",
       "mime_type": "image/png",
@@ -425,18 +833,18 @@
         "status": "uploaded",
         "file_id": "1jv-Z0u9yypAZB9isdm-1TOQ6E2oI4Yr9",
         "url": "https://drive.google.com/file/d/1jv-Z0u9yypAZB9isdm-1TOQ6E2oI4Yr9/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:45:30-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "aa6a29705841-03-site-faz-parte-da-rotina",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/03-site-faz-parte-da-rotina.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/03-site-faz-parte-da-rotina.png",
       "filename": "03-site-faz-parte-da-rotina.png",
       "campaign": "instagram-stories/2026-05-12-light-batch-001",
       "mime_type": "image/png",
@@ -450,18 +858,18 @@
         "status": "uploaded",
         "file_id": "1B8SfemIyPZcnB7ZmmHDDXI0RZU3EBThD",
         "url": "https://drive.google.com/file/d/1B8SfemIyPZcnB7ZmmHDDXI0RZU3EBThD/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:45:30-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "91d5d9672d5c-04-rotina-nao-precisa-continuar-manual-sem-pessoa",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/04-rotina-nao-precisa-continuar-manual-sem-pessoa.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/04-rotina-nao-precisa-continuar-manual-sem-pessoa.png",
       "filename": "04-rotina-nao-precisa-continuar-manual-sem-pessoa.png",
       "campaign": "instagram-stories/2026-05-12-light-batch-001",
       "mime_type": "image/png",
@@ -475,18 +883,18 @@
         "status": "uploaded",
         "file_id": "1iyLP1pBR4Lydvn7Ya_VPsf1EWn50Olzp",
         "url": "https://drive.google.com/file/d/1iyLP1pBR4Lydvn7Ya_VPsf1EWn50Olzp/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:45:30-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "ce119768ceda-05-tecnologia-util-para-problemas-reais",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/05-tecnologia-util-para-problemas-reais.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001/05-tecnologia-util-para-problemas-reais.png",
       "filename": "05-tecnologia-util-para-problemas-reais.png",
       "campaign": "instagram-stories/2026-05-12-light-batch-001",
       "mime_type": "image/png",
@@ -500,18 +908,18 @@
         "status": "uploaded",
         "file_id": "1KksjfJQGRbJ2tg9nRTBc_lS34_VMtvqj",
         "url": "https://drive.google.com/file/d/1KksjfJQGRbJ2tg9nRTBc_lS34_VMtvqj/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-light-batch-001"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T19:45:30-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "b78d3dbde527-01-rotina-manual-mesa-e-planejamento",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/01-rotina-manual-mesa-e-planejamento.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/01-rotina-manual-mesa-e-planejamento.png",
       "filename": "01-rotina-manual-mesa-e-planejamento.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -525,18 +933,18 @@
         "status": "uploaded",
         "file_id": "1gGzHg28kR6iaySIKiQzC12_hxg1DrFeL",
         "url": "https://drive.google.com/file/d/1gGzHg28kR6iaySIKiQzC12_hxg1DrFeL/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:34-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "5f6d42767187-02-operacao-mais-clara-bancada-envios",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/02-operacao-mais-clara-bancada-envios.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/02-operacao-mais-clara-bancada-envios.png",
       "filename": "02-operacao-mais-clara-bancada-envios.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -550,18 +958,18 @@
         "status": "uploaded",
         "file_id": "1RJQG36bjTJ7q2qEWBSLcNd1via3k2hlS",
         "url": "https://drive.google.com/file/d/1RJQG36bjTJ7q2qEWBSLcNd1via3k2hlS/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:35-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "bbec122f89e1-03-site-faz-parte-da-rotina-sem-pessoa",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/03-site-faz-parte-da-rotina-sem-pessoa.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/03-site-faz-parte-da-rotina-sem-pessoa.png",
       "filename": "03-site-faz-parte-da-rotina-sem-pessoa.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -575,18 +983,18 @@
         "status": "uploaded",
         "file_id": "1kewOfZ8G-X_ESNU5wz8aD3TIc2kCGRIN",
         "url": "https://drive.google.com/file/d/1kewOfZ8G-X_ESNU5wz8aD3TIc2kCGRIN/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:35-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "e64aa2e07ac2-04-tecnologia-util-dashboard-mesa-azul",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/04-tecnologia-util-dashboard-mesa-azul.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/04-tecnologia-util-dashboard-mesa-azul.png",
       "filename": "04-tecnologia-util-dashboard-mesa-azul.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -600,18 +1008,18 @@
         "status": "uploaded",
         "file_id": "1ZtCTO4v_BXOcXQ_EEOzSgSvAqkvagJPX",
         "url": "https://drive.google.com/file/d/1ZtCTO4v_BXOcXQ_EEOzSgSvAqkvagJPX/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:35-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "e4ea9dbbff5f-05-rotina-manual-dashboard-luz-natural",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/05-rotina-manual-dashboard-luz-natural.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/05-rotina-manual-dashboard-luz-natural.png",
       "filename": "05-rotina-manual-dashboard-luz-natural.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -625,18 +1033,18 @@
         "status": "uploaded",
         "file_id": "1FW-2OtK-eQrBrRrGML221J6w3qD5CGHM",
         "url": "https://drive.google.com/file/d/1FW-2OtK-eQrBrRrGML221J6w3qD5CGHM/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:35-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "681b79cda6c1-06-mais-clareza-menos-improviso",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/06-mais-clareza-menos-improviso.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002/06-mais-clareza-menos-improviso.png",
       "filename": "06-mais-clareza-menos-improviso.png",
       "campaign": "instagram-stories/2026-05-12-no-people-batch-002",
       "mime_type": "image/png",
@@ -650,18 +1058,18 @@
         "status": "uploaded",
         "file_id": "1lPBYSn8bHeu8CLhB2pDwiVYIjk2qoJxI",
         "url": "https://drive.google.com/file/d/1lPBYSn8bHeu8CLhB2pDwiVYIjk2qoJxI/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-12-no-people-batch-002"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-12T20:20:35-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "5f16051a5000-01-projeto-piloto-story-codex-imagegen-1080x1920",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test/01-projeto-piloto-story-codex-imagegen-1080x1920.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test/01-projeto-piloto-story-codex-imagegen-1080x1920.png",
       "filename": "01-projeto-piloto-story-codex-imagegen-1080x1920.png",
       "campaign": "instagram-stories/2026-05-17-codex-imagegen-test",
       "mime_type": "image/png",
@@ -675,18 +1083,18 @@
         "status": "uploaded",
         "file_id": "1-kCMTNq1xtv5S6vE3z0wVCCK3B0P08vb",
         "url": "https://drive.google.com/file/d/1-kCMTNq1xtv5S6vE3z0wVCCK3B0P08vb/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-17T15:47:01-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c8b19006edbd-01-projeto-piloto-story-codex-imagegen",
-      "relative_path": "deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test/01-projeto-piloto-story-codex-imagegen.png",
+      "relative_path": "assets/deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test/01-projeto-piloto-story-codex-imagegen.png",
       "filename": "01-projeto-piloto-story-codex-imagegen.png",
       "campaign": "instagram-stories/2026-05-17-codex-imagegen-test",
       "mime_type": "image/png",
@@ -700,18 +1108,18 @@
         "status": "uploaded",
         "file_id": "1N7oHsQNhz_bpuKOUQurh489jp_9KfISn",
         "url": "https://drive.google.com/file/d/1N7oHsQNhz_bpuKOUQurh489jp_9KfISn/view",
-        "folder": "deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test"
+        "folder": "assets/deliverables/social-assets/instagram-stories/2026-05-17-codex-imagegen-test"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-17T15:44:44-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "cca7e2146d5a-00-principal-cases-1080x1350",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/feed-4x5/00-principal-cases-1080x1350.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/00-principal-cases-1080x1350.png",
       "filename": "00-principal-cases-1080x1350.png",
       "campaign": "meta-projeto-piloto/feed-4x5",
       "mime_type": "image/png",
@@ -725,18 +1133,18 @@
         "status": "uploaded",
         "file_id": "13cuY34B3ecQbXo0N-MVTxz3u5yW0Ehr2",
         "url": "https://drive.google.com/file/d/13cuY34B3ecQbXo0N-MVTxz3u5yW0Ehr2/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/feed-4x5"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:10:39-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c6d70acc998d-01-controles-simples-1080x1350",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/feed-4x5/01-controles-simples-1080x1350.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/01-controles-simples-1080x1350.png",
       "filename": "01-controles-simples-1080x1350.png",
       "campaign": "meta-projeto-piloto/feed-4x5",
       "mime_type": "image/png",
@@ -750,18 +1158,18 @@
         "status": "uploaded",
         "file_id": "1_v74htd9bWuuB-wUhnuOo_2DD5FUZA7q",
         "url": "https://drive.google.com/file/d/1_v74htd9bWuuB-wUhnuOo_2DD5FUZA7q/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/feed-4x5"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:10:39-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "b46000587992-02-rotina-solucao-1080x1350",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/feed-4x5/02-rotina-solucao-1080x1350.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/02-rotina-solucao-1080x1350.png",
       "filename": "02-rotina-solucao-1080x1350.png",
       "campaign": "meta-projeto-piloto/feed-4x5",
       "mime_type": "image/png",
@@ -775,18 +1183,18 @@
         "status": "uploaded",
         "file_id": "1bX-h_b9nqK39RMvvf4IEafH9baThoSWy",
         "url": "https://drive.google.com/file/d/1bX-h_b9nqK39RMvvf4IEafH9baThoSWy/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/feed-4x5"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:10:39-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "fb456cf831c9-criativo-principal-original",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/source/criativo-principal-original.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/source/criativo-principal-original.png",
       "filename": "criativo-principal-original.png",
       "campaign": "meta-projeto-piloto/source",
       "mime_type": "image/png",
@@ -800,18 +1208,18 @@
         "status": "uploaded",
         "file_id": "1J3RdWUpKviQ2eWUiriPyhTjaFA8SfcRh",
         "url": "https://drive.google.com/file/d/1J3RdWUpKviQ2eWUiriPyhTjaFA8SfcRh/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/source"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/source"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:10:18-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "6612f32729c3-variacao-controles-simples-original",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/source/variacao-controles-simples-original.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/source/variacao-controles-simples-original.png",
       "filename": "variacao-controles-simples-original.png",
       "campaign": "meta-projeto-piloto/source",
       "mime_type": "image/png",
@@ -825,18 +1233,18 @@
         "status": "uploaded",
         "file_id": "1b2AanH-6zk5Et5eHCg_vgG1ROAc2lg4Y",
         "url": "https://drive.google.com/file/d/1b2AanH-6zk5Et5eHCg_vgG1ROAc2lg4Y/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/source"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/source"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:09:23-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "4448edd4f598-variacao-rotina-solucao-original",
-      "relative_path": "deliverables/social-assets/meta-projeto-piloto/source/variacao-rotina-solucao-original.png",
+      "relative_path": "assets/deliverables/social-assets/meta-projeto-piloto/source/variacao-rotina-solucao-original.png",
       "filename": "variacao-rotina-solucao-original.png",
       "campaign": "meta-projeto-piloto/source",
       "mime_type": "image/png",
@@ -850,18 +1258,68 @@
         "status": "uploaded",
         "file_id": "1s6R9w8Pd-FV_YP_PllsVSu6n2iHgH4ZU",
         "url": "https://drive.google.com/file/d/1s6R9w8Pd-FV_YP_PllsVSu6n2iHgH4ZU/view",
-        "folder": "deliverables/social-assets/meta-projeto-piloto/source"
+        "folder": "assets/deliverables/social-assets/meta-projeto-piloto/source"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-05-10T22:09:44-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
+    },
+    {
+      "asset_id": "a8a115e898aa-rito-company-avatar-light-1080",
+      "relative_path": "assets/deliverables/social-assets/profile-images/rito-company-avatar-light-1080.png",
+      "filename": "rito-company-avatar-light-1080.png",
+      "campaign": "profile-images",
+      "mime_type": "image/png",
+      "size_bytes": 304207,
+      "sha256": "a8a115e898aada704a6b0dcec09cec895a7bc525c7b433b2a4157c8c8d53567c",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1DWtd3vUC0W10o6dO9dNOZZczmTGu1Om0",
+        "url": "https://drive.google.com/file/d/1DWtd3vUC0W10o6dO9dNOZZczmTGu1Om0/view",
+        "folder": "assets/deliverables/social-assets/profile-images"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:44-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
+    },
+    {
+      "asset_id": "eedc7a4929bc-rito-company-avatar-soft-1080",
+      "relative_path": "assets/deliverables/social-assets/profile-images/rito-company-avatar-soft-1080.png",
+      "filename": "rito-company-avatar-soft-1080.png",
+      "campaign": "profile-images",
+      "mime_type": "image/png",
+      "size_bytes": 331461,
+      "sha256": "eedc7a4929bcb743d072c91b639e216abbdca20e7a669b7dcaf233b115448391",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1H88uf3WQRU70xhEf9Mv_yg0ef2TS_EkY",
+        "url": "https://drive.google.com/file/d/1H88uf3WQRU70xhEf9Mv_yg0ef2TS_EkY/view",
+        "folder": "assets/deliverables/social-assets/profile-images"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-23T21:25:43-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
     },
     {
       "asset_id": "ddfef8e46f2b-pexels-cup-of-couple-6177614",
-      "relative_path": "deliverables/social-assets/source-photos/pexels-cup-of-couple-6177614.jpg",
+      "relative_path": "assets/deliverables/social-assets/source-photos/pexels-cup-of-couple-6177614.jpg",
       "filename": "pexels-cup-of-couple-6177614.jpg",
       "campaign": "source-photos",
       "mime_type": "image/jpeg",
@@ -875,18 +1333,18 @@
         "status": "uploaded",
         "file_id": "1ZTPvKvDUEi856qBzTC-Z479v2HBZpe5T",
         "url": "https://drive.google.com/file/d/1ZTPvKvDUEi856qBzTC-Z479v2HBZpe5T/view",
-        "folder": "deliverables/social-assets/source-photos"
+        "folder": "assets/deliverables/social-assets/source-photos"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T21:25:46-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "c51b88dcb6c0-pexels-mizunokozuki-12902905",
-      "relative_path": "deliverables/social-assets/source-photos/pexels-mizunokozuki-12902905.jpg",
+      "relative_path": "assets/deliverables/social-assets/source-photos/pexels-mizunokozuki-12902905.jpg",
       "filename": "pexels-mizunokozuki-12902905.jpg",
       "campaign": "source-photos",
       "mime_type": "image/jpeg",
@@ -900,18 +1358,18 @@
         "status": "uploaded",
         "file_id": "1fL4lWrRttIraO4cIwPvmtmgwr85Mkb1E",
         "url": "https://drive.google.com/file/d/1fL4lWrRttIraO4cIwPvmtmgwr85Mkb1E/view",
-        "folder": "deliverables/social-assets/source-photos"
+        "folder": "assets/deliverables/social-assets/source-photos"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T21:25:46-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     },
     {
       "asset_id": "97ada863ed46-pexels-rdne-10376243",
-      "relative_path": "deliverables/social-assets/source-photos/pexels-rdne-10376243.jpg",
+      "relative_path": "assets/deliverables/social-assets/source-photos/pexels-rdne-10376243.jpg",
       "filename": "pexels-rdne-10376243.jpg",
       "campaign": "source-photos",
       "mime_type": "image/jpeg",
@@ -925,18 +1383,43 @@
         "status": "uploaded",
         "file_id": "1BYTGdexFHYgC0jXSZVl1tjj6Uhu5b6ie",
         "url": "https://drive.google.com/file/d/1BYTGdexFHYgC0jXSZVl1tjj6Uhu5b6ie/view",
-        "folder": "deliverables/social-assets/source-photos"
+        "folder": "assets/deliverables/social-assets/source-photos"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-23T21:25:46-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
+    },
+    {
+      "asset_id": "e1b782dc74dd-instagram-template-dor-resultado",
+      "relative_path": "assets/deliverables/social-assets/templates/instagram-template-dor-resultado.png",
+      "filename": "instagram-template-dor-resultado.png",
+      "campaign": "templates",
+      "mime_type": "image/png",
+      "size_bytes": 58674,
+      "sha256": "e1b782dc74dd03e2dcbe1ec44776798f98d232758def26151a97e92773347d5b",
+      "dimensions": {
+        "width": 1080,
+        "height": 1350
+      },
+      "drive": {
+        "status": "uploaded",
+        "file_id": "1lr_w3qIO1dYbEEKDi2zF-rWXSti5pC-i",
+        "url": "https://drive.google.com/file/d/1lr_w3qIO1dYbEEKDi2zF-rWXSti5pC-i/view",
+        "folder": "assets/deliverables/social-assets/templates"
+      },
+      "usage": {
+        "git_policy": "drive_only",
+        "site_runtime": false
+      },
+      "created_at": "2026-04-20T15:01:20-03:00",
+      "updated_at": "2026-06-28T11:52:57-03:00"
     },
     {
       "asset_id": "256135b47d92-instagram-template-institucional",
-      "relative_path": "deliverables/social-assets/templates/instagram-template-institucional.png",
+      "relative_path": "assets/deliverables/social-assets/templates/instagram-template-institucional.png",
       "filename": "instagram-template-institucional.png",
       "campaign": "templates",
       "mime_type": "image/png",
@@ -950,14 +1433,14 @@
         "status": "uploaded",
         "file_id": "1GMlUPyE336rb4ch5oMRtXPqmRIsdfAy-",
         "url": "https://drive.google.com/file/d/1GMlUPyE336rb4ch5oMRtXPqmRIsdfAy-/view",
-        "folder": "deliverables/social-assets/templates"
+        "folder": "assets/deliverables/social-assets/templates"
       },
       "usage": {
         "git_policy": "drive_only",
         "site_runtime": false
       },
       "created_at": "2026-04-20T15:01:21-03:00",
-      "updated_at": "2026-05-18T14:34:46-03:00"
+      "updated_at": "2026-06-28T11:52:06-03:00"
     }
   ]
 }

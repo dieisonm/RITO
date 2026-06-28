@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-RUNTIME_DIR="$ROOT/operations/ai-os/whatsapp/runtime"
+RUNTIME_DIR="$ROOT/ops/ai-os/whatsapp/runtime"
 PID_FILE="$RUNTIME_DIR/waha-webhook.pid"
 LOG_FILE="$RUNTIME_DIR/waha-webhook.log"
 HEALTH_URL="http://127.0.0.1:8787/health"

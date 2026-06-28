@@ -453,7 +453,7 @@ function parseArgs(array $argv): array
 {
     $args = [
         'apply' => false,
-        'batch_dir' => dirname(__DIR__) . '/operations/ai-os/growth/prospecting/territories/novo-hamburgo-rs/batches',
+        'batch_dir' => dirname(__DIR__) . '/ops/ai-os/growth/prospecting/territories/novo-hamburgo-rs/batches',
         'batch_csv' => '2026-04-21-batch-001-pilot.csv',
         'batch_json' => '2026-04-21-batch-001-outreach-data.json',
         'company_ids' => [],
@@ -616,8 +616,8 @@ function renderHtmlTemplate(string $templatePath, array $context): string
 function buildInlineBrandAttachments(): array
 {
     $attachments = [];
-    $logoPath = repoRootPath() . '/logos/rito_sistemas_wordmark_01.png';
-    $monogramPath = repoRootPath() . '/logos/site-and-institutional-high-res/rito-monograma-petroleo-4x.png';
+    $logoPath = repoRootPath() . '/site/logos/rito_sistemas_wordmark_01.png';
+    $monogramPath = repoRootPath() . '/site/logos/rito_monogram_r_01.png';
 
     $logoContent = file_get_contents($logoPath);
     if ($logoContent !== false) {
@@ -823,7 +823,7 @@ function buildRealHtmlEmail(
     string $campaign = 'outbound_email'
 ): array
 {
-    $templatePath = repoRootPath() . '/operations/ai-os/email/templates/prospecting-outbound-email-template-v2.html';
+    $templatePath = repoRootPath() . '/ops/ai-os/email/templates/prospecting-outbound-email-template-v2.html';
     $fronts = array_values(array_filter(
         array_map(
             static fn($value): string => trim((string) $value),
@@ -874,7 +874,7 @@ function buildRealHtmlEmail(
 
 function buildTestHtmlEmailPreview(string $subjectText, string $transport = 'smtp'): array
 {
-    $templatePath = repoRootPath() . '/operations/ai-os/email/templates/prospecting-outbound-email-template-v2.html';
+    $templatePath = repoRootPath() . '/ops/ai-os/email/templates/prospecting-outbound-email-template-v2.html';
     $brandImages = brandImageUrls($transport);
     $siteUrl = trackedUrl('https://ritosistemas.com', 'email_test', 'test_site_html');
     $instagramUrl = trackedUrl('https://www.instagram.com/ritosistemas/', 'email_test', 'test_instagram_html');

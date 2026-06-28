@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-WAHA_DIR="$ROOT/operations/ai-os/whatsapp/waha"
+WAHA_DIR="$ROOT/ops/ai-os/whatsapp/waha"
 DOCKER_CONFIG_DIR="$WAHA_DIR/.docker-config"
 
 : "${COLIMA_HOME:=/tmp/rito-colima-home}"

@@ -44,23 +44,23 @@ LINE_HEX = "#d7d1ca"
 
 
 DOCX_SOURCES: List[Tuple[str, Path]] = [
-    ("rito-first-contact-playbook.docx", ROOT / "docs/company/client-ready/first-contact-playbook.md"),
-    ("rito-client-briefing-form.docx", ROOT / "docs/company/client-ready/client-briefing-form-final.md"),
-    ("rito-commercial-proposal-template.docx", ROOT / "docs/company/client-ready/commercial-proposal-final-template.md"),
-    ("rito-estimate-template.docx", ROOT / "docs/company/client-ready/estimate-final-template.md"),
-    ("rito-contract-template.docx", ROOT / "docs/company/legal-operational/contract-template.md"),
-    ("rito-follow-up-sequence.docx", ROOT / "docs/company/client-ready/follow-up-sequence-final.md"),
-    ("rito-proposal-send-checklist.docx", ROOT / "docs/company/client-ready/proposal-send-checklist.md"),
-    ("rito-pricing-guide.docx", ROOT / "docs/company/commercial/pricing-guide.md"),
+    ("rito-first-contact-playbook.docx", ROOT / "docs/sales/client-ready/first-contact-playbook.md"),
+    ("rito-client-briefing-form.docx", ROOT / "docs/sales/client-ready/client-briefing-form-final.md"),
+    ("rito-commercial-proposal-template.docx", ROOT / "docs/sales/client-ready/commercial-proposal-final-template.md"),
+    ("rito-estimate-template.docx", ROOT / "docs/sales/client-ready/estimate-final-template.md"),
+    ("rito-contract-template.docx", ROOT / "docs/legal/contract-template.md"),
+    ("rito-follow-up-sequence.docx", ROOT / "docs/sales/client-ready/follow-up-sequence-final.md"),
+    ("rito-proposal-send-checklist.docx", ROOT / "docs/sales/client-ready/proposal-send-checklist.md"),
+    ("rito-pricing-guide.docx", ROOT / "docs/sales/commercial/pricing-guide.md"),
 ]
 
 PDF_SOURCES: List[Tuple[str, Path]] = [
-    ("rito-branding-guide.pdf", ROOT / "docs/company/institutional/mini-brand-guide.md"),
-    ("rito-software-brand-system.pdf", ROOT / "docs/company/institutional/software-ui-brand-system.md"),
-    ("rito-company-onepager.pdf", ROOT / "docs/company/sales-materials/rito-company-onepager-v1.md"),
+    ("rito-branding-guide.pdf", ROOT / "docs/brand/institutional/mini-brand-guide.md"),
+    ("rito-software-brand-system.pdf", ROOT / "docs/brand/institutional/software-ui-brand-system.md"),
+    ("rito-company-onepager.pdf", ROOT / "docs/sales/materials/rito-company-onepager-v1.md"),
 ]
 
-PRESENTATION_MD = ROOT / "docs/company/sales-materials/rito-company-presentation-v1.md"
+PRESENTATION_MD = ROOT / "docs/sales/materials/rito-company-presentation-v1.md"
 PRESENTATION_PPTX = PPT_DIR / "rito-company-presentation.pptx"
 PRESENTATION_PDF = PDF_DIR / "rito-company-presentation.pdf"
 
@@ -1020,7 +1020,7 @@ def create_deliverables_readme() -> None:
                 "",
                 "## Observação",
                 "",
-                "Os arquivos desta pasta são gerados a partir da base em `docs/company/`. Quando os documentos-fonte forem refinados, execute o script novamente para atualizar o kit final.",
+                "Os arquivos desta pasta são gerados a partir da base em `docs/sales/`, `docs/legal/` e `docs/brand/`. Quando os documentos-fonte forem refinados, execute o script novamente para atualizar o kit final.",
                 "",
             ]
         ),

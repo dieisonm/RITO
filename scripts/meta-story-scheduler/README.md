@@ -18,11 +18,11 @@ npm install
 
 ## Fluxo recomendado
 
-1. Copie o template em `operations/instagram/story-schedule.plan.template.json` para um plano real.
+1. Copie o template em `ops/instagram/story-schedule.plan.template.json` para um plano real.
 2. Rode a autenticacao inicial:
 
 ```bash
-node schedule_instagram_stories.mjs auth --config ../../operations/instagram/story-schedule.plan.template.json
+node schedule_instagram_stories.mjs auth --config ../../ops/instagram/story-schedule.plan.template.json
 ```
 
 3. Faça login no Meta Business Suite na janela aberta e pressione `Enter` no terminal.
@@ -30,7 +30,7 @@ node schedule_instagram_stories.mjs auth --config ../../operations/instagram/sto
 5. Rode o agendamento:
 
 ```bash
-node schedule_instagram_stories.mjs schedule --config ../../operations/instagram/story-schedule.plan.template.json
+node schedule_instagram_stories.mjs schedule --config ../../ops/instagram/story-schedule.plan.template.json
 ```
 
 ## Comandos
@@ -38,25 +38,25 @@ node schedule_instagram_stories.mjs schedule --config ../../operations/instagram
 ### Validar o plano
 
 ```bash
-node schedule_instagram_stories.mjs validate --config ../../operations/instagram/story-schedule.plan.template.json
+node schedule_instagram_stories.mjs validate --config ../../ops/instagram/story-schedule.plan.template.json
 ```
 
 ### Agendar apenas os primeiros N stories
 
 ```bash
-node schedule_instagram_stories.mjs schedule --config ../../operations/instagram/story-schedule.plan.template.json --limit 5
+node schedule_instagram_stories.mjs schedule --config ../../ops/instagram/story-schedule.plan.template.json --limit 5
 ```
 
 ### Continuar mesmo se um story falhar
 
 ```bash
-node schedule_instagram_stories.mjs schedule --config ../../operations/instagram/story-schedule.plan.template.json --continue-on-error
+node schedule_instagram_stories.mjs schedule --config ../../ops/instagram/story-schedule.plan.template.json --continue-on-error
 ```
 
 ### Rodar em dry-run
 
 ```bash
-node schedule_instagram_stories.mjs schedule --config ../../operations/instagram/story-schedule.plan.template.json --dry-run
+node schedule_instagram_stories.mjs schedule --config ../../ops/instagram/story-schedule.plan.template.json --dry-run
 ```
 
 ## Observacoes
