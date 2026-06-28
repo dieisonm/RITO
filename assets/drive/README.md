@@ -54,7 +54,7 @@ python3 scripts/drive_assets.py upload
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path deliverables/social-assets/exemplo.png \
+  --path assets/deliverables/social-assets/exemplo.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```
@@ -96,3 +96,15 @@ Alternativas se `rclone` não estiver configurado em outro computador:
 - futura ferramenta de upload binário quando disponível no Codex.
 
 Depois do upload, o manifesto continua sendo atualizado no Git para manter Mac e servidor sincronizados.
+
+## O que deve sair do Git
+
+- imagens pesadas em `assets/deliverables/`
+- binários comerciais como `docx`, `xlsx`, `pptx` e `pdf` em `assets/deliverables/business-kit/`
+- PNGs institucionais de alta resolução em `assets/brand/logos/site-and-institutional-high-res/`
+
+No Git devem ficar apenas:
+
+- o manifesto `assets/drive/asset-manifest.json`
+- os READMEs e estruturas de pasta
+- assets leves realmente necessários para runtime do site em `site/`

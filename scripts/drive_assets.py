@@ -15,7 +15,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "assets" / "drive" / "asset-manifest.json"
-QUEUE_DIR = ROOT / "operations" / "ai-os" / "asset-sync" / "upload-queue"
+QUEUE_DIR = ROOT / "ops" / "ai-os" / "asset-sync" / "upload-queue"
 DRIVE_ROOT = {
     "name": "RITO_Files",
     "folder_id": "1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o",
@@ -27,6 +27,9 @@ MEDIA_EXTENSIONS = {
     ".jpeg",
     ".webp",
     ".gif",
+    ".docx",
+    ".xlsx",
+    ".pptx",
     ".mp4",
     ".mov",
     ".pdf",
@@ -446,7 +449,12 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     scan = subparsers.add_parser("scan", help="Escanear mídia local e atualizar manifesto/fila.")
-    scan.add_argument("--roots", nargs="+", default=["deliverables"], help="Pastas relativas ao repo para escanear.")
+    scan.add_argument(
+        "--roots",
+        nargs="+",
+        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        help="Pastas relativas ao repo para escanear.",
+    )
     scan.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB.")
     scan.add_argument("--write-manifest", action="store_true")
     scan.add_argument("--write-queue", action="store_true")
@@ -454,7 +462,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     upload = subparsers.add_parser("upload", help="Subir assets pendentes via rclone e atualizar manifesto.")
     upload.add_argument("--remote", default="rito-drive:", help="Remote rclone de destino.")
-    upload.add_argument("--roots", nargs="+", default=["deliverables"], help="Pastas relativas ao repo para rescan.")
+    upload.add_argument(
+        "--roots",
+        nargs="+",
+        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        help="Pastas relativas ao repo para rescan.",
+    )
     upload.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB no rescan.")
     upload.add_argument("--rescan", action="store_true", help="Atualizar manifesto antes de subir.")
     upload.add_argument("--dry-run", action="store_true")
