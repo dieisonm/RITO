@@ -17,6 +17,7 @@ Esta pasta concentra a documentação estável da RITO.
 
 - [`docs/brand/foundation.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/brand/foundation.md)
 - [`docs/site/site-content.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/site/site-content.md)
+- [`docs/ops/server/other-computer-onboarding.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/server/other-computer-onboarding.md)
 - [`README.md`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/README.md)
 
 ## Regra

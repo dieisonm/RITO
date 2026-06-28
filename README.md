@@ -76,6 +76,7 @@ Importante:
 - `docs/site/site-content.md`: estrutura editorial e textos-base do site.
 - `docs/ops/hostinger-deploy.md`: passo a passo para publicacao na Hostinger.
 - `docs/ops/server/desktop-server-replication-runbook.md`: rotina do PC servidor 24/7.
+- `docs/ops/server/other-computer-onboarding.md`: retomada rapida do projeto em outro computador.
 
 ## Arquivos grandes
 
