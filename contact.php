@@ -388,6 +388,8 @@ $fbclid = cleanLine((string) ($_POST['fbclid'] ?? ''));
 $msclkid = cleanLine((string) ($_POST['msclkid'] ?? ''));
 $liFatId = cleanLine((string) ($_POST['li_fat_id'] ?? ''));
 $ttclid = cleanLine((string) ($_POST['ttclid'] ?? ''));
+$metaFbp = cleanLine((string) ($_POST['meta_fbp'] ?? ''));
+$metaFbc = cleanLine((string) ($_POST['meta_fbc'] ?? ''));
 $landingPage = cleanLine((string) ($_POST['landing_page'] ?? ''));
 $referrer = cleanLine((string) ($_POST['referrer'] ?? ''));
 $firstLandingPage = cleanLine((string) ($_POST['first_landing_page'] ?? ''));
@@ -455,6 +457,8 @@ $fbclid = shorten($fbclid, 400);
 $msclkid = shorten($msclkid, 220);
 $liFatId = shorten($liFatId, 220);
 $ttclid = shorten($ttclid, 220);
+$metaFbp = shorten($metaFbp, 240);
+$metaFbc = shorten($metaFbc, 240);
 $landingPage = shorten($landingPage, 400);
 $referrer = shorten($referrer, 400);
 $firstLandingPage = shorten($firstLandingPage, 400);
@@ -503,6 +507,8 @@ $bodyLines = [
     'MSCLKID: ' . ($msclkid !== '' ? $msclkid : 'Não informado'),
     'LI FAT ID: ' . ($liFatId !== '' ? $liFatId : 'Não informado'),
     'TTCLID: ' . ($ttclid !== '' ? $ttclid : 'Não informado'),
+    'Meta FBP: ' . ($metaFbp !== '' ? $metaFbp : 'Não informado'),
+    'Meta FBC: ' . ($metaFbc !== '' ? $metaFbc : 'Não informado'),
     'Landing page: ' . ($landingPage !== '' ? $landingPage : 'Não informada'),
     'Referrer: ' . ($referrer !== '' ? $referrer : 'Não informado'),
     'Primeira landing page: ' . ($firstLandingPage !== '' ? $firstLandingPage : 'Não informada'),
@@ -559,6 +565,8 @@ $leadPayload = [
     'msclkid' => $msclkid !== '' ? $msclkid : null,
     'li_fat_id' => $liFatId !== '' ? $liFatId : null,
     'ttclid' => $ttclid !== '' ? $ttclid : null,
+    'meta_fbp' => $metaFbp !== '' ? $metaFbp : null,
+    'meta_fbc' => $metaFbc !== '' ? $metaFbc : null,
     'landing_page' => $landingPage !== '' ? $landingPage : null,
     'referrer' => $referrer !== '' ? $referrer : null,
     'first_landing_page' => $firstLandingPage !== '' ? $firstLandingPage : null,

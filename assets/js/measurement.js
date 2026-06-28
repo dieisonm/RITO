@@ -1,5 +1,4 @@
 (function () {
-  const GA_MEASUREMENT_ID = "G-ZTLGY2QWVR";
   const UTM_KEYS = [
     "utm_id",
     "utm_source",
@@ -15,8 +14,35 @@
   const ATTRIBUTION_KEYS = [...UTM_KEYS, ...CLICK_ID_KEYS];
   const STORAGE_KEY = "rito_attribution";
   const STORAGE_TTL_MS = 90 * 24 * 60 * 60 * 1000;
+  const DEFAULT_CONFIG = {
+    gaMeasurementId: "G-ZTLGY2QWVR",
+    metaPixelId: "",
+  };
 
   window.dataLayer = window.dataLayer || [];
+
+  function cleanValue(value, limit) {
+    return String(value || "").trim().slice(0, limit);
+  }
+
+  function readRuntimeConfig() {
+    const rawConfig =
+      window.RITO_MEASUREMENT_CONFIG && typeof window.RITO_MEASUREMENT_CONFIG === "object"
+        ? window.RITO_MEASUREMENT_CONFIG
+        : {};
+
+    return {
+      gaMeasurementId: cleanValue(
+        rawConfig.gaMeasurementId || DEFAULT_CONFIG.gaMeasurementId,
+        40
+      ),
+      metaPixelId: cleanValue(rawConfig.metaPixelId || DEFAULT_CONFIG.metaPixelId, 40),
+    };
+  }
+
+  const runtimeConfig = readRuntimeConfig();
+  const GA_MEASUREMENT_ID = runtimeConfig.gaMeasurementId;
+  const META_PIXEL_ID = runtimeConfig.metaPixelId;
 
   function installGoogleAnalytics() {
     if (!GA_MEASUREMENT_ID) {
@@ -45,6 +71,44 @@
     )}`;
     script.dataset.ritoGa4 = GA_MEASUREMENT_ID;
     document.head.appendChild(script);
+  }
+
+  function installMetaPixel() {
+    if (!META_PIXEL_ID) {
+      return;
+    }
+
+    if (!window.fbq) {
+      const fbq = function () {
+        if (fbq.callMethod) {
+          fbq.callMethod.apply(fbq, arguments);
+        } else {
+          fbq.queue.push(arguments);
+        }
+      };
+
+      fbq.queue = [];
+      fbq.loaded = true;
+      fbq.version = "2.0";
+      window.fbq = fbq;
+
+      if (!window._fbq) {
+        window._fbq = fbq;
+      }
+    }
+
+    if (!document.querySelector(`script[data-rito-meta-pixel="${META_PIXEL_ID}"]`)) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://connect.facebook.net/en_US/fbevents.js";
+      script.dataset.ritoMetaPixel = META_PIXEL_ID;
+      document.head.appendChild(script);
+    }
+
+    if (window.fbq.__ritoPixelId !== META_PIXEL_ID) {
+      window.fbq("init", META_PIXEL_ID);
+      window.fbq.__ritoPixelId = META_PIXEL_ID;
+    }
   }
 
   function readStoredAttribution() {
@@ -91,8 +155,10 @@
     }
   }
 
-  function cleanValue(value, limit) {
-    return String(value || "").trim().slice(0, limit);
+  function readCookie(name) {
+    const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const match = document.cookie.match(new RegExp(`(?:^|; )${escapedName}=([^;]*)`));
+    return match ? decodeURIComponent(match[1]) : "";
   }
 
   function currentAttribution() {
@@ -146,6 +212,7 @@
   const attribution = currentAttribution();
 
   installGoogleAnalytics();
+  installMetaPixel();
 
   function gaEventName(eventName) {
     if (eventName === "rito_page_view") {
@@ -157,6 +224,42 @@
     }
 
     return eventName;
+  }
+
+  function metaEventName(eventName) {
+    if (eventName === "rito_page_view") {
+      return "PageView";
+    }
+
+    if (eventName === "generate_lead_form") {
+      return "Lead";
+    }
+
+    return "";
+  }
+
+  function metaCustomEventName(eventName) {
+    if (eventName === "click_whatsapp") {
+      return "RitoClickWhatsApp";
+    }
+
+    if (eventName === "click_email") {
+      return "RitoClickEmail";
+    }
+
+    if (eventName === "click_instagram") {
+      return "RitoClickInstagram";
+    }
+
+    if (eventName === "click_pilot_landing") {
+      return "RitoClickPilotLanding";
+    }
+
+    return `Rito${eventName
+      .split("_")
+      .filter(Boolean)
+      .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+      .join("")}`;
   }
 
   function sendToGoogleAnalytics(eventName, eventPayload) {
@@ -173,9 +276,57 @@
     });
   }
 
+  function sendToMetaPixel(eventName, eventPayload) {
+    if (typeof window.fbq !== "function" || !META_PIXEL_ID) {
+      return;
+    }
+
+    const { event, event_id, ...params } = eventPayload;
+    const metaParams = {
+      page_path: window.location.pathname,
+      page_title: document.title,
+      page_location: window.location.href,
+      ...params,
+    };
+
+    const mappedEventName = metaEventName(eventName);
+
+    if (mappedEventName) {
+      window.fbq("track", mappedEventName, metaParams, {
+        eventID: event_id,
+      });
+      return;
+    }
+
+    window.fbq("trackCustom", metaCustomEventName(eventName), metaParams, {
+      eventID: event_id,
+    });
+  }
+
+  function createEventId(eventName) {
+    return `${eventName}_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+  }
+
+  function currentMetaClickId() {
+    const existingFbc = cleanValue(readCookie("_fbc"), 240);
+
+    if (existingFbc) {
+      return existingFbc;
+    }
+
+    const fbclid = cleanValue(attribution.fbclid || attribution.first_fbclid || "", 200);
+
+    if (!fbclid) {
+      return "";
+    }
+
+    return `fb.1.${Date.now()}.${fbclid}`;
+  }
+
   function pushEvent(eventName, payload) {
     const eventPayload = {
       event: eventName,
+      event_id: createEventId(eventName),
       page_path: window.location.pathname,
       page_title: document.title,
       ...attribution,
@@ -184,6 +335,7 @@
 
     window.dataLayer.push(eventPayload);
     sendToGoogleAnalytics(eventName, eventPayload);
+    sendToMetaPixel(eventName, eventPayload);
     return eventPayload;
   }
 
@@ -216,6 +368,8 @@
       setHiddenValue(form, "referrer", attribution.referrer);
       setHiddenValue(form, "first_landing_page", attribution.first_landing_page);
       setHiddenValue(form, "first_referrer", attribution.first_referrer);
+      setHiddenValue(form, "meta_fbp", cleanValue(readCookie("_fbp"), 240));
+      setHiddenValue(form, "meta_fbc", currentMetaClickId());
 
       ATTRIBUTION_KEYS.forEach((key) => {
         setHiddenValue(form, `first_${key}`, attribution[`first_${key}`]);
@@ -228,6 +382,7 @@
   }
 
   window.ritoTrack = pushEvent;
+  window.ritoRefreshTrackingFields = enrichForms;
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", enrichForms);
