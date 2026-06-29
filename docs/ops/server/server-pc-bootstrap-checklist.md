@@ -108,5 +108,5 @@ https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
 - Não disparar campanha paga.
 - Não enviar lote frio sem aprovação humana explícita.
 - Não commitar `.env`, sessão WAHA, logs brutos de inbox, credenciais SMTP/IMAP, credenciais de hospedagem ou documentos `.local.md`.
-- Não commitar arquivos pesados de `assets/deliverables/`; registrar no Drive e no manifesto.
+- Não commitar arquivos pesados de `assets/`; registrar no Drive e no manifesto.
 - Não deixar dois computadores editando o mesmo arquivo operacional ao mesmo tempo.

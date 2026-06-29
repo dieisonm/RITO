@@ -16,7 +16,7 @@ Aplicar o fluxo novo de marketing aos 3 posts de lançamento do Instagram da RIT
 - formato: `estático 4:5`
 - status: `arte oficial aprovada`
 - arte:
-  - `assets/deliverables/social-assets/instagram-launch/01-rito-apresentacao-static.png`
+  - `assets/social/instagram-launch/01-rito-apresentacao-static.png`
 - base editorial:
   - `ops/instagram/posts/2026-04-launch-post-01-apresentacao.md`
 
@@ -28,7 +28,7 @@ Aplicar o fluxo novo de marketing aos 3 posts de lançamento do Instagram da RIT
 - formato: `estático 4:5`
 - status: `arte oficial aprovada`
 - arte:
-  - `assets/deliverables/social-assets/instagram-launch/02-rito-dor-planilhas-static.png`
+  - `assets/social/instagram-launch/02-rito-dor-planilhas-static.png`
 - base editorial:
   - `ops/instagram/posts/2026-04-launch-post-02-dor-planilhas-e-retrabalho.md`
 
@@ -40,9 +40,9 @@ Aplicar o fluxo novo de marketing aos 3 posts de lançamento do Instagram da RIT
 - formato: `carrossel com 3 slides`
 - status: `arte oficial aprovada`
 - artes:
-  - `assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-01.png`
-  - `assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-02.png`
-  - `assets/deliverables/social-assets/instagram-launch/03-rito-carrossel-slide-03.png`
+  - `assets/social/instagram-launch/03-rito-carrossel-slide-01.png`
+  - `assets/social/instagram-launch/03-rito-carrossel-slide-02.png`
+  - `assets/social/instagram-launch/03-rito-carrossel-slide-03.png`
 - base editorial:
   - `ops/instagram/posts/2026-04-launch-post-03-exemplo-controle-e-rotina.md`
 

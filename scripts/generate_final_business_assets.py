@@ -24,9 +24,9 @@ from reportlab.platypus import Image, Paragraph, Preformatted, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parent.parent
-LOGO = ROOT / "logos" / "rito_sistemas_wordmark_01.png"
-MONOGRAM = ROOT / "logos" / "rito_monogram_r_01.png"
-OUT_ROOT = ROOT / "deliverables" / "business-kit"
+LOGO = ROOT / "assets" / "brand" / "logos" / "site" / "rito_sistemas_wordmark_01.png"
+MONOGRAM = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_01.png"
+OUT_ROOT = ROOT / "assets" / "business-kit"
 DOCX_DIR = OUT_ROOT / "editable-docx"
 PDF_DIR = OUT_ROOT / "pdf"
 PPT_DIR = OUT_ROOT / "presentation"

@@ -19,4 +19,4 @@ commit: ""
 
 ## Details
 
-Em 2026-05-18 foi removido o commit invalido de bootstrap do servidor que entrou em origin/main e falhou no deploy. Tambem foram limpos residuos locais que reintroduziam publicacao direta e gatilho amplo para a pasta de scripts no workflow. O workflow deve disparar apenas para site/**, logos/**, scripts/build_dist.sh e .github/workflows/deploy-hostinger.yml.
+Em 2026-05-18 foi removido o commit invalido de bootstrap do servidor que entrou em origin/main e falhou no deploy. Tambem foram limpos residuos locais que reintroduziam publicacao direta e gatilho amplo para a pasta de scripts no workflow. O workflow deve disparar apenas para site/**, assets/brand/**, scripts/build_dist.sh e .github/workflows/deploy-hostinger.yml.

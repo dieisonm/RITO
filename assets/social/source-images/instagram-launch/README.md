@@ -10,4 +10,4 @@ Acervo antigo de fotos-base usado em uma rodada anterior do pack de lançamento 
 
 ## Observação
 
-As peças finais oficiais ficam em `assets/deliverables/social-assets/instagram-launch/`.
+As peças finais oficiais ficam em `assets/social/instagram-launch/`.

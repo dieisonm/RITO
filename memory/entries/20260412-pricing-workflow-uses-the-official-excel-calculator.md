@@ -10,7 +10,7 @@ source: "codex"
 created_at: "2026-04-12T19:24:05.396Z"
 updated_at: "2026-04-12T19:24:05.396Z"
 tags: ["pricing","commercial","calculator","excel"]
-files: ["docs/sales/commercial/pricing-guide.md","docs/sales/commercial/pricing-calculator-guide.md","assets/deliverables/business-kit/editable-xlsx/rito-pricing-calculator.xlsx","scripts/generate_pricing_calculator_xlsx.py"]
+files: ["docs/sales/commercial/pricing-guide.md","docs/sales/commercial/pricing-calculator-guide.md","assets/business-kit/editable-xlsx/rito-pricing-calculator.xlsx","scripts/generate_pricing_calculator_xlsx.py"]
 related_ids: []
 issue: ""
 pr: ""

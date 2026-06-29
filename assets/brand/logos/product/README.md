@@ -4,7 +4,7 @@ Esta pasta guarda a segunda familia oficial de logos da RITO para uso em softwar
 
 ## Regra principal
 
-- O site continua usando a familia atual ja presente na raiz de `logos/`.
+- O site institucional usa a família canônica em `assets/brand/logos/site/`.
 - Sistemas, aplicativos, dashboards e interfaces internas devem usar apenas os arquivos desta pasta.
 - Nao misturar os SVGs desta pasta com os PNGs usados hoje no site sem decisao explicita de rebranding.
 

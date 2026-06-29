@@ -11,13 +11,13 @@ Este documento traduz a marca do site para interfaces de software sem perder sob
 - Paleta real do site em `site/assets/css/styles.css`
 - Tipografia real do site em `site/index.html`
 - Lógica visual editorial e limpa já usada na home
-- Família atual do site em `logos/`
-- Família oficial para software e aplicativos em `assets/brand/logos/systems-and-apps/`
+- Família atual do site em `assets/brand/logos/site/`
+- Família oficial para software e aplicativos em `assets/brand/logos/product/`
 
 ## Regra de logo para produto
 
-- Para software, dashboards, aplicativos e interfaces internas, usar como padrão os SVGs de `assets/brand/logos/systems-and-apps/`.
-- O site continua com a família atual de `logos/` até decisão explícita de migração.
+- Para software, dashboards, aplicativos e interfaces internas, usar como padrão os SVGs de `assets/brand/logos/product/`.
+- O site continua sendo publicado a partir da família atual em `assets/brand/logos/site/` até decisão explícita de migração.
 - Em produto, preferir assets vetoriais antes de PNG.
 - Para fundos claros, usar as variantes `escuro` ou `claro` conforme contraste.
 - Para fundos escuros, usar as variantes `claro` ou `branco`.
@@ -27,11 +27,11 @@ Este documento traduz a marca do site para interfaces de software sem perder sob
 
 | Contexto | Arquivo recomendado |
 | --- | --- |
-| App icon, avatar de produto e navegação compacta | `assets/brand/logos/systems-and-apps/rito-monograma-r-escuro.svg` |
-| App icon em fundo escuro | `assets/brand/logos/systems-and-apps/rito-monograma-r-claro.svg` |
-| Login, splash, onboarding e header principal | `assets/brand/logos/systems-and-apps/rito-assinatura-horizontal-claro.svg` ou `assets/brand/logos/systems-and-apps/rito-assinatura-horizontal-branco.svg` |
-| Rodapé de produto e tela "sobre" | `assets/brand/logos/systems-and-apps/rito-wordmark-claro.svg` ou `assets/brand/logos/systems-and-apps/rito-wordmark-branco.svg` |
-| Destaques especiais | `assets/brand/logos/systems-and-apps/rito-monograma-r-areia.svg` ou `assets/brand/logos/systems-and-apps/rito-wordmark-areia.svg` |
+| App icon, avatar de produto e navegação compacta | `assets/brand/logos/product/rito-monograma-r-escuro.svg` |
+| App icon em fundo escuro | `assets/brand/logos/product/rito-monograma-r-claro.svg` |
+| Login, splash, onboarding e header principal | `assets/brand/logos/product/rito-assinatura-horizontal-claro.svg` ou `assets/brand/logos/product/rito-assinatura-horizontal-branco.svg` |
+| Rodapé de produto e tela "sobre" | `assets/brand/logos/product/rito-wordmark-claro.svg` ou `assets/brand/logos/product/rito-wordmark-branco.svg` |
+| Destaques especiais | `assets/brand/logos/product/rito-monograma-r-areia.svg` ou `assets/brand/logos/product/rito-wordmark-areia.svg` |
 
 ## Princípios de interface
 
@@ -195,7 +195,7 @@ Se um software da RITO precisar de uma identidade própria, ele deve herdar:
 - a mesma lógica tipográfica
 - o mesmo comportamento de cartões e bordas
 - o mesmo tom sóbrio e prático
-- a família de logos de `assets/brand/logos/systems-and-apps/` como base visual primária de produto
+- a família de logos de `assets/brand/logos/product/` como base visual primária de produto
 
 ## Resumo operacional
 

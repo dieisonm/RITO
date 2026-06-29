@@ -154,7 +154,7 @@ Para soluções completas, com mais etapas, mais usuários e maior complexidade.
 
 A RITO agora mantém uma calculadora oficial em Excel para apoiar a precificação:
 
-- `assets/deliverables/business-kit/editable-xlsx/rito-pricing-calculator.xlsx`
+- `assets/business-kit/editable-xlsx/rito-pricing-calculator.xlsx`
 
 Nela, a precificação combina:
 

@@ -34,7 +34,7 @@ Fluxo padrão:
 1. Criar o prompt visual seguindo este guia.
 2. Enviar o prompt para `ImageGen` quando a solicitação for produção de imagem.
 3. Preservar o arquivo original gerado na pasta interna do Codex.
-4. Copiar a imagem aprovada ou candidata para o diretório correto em `assets/deliverables/social-assets/`.
+4. Copiar a imagem aprovada ou candidata para o diretório correto em `assets/social/`.
 5. Validar proporção e dimensão; se necessário, exportar uma versão final no tamanho correto.
 6. Criar ou atualizar o `README.md` do lote com prompt, objetivo, data e observações.
 7. Encaminhar para revisão visual antes de publicar.
@@ -47,11 +47,11 @@ Exceção:
 
 ## Diretórios de saída
 
-- Stories orgânicos: `assets/deliverables/social-assets/instagram-stories/YYYY-MM-DD-nome-do-lote/`
-- Feed de campanha Meta: `assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/`
-- Fontes/originais de campanha: `assets/deliverables/social-assets/meta-projeto-piloto/source/`
-- Avatares e perfis: `assets/deliverables/social-assets/profile-images/`
-- Templates e experimentos reutilizáveis: `assets/deliverables/social-assets/templates/`
+- Stories orgânicos: `assets/social/instagram-stories/YYYY-MM-DD-nome-do-lote/`
+- Feed de campanha Meta: `assets/social/meta-projeto-piloto/feed-4x5/`
+- Fontes/originais de campanha: `assets/social/meta-projeto-piloto/source/`
+- Avatares e perfis: `assets/social/profile-images/`
+- Templates e experimentos reutilizáveis: `assets/social/templates/`
 
 Nomear arquivos com prefixo numérico e descrição curta:
 

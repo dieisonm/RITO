@@ -32,7 +32,7 @@ Espaço para organizar a operação de Instagram da RITO.
 
 ## Entregas atuais
 
-- artes finais em `assets/deliverables/social-assets/instagram-launch/`
+- artes finais em `assets/social/instagram-launch/`
 - textos de publicação em `ops/instagram/posts/`
 - estratégia de largada em `docs/brand/presence/instagram-launch-strategy.md`
 - direção oficial extraída das peças aprovadas em `docs/brand/presence/instagram-official-post-direction.md`
@@ -55,7 +55,7 @@ Espaço para organizar a operação de Instagram da RITO.
 
 - Guia oficial interno para GPT Image 2: [GPT Image 2 Visual Prompting Guide](../../docs/agents/agent-system/gpt-image-2-visual-prompting-guide.md)
 - A geração de imagens pode ser feita diretamente no Codex via ImageGen quando a demanda for produção visual.
-- Depois de gerar, copiar o arquivo para `assets/deliverables/social-assets/`, validar dimensão final e registrar o lote.
+- Depois de gerar, copiar o arquivo para `assets/social/`, validar dimensão final e registrar o lote.
 
 ## Acesso local
 

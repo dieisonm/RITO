@@ -6,8 +6,8 @@ Guardar ativos prontos para presença institucional da RITO em redes sociais.
 
 ## Avatares gerados
 
-- [rito-company-avatar-light-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/deliverables/social-assets/profile-images/rito-company-avatar-light-1080.png)
-- [rito-company-avatar-soft-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/deliverables/social-assets/profile-images/rito-company-avatar-soft-1080.png)
+- [rito-company-avatar-light-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/social/profile-images/rito-company-avatar-light-1080.png)
+- [rito-company-avatar-soft-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/social/profile-images/rito-company-avatar-soft-1080.png)
 
 ## Stories gerados
 
@@ -22,7 +22,7 @@ Guardar ativos prontos para presença institucional da RITO em redes sociais.
 - Imagens de campanhas, stories, posts e mockups podem ser geradas diretamente no Codex via ImageGen.
 - O agente de `Creative Production / Social Design Ops` deve gerar a imagem quando a demanda for produção visual, salvo pedido explícito para entregar apenas prompt.
 - O original gerado pelo Codex deve ser preservado na pasta interna do Codex.
-- A versão usada no projeto deve ser copiada para o diretório correto dentro de `assets/deliverables/social-assets/`.
+- A versão usada no projeto deve ser copiada para o diretório correto dentro de `assets/social/`.
 - Cada lote novo deve ter um `README.md` com objetivo, prompt, arquivos e pendências de revisão.
 
 ## Uso recomendado

@@ -39,7 +39,7 @@ Gatilho:
 - `push` na branch `main`
 - apenas quando houver mudancas em:
   - `site/**`
-  - `logos/**`
+  - `assets/brand/**`
   - `scripts/build_dist.sh`
   - `.github/workflows/deploy-hostinger.yml`
 
@@ -64,7 +64,7 @@ git push origin main
 
 Se a mudanca tocar arquivos do site, o GitHub Actions publica a branch `hostinger` automaticamente.
 
-Se a mudanca tocar apenas `docs/`, `operations/`, `memory/`, `assets/drive/` ou outros arquivos administrativos, o deploy do site nao deve rodar.
+Se a mudanca tocar apenas `docs/`, `ops/`, `memory/`, `assets/drive/` ou outros arquivos administrativos, o deploy do site nao deve rodar.
 
 ## Publicacao manual da branch hostinger
 

@@ -1,6 +1,6 @@
 # Site Backlog da RITO Sistemas
 
-Este diretorio organiza o backlog de melhorias do site da RITO Sistemas a partir das auditorias e recomendacoes ja produzidas em `docs/site/audits/` e `docs/site/plans/`.
+Este diretorio organiza o backlog de melhorias do site da RITO Sistemas a partir das auditorias e recomendacoes ja produzidas em `docs/website/audits/` e `docs/website/plans/`.
 
 ## Objetivo
 
@@ -25,12 +25,12 @@ Nao faz parte deste diretorio:
 
 ## Fontes de verdade usadas
 
-- `docs/site/audits/site-ux-conversion-audit.md`
-- `docs/site/audits/contact-flow-audit.md`
-- `docs/site/audits/information-architecture-review.md`
-- `docs/site/plans/homepage-copy-recommendations.md`
-- `docs/site/plans/internal-pages-copy-recommendations.md`
-- `docs/site/plans/contact-page-copy-strengthening.md`
+- `docs/website/audits/site-ux-conversion-audit.md`
+- `docs/website/audits/contact-flow-audit.md`
+- `docs/website/audits/information-architecture-review.md`
+- `docs/website/plans/homepage-copy-recommendations.md`
+- `docs/website/plans/internal-pages-copy-recommendations.md`
+- `docs/website/plans/contact-page-copy-strengthening.md`
 
 ## Arquivos deste diretorio
 

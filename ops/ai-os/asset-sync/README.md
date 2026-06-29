@@ -41,7 +41,7 @@ Registrar arquivo já enviado ao Drive:
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path assets/deliverables/social-assets/campanha/arte.png \
+  --path assets/social/campanha/arte.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```

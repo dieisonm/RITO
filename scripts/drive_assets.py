@@ -452,7 +452,7 @@ def build_parser() -> argparse.ArgumentParser:
     scan.add_argument(
         "--roots",
         nargs="+",
-        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        default=["assets/business-kit", "assets/social", "assets/brand/logos/site"],
         help="Pastas relativas ao repo para escanear.",
     )
     scan.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB.")
@@ -465,7 +465,7 @@ def build_parser() -> argparse.ArgumentParser:
     upload.add_argument(
         "--roots",
         nargs="+",
-        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        default=["assets/business-kit", "assets/social", "assets/brand/logos/site"],
         help="Pastas relativas ao repo para rescan.",
     )
     upload.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB no rescan.")

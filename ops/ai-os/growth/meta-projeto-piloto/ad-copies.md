@@ -6,7 +6,7 @@ Data: `2026-05-10`
 
 Arquivo:
 
-`assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/00-principal-cases-1080x1350.png`
+`assets/social/meta-projeto-piloto/feed-4x5/00-principal-cases-1080x1350.png`
 
 URL:
 
@@ -44,7 +44,7 @@ Saiba mais
 
 Arquivo:
 
-`assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/01-controles-simples-1080x1350.png`
+`assets/social/meta-projeto-piloto/feed-4x5/01-controles-simples-1080x1350.png`
 
 URL:
 
@@ -82,7 +82,7 @@ Saiba mais
 
 Arquivo:
 
-`assets/deliverables/social-assets/meta-projeto-piloto/feed-4x5/02-rotina-solucao-1080x1350.png`
+`assets/social/meta-projeto-piloto/feed-4x5/02-rotina-solucao-1080x1350.png`
 
 URL:
 

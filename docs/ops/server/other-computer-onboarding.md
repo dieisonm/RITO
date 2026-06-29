@@ -17,16 +17,24 @@ Este guia existe para retomar o projeto sem depender de arquivos locais soltos.
 - `ops/`: operação viva.
 - `memory/`: memória durável do projeto.
 - `assets/brand/`: fontes de marca e logos para uso interno.
-- `assets/deliverables/`: estrutura dos entregáveis.
+- `assets/`: estrutura dos entregáveis.
 - `assets/drive/asset-manifest.json`: registro oficial dos assets pesados.
 
 ## Onde procurar cada coisa
 
 - decisão de marca e logo: `docs/brand/` e `assets/brand/logos/`
-- logos usados pelo site: `site/logos/`
-- conteúdo e estrutura do site: `docs/site/`
+- logos usados pelo site: `assets/brand/logos/site/`
+- logos para sistemas, dashboards, apps e interfaces criadas pela RITO: `assets/brand/logos/product/`
+- conteúdo e estrutura do site: `docs/website/`
 - operação comercial, outbound, WhatsApp e campanhas: `ops/`
 - decisões já tomadas: `memory/entries/`
+
+## Regra rápida de escolha de logo
+
+- Se a entrega for site institucional, página pública, material comercial, Canva, proposta, PDF ou rede social, usar a família de `assets/brand/logos/site/`.
+- Se a entrega for sistema, dashboard, app, portal, login, onboarding, header de produto, avatar de software ou interface interna, usar a família de `assets/brand/logos/product/`.
+- Em sistemas criados por nós, a regra padrão é usar `assets/brand/logos/product/` e preferir SVG antes de PNG.
+- Não puxar logo diretamente de memória, de screenshots antigas ou do HTML do site. Sempre partir da pasta canônica em `assets/brand/logos/`.
 
 ## Primeiros passos no outro PC
 

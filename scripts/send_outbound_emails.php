@@ -616,8 +616,8 @@ function renderHtmlTemplate(string $templatePath, array $context): string
 function buildInlineBrandAttachments(): array
 {
     $attachments = [];
-    $logoPath = repoRootPath() . '/site/logos/rito_sistemas_wordmark_01.png';
-    $monogramPath = repoRootPath() . '/site/logos/rito_monogram_r_01.png';
+    $logoPath = repoRootPath() . '/assets/brand/logos/site/rito_sistemas_wordmark_01.png';
+    $monogramPath = repoRootPath() . '/assets/brand/logos/site/rito_monogram_r_01.png';
 
     $logoContent = file_get_contents($logoPath);
     if ($logoContent !== false) {
@@ -646,8 +646,8 @@ function brandImageUrls(string $transport): array
 {
     if ($transport === 'brevo-api') {
         return [
-            'wordmark' => 'https://ritosistemas.com/logos/rito_sistemas_wordmark_01.png',
-            'monogram' => 'https://ritosistemas.com/logos/rito_monogram_r_01.png',
+            'wordmark' => 'https://ritosistemas.com/assets/brand/rito_sistemas_wordmark_01.png',
+            'monogram' => 'https://ritosistemas.com/assets/brand/rito_monogram_r_01.png',
         ];
     }
 

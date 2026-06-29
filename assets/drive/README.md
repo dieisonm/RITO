@@ -54,7 +54,7 @@ python3 scripts/drive_assets.py upload
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path assets/deliverables/social-assets/exemplo.png \
+  --path assets/social/exemplo.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```
@@ -99,9 +99,9 @@ Depois do upload, o manifesto continua sendo atualizado no Git para manter Mac e
 
 ## O que deve sair do Git
 
-- imagens pesadas em `assets/deliverables/`
-- binários comerciais como `docx`, `xlsx`, `pptx` e `pdf` em `assets/deliverables/business-kit/`
-- PNGs institucionais de alta resolução em `assets/brand/logos/site-and-institutional-high-res/`
+- imagens pesadas em `assets/`
+- binários comerciais como `docx`, `xlsx`, `pptx` e `pdf` em `assets/business-kit/`
+- PNGs institucionais de alta resolução em `assets/brand/logos/site/`
 
 No Git devem ficar apenas:
 

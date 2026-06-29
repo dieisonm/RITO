@@ -10,7 +10,7 @@ source: "codex"
 created_at: "2026-04-12T19:24:05.383Z"
 updated_at: "2026-04-12T19:24:05.383Z"
 tags: ["site","process","change-management"]
-files: ["docs/site/audits/site-ux-conversion-audit.md","docs/site/plans/homepage-copy-recommendations.md","docs/site/backlog/site-improvement-backlog.md","site/index.html"]
+files: ["docs/website/audits/site-ux-conversion-audit.md","docs/website/plans/homepage-copy-recommendations.md","docs/website/backlog/site-improvement-backlog.md","site/index.html"]
 related_ids: []
 issue: ""
 pr: ""

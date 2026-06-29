@@ -53,7 +53,7 @@ Regras:
 ## Regras gerais
 
 - escrever em português do Brasil nas entregas;
-- seguir `docs/site/frontend-ui-development-guide.md`;
+- seguir `docs/website/frontend-ui-development-guide.md`;
 - para o site da RITO, preservar a linguagem visual atual, salvo pedido explícito de redesign;
 - para projetos de clientes, priorizar clareza operacional, responsividade e manutenção simples;
 - não transformar ajuste pontual em redesign;

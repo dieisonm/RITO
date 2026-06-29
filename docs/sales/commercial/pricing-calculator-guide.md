@@ -6,7 +6,7 @@ Padronizar o uso da planilha oficial de precificação da RITO Sistemas para tra
 
 ## Arquivo oficial
 
-- Planilha final: `assets/deliverables/business-kit/editable-xlsx/rito-pricing-calculator.xlsx`
+- Planilha final: `assets/business-kit/editable-xlsx/rito-pricing-calculator.xlsx`
 - Gerador: `scripts/generate_pricing_calculator_xlsx.py`
 
 ## Estrutura da planilha

@@ -10,7 +10,7 @@ source: "codex"
 created_at: "2026-04-12T19:24:05.366Z"
 updated_at: "2026-06-28T12:20:00.000Z"
 tags: ["operations","documentation","deliverables"]
-files: ["docs/README.md","assets/deliverables/business-kit/README.md","scripts/generate_final_business_assets.py","scripts/generate_pricing_calculator_xlsx.py"]
+files: ["docs/README.md","assets/business-kit/README.md","scripts/generate_final_business_assets.py","scripts/generate_pricing_calculator_xlsx.py"]
 related_ids: ["20260518-rito-passa-a-usar-github-first-com-google-drive-para-assets-","20260628-repositorio-foi-enxugado-e-outros-pcs-devem-usar-main-drive-e-caminhos-canonicos"]
 issue: ""
 pr: ""

@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "site/**"
-      - "logos/**"
+      - "assets/brand/**"
       - "scripts/build_dist.sh"
       - ".github/workflows/deploy-hostinger.yml"
   workflow_dispatch:
