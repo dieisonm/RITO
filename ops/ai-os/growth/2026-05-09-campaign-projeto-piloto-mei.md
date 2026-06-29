@@ -72,7 +72,7 @@
 
 ## Criativos Selecionados
 
-- pacote: `assets/social/meta-projeto-piloto/`
+- pacote: `assets/deliverables/social-assets/meta-projeto-piloto/`
 - formato: `1080x1350`
 - principal:
   - `feed-4x5/00-principal-cases-1080x1350.png`

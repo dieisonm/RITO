@@ -5,9 +5,9 @@ from PIL import Image, ImageDraw
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_01.png"
-SVG_OUT = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_clean.svg"
-PNG_OUT = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_clean_2048.png"
+SOURCE = ROOT / "logos" / "rito_monogram_r_01.png"
+SVG_OUT = ROOT / "logos" / "rito_monogram_r_clean.svg"
+PNG_OUT = ROOT / "logos" / "rito_monogram_r_clean_2048.png"
 
 BRAND = "#173847"
 

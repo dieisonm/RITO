@@ -62,7 +62,7 @@ Para a campanha atual `Projeto Piloto RITO`, o primeiro fluxo seguro seria:
 2. validar se a conta, pagina e Instagram aparecem corretamente;
 3. localizar ou criar o Dataset/Pixel pelo fluxo oficial da Meta;
 4. conferir se eventos `PageView`, `ViewContent`, `Lead` e `Contact` estao chegando;
-5. so depois montar campanha em pausa usando os ativos existentes em `assets/social/meta-projeto-piloto/`.
+5. so depois montar campanha em pausa usando os ativos existentes em `assets/deliverables/social-assets/meta-projeto-piloto/`.
 
 ### Instagram organico
 

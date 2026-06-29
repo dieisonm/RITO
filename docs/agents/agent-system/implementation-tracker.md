@@ -93,7 +93,7 @@ Este tracker existe para manter rastreabilidade e retomada segura.
 
 - `concluido`: monograma limpo exportado para `assets/brand/logos/rito_monogram_r_clean.svg` e `assets/brand/logos/rito_monogram_r_clean_2048.png`
 - `concluido`: assets da marca enviados para a biblioteca do Canva
-- `concluido`: templates locais de Instagram gerados em `assets/social/templates/`
+- `concluido`: templates locais de Instagram gerados em `assets/deliverables/social-assets/templates/`
 - `concluido`: templates de Instagram enviados também como assets na biblioteca do Canva
 - `concluido`: checklist visual rígido criado em `review-checklists/instagram-visual-qa.md`
 - `em andamento`: prompts e playbooks atualizados para usar o checklist como gate operacional

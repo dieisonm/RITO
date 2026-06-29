@@ -4,9 +4,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "assets" / "social" / "templates"
-LOGO = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_clean_2048.png"
-WORDMARK = ROOT / "assets" / "brand" / "logos" / "site" / "rito_sistemas_wordmark_02.png"
+OUT = ROOT / "deliverables" / "social-assets" / "templates"
+LOGO = ROOT / "logos" / "rito_monogram_r_clean_2048.png"
+WORDMARK = ROOT / "logos" / "rito_sistemas_wordmark_02.png"
 
 W, H = 1080, 1350
 

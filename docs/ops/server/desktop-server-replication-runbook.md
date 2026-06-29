@@ -100,7 +100,7 @@ Depois de subir manualmente um arquivo grande ao Drive, registrar:
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path assets/social/campanha/arte.png \
+  --path assets/deliverables/social-assets/campanha/arte.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```
@@ -258,7 +258,7 @@ Uso:
 - handoff para Codex;
 - operação e sincronização.
 
-### `assets/social/`
+### `assets/deliverables/social-assets/`
 
 Peças e imagens geradas para campanhas e redes sociais.
 
@@ -451,7 +451,7 @@ Arquivos pesados não devem entrar no Git.
 
 Fluxo padrão:
 
-1. O asset nasce localmente em `assets/` ou chega por download.
+1. O asset nasce localmente em `assets/deliverables/` ou chega por download.
 2. O scanner atualiza o manifesto e gera fila:
 
 ```bash
@@ -475,7 +475,7 @@ Regra:
 
 - se o servidor precisa usar um asset, ele lê o manifesto e baixa/abre pelo Drive;
 - se o asset precisa ir para o site, criar uma versão otimizada e leve em `site/`;
-- `assets/**/*.png`, `jpg`, `webp`, `mp4`, `pdf` e `zip` ficam ignorados pelo Git.
+- `assets/deliverables/**/*.png`, `jpg`, `webp`, `mp4`, `pdf` e `zip` ficam ignorados pelo Git.
 
 ## Sincronização de arquivos
 
@@ -619,7 +619,7 @@ ops/ai-os/whatsapp/waha/.env
 ops/ai-os/whatsapp/waha/.sessions/
 ops/ai-os/whatsapp/.session/
 ops/instagram/instagram-access.local.md
-ops/web/registrobr-access.local.md
+ops/website/registrobr-access.local.md
 ops/ai-os/whatsapp/inbox/raw/*.jsonl
 ops/ai-os/whatsapp/inbox/conversations/*.jsonl
 ops/ai-os/whatsapp/inbox/pending/*.jsonl

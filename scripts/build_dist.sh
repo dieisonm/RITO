@@ -8,8 +8,8 @@ rm -rf "$DIST_DIR"
 mkdir -p "$DIST_DIR"
 
 cp -R "$ROOT_DIR/site/." "$DIST_DIR/"
-mkdir -p "$DIST_DIR/assets/brand"
-find "$ROOT_DIR/assets/brand/logos/site" -maxdepth 1 -type f ! -name 'README.md' -exec cp {} "$DIST_DIR/assets/brand/" \;
+rm -rf "$DIST_DIR/logos"
+cp -R "$ROOT_DIR/site/logos" "$DIST_DIR/logos"
 find "$DIST_DIR" -name .DS_Store -delete
 find "$DIST_DIR/storage" -type f -name '*.jsonl' -delete 2>/dev/null || true
 

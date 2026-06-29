@@ -18,7 +18,7 @@ Produzir ou orientar a produção de peças sociais publicáveis, com plataforma
 - logo e identidade visual usam assets oficiais
 - a peça passa no checklist visual antes de seguir para revisão
 - quando houver imagem gerada por IA, o prompt final segue `docs/agents/agent-system/gpt-image-2-visual-prompting-guide.md`
-- quando a demanda for criar imagem, o agente gera a imagem via ImageGen e salva o resultado em `assets/social/`, salvo pedido explícito para entregar apenas o prompt
+- quando a demanda for criar imagem, o agente gera a imagem via ImageGen e salva o resultado em `assets/deliverables/social-assets/`, salvo pedido explícito para entregar apenas o prompt
 
 ### Validação antes de aprovar
 
@@ -69,7 +69,7 @@ Produzir ou orientar a produção de peças sociais publicáveis, com plataforma
 - não aprovar peça com cara de slide, flyer ou deck
 - tratar o checklist `instagram-visual-qa.md` como bloqueio técnico real, não como recomendação
 - se o fluxo no Canva estiver indisponível ou com erro de conector, registrar o bloqueio e seguir com export local de alta qualidade apenas se o resultado final passar no checklist visual
-- para peças institucionais com a família atual da marca, preferir os exports de alta resolução em `assets/brand/logos/site/`
+- para peças institucionais com a família atual da marca, preferir `assets/brand/logos/site-and-institutional-high-res/` em vez dos PNGs pequenos da raiz de `logos/`
 - nunca substituir a família atual oficial por asset derivado ou redesenhado quando houver os arquivos oficiais de alta qualidade disponíveis
 - para geração de imagem com GPT Image 2, produzir prompt em blocos claros: uso, cena principal, composição, texto exato, identidade RITO, restrições e entrega
 - no Codex, usar `ImageGen` como gerador padrão para imagens da RITO; não depender de geração externa quando a ferramenta estiver disponível
@@ -110,7 +110,7 @@ Produzir ou orientar a produção de peças sociais publicáveis, com plataforma
 ### 4. Pacote de produção
 
 - arte final exportada
-- caminho do arquivo salvo em `assets/social/`
+- caminho do arquivo salvo em `assets/deliverables/social-assets/`
 - caminho do original gerado pelo Codex, quando aplicável
 - dimensão do arquivo final validado
 - versão aprovada para revisão

@@ -2,11 +2,12 @@
 
 Esta pasta guarda os arquivos-fonte de marca usados fora do runtime público do site.
 
-- `logos/site/`: logos da família usada no site e em materiais institucionais.
-- `logos/product/`: família oficial para produtos, dashboards e sistemas.
+- `logos/systems-and-apps/`: família oficial para produtos, dashboards e sistemas.
+- `logos/site-and-institutional-high-res/`: PNGs de alta resolução para peças institucionais.
+- `logos/rito_*`: exports leves de apoio para documentação interna.
 
 Regra:
 
-- o build do site publica os arquivos certos a partir de `assets/brand/logos/site/`
+- o site público continua lendo `site/logos/`
 - assets pesados daqui devem ser registrados no Google Drive
 - o Git deve guardar só o que for leve, estável e realmente útil como fonte

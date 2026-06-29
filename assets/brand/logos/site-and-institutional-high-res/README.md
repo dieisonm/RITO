@@ -14,10 +14,9 @@ Estes arquivos sao a versao preferencial da familia atual da marca para:
 
 ## Regra de uso
 
-- Esta é a fonte canônica da família usada no site e nos materiais institucionais.
-- O build do site publica os arquivos necessários a partir desta pasta.
+- O site atual pode continuar apontando para os PNGs legados na raiz de `logos/` por compatibilidade.
 - Sempre que a peca precisar da familia atual da marca com mais nitidez, preferir os arquivos desta pasta.
-- Para software, dashboards, aplicativos e interfaces de produto, continuar usando a familia de `assets/brand/logos/product/`.
+- Para software, dashboards, aplicativos e interfaces de produto, continuar usando a familia de `assets/brand/logos/systems-and-apps/`.
 
 ## Arquivos
 

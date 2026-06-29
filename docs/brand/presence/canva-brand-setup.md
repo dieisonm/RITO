@@ -46,17 +46,17 @@ Registrar o estado atual dos assets da RITO dentro do Canva e o que foi possíve
 
 Os arquivos abaixo foram gerados e publicados para uso como base visual:
 
-- [instagram-template-institucional.png](../../../assets/social/templates/instagram-template-institucional.png)
-- [instagram-template-dor-resultado.png](../../../assets/social/templates/instagram-template-dor-resultado.png)
+- [instagram-template-institucional.png](../../../assets/deliverables/social-assets/templates/instagram-template-institucional.png)
+- [instagram-template-dor-resultado.png](../../../assets/deliverables/social-assets/templates/instagram-template-dor-resultado.png)
 
 ## Assets locais oficiais para uso institucional no Canva
 
 Para posts, capas, apresentações e peças institucionais que usem a família atual da marca, os assets preferenciais locais agora são:
 
-- [rito-monograma-petroleo-4x.png](../../../assets/brand/logos/site/rito-monograma-petroleo-4x.png)
-- [rito-monograma-branco-4x.png](../../../assets/brand/logos/site/rito-monograma-branco-4x.png)
-- [rito-wordmark-petroleo-4x.png](../../../assets/brand/logos/site/rito-wordmark-petroleo-4x.png)
-- [rito-wordmark-branco-4x.png](../../../assets/brand/logos/site/rito-wordmark-branco-4x.png)
+- [rito-monograma-petroleo-4x.png](../../../assets/brand/logos/site-and-institutional-high-res/rito-monograma-petroleo-4x.png)
+- [rito-monograma-branco-4x.png](../../../assets/brand/logos/site-and-institutional-high-res/rito-monograma-branco-4x.png)
+- [rito-wordmark-petroleo-4x.png](../../../assets/brand/logos/site-and-institutional-high-res/rito-wordmark-petroleo-4x.png)
+- [rito-wordmark-branco-4x.png](../../../assets/brand/logos/site-and-institutional-high-res/rito-wordmark-branco-4x.png)
 
 ## Limitação atual do plugin
 
@@ -124,6 +124,6 @@ Mas a criação do **Brand Kit nativo do Canva** continua dependente de:
 - não usar o monograma derivado `rito_monogram_r_clean.*` como substituto automático do logo oficial em peças institucionais
 - qualquer simplificação, reconstrução ou vetorização do `R` exige aprovação humana explícita antes de virar asset protagonista
 - para posts do Instagram, o uso preferencial é:
-  1. assets oficiais originais da marca, com preferência para `assets/brand/logos/site/` quando a peça usar a família atual institucional
+  1. assets oficiais originais da marca, com preferência para `assets/brand/logos/site-and-institutional-high-res/` quando a peça usar a família atual institucional
   2. composição manual em artboard nativo
   3. revisão visual antes de qualquer commit no Canva

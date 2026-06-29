@@ -24,7 +24,7 @@ Avaliar o site da RITO Sistemas com foco em experiência do usuário, clareza da
 - limitações atuais do layout ou conteúdo
 - contexto de conversão desejado
 - quando houver implementação aprovada, consultar:
-  - `docs/website/frontend-ui-development-guide.md`
+  - `docs/site/frontend-ui-development-guide.md`
 
 ## Regras
 

@@ -19,8 +19,8 @@ REQUIRED_PATHS = [
     "assets/css/styles.css",
     "assets/js/app.js",
     "assets/js/measurement.js",
-    "assets/brand/rito_monogram_r_01.png",
-    "assets/brand/rito_sistemas_wordmark_01.png",
+    "logos/rito_monogram_r_01.png",
+    "logos/rito_sistemas_wordmark_01.png",
     "pages/contato.html",
     "pages/projeto-piloto.html",
     "storage/.htaccess",
@@ -114,6 +114,9 @@ def validate_dist(dist_dir: Path) -> list[str]:
         *dist_dir.rglob("*.jsonl"),
         *dist_dir.rglob(".DS_Store"),
     ]
+
+    if (dist_dir / "logos" / "logos").exists():
+        fail("pasta duplicada proibida encontrada: logos/logos", errors)
 
     for forbidden_path in forbidden_matches:
         fail(f"arquivo proibido no deploy: {forbidden_path.relative_to(dist_dir).as_posix()}", errors)

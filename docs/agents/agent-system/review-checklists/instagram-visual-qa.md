@@ -7,7 +7,7 @@ Nenhuma peça de Instagram da RITO pode ser considerada pronta se qualquer item 
 ## Asset e marca
 
 - O logo principal ou monograma usado como protagonista é o asset oficial aprovado da marca.
-- Para a família atual institucional da RITO, preferir os arquivos em `assets/brand/logos/site/` quando a peça exigir logo grande ou export de alta nitidez.
+- Para a família atual institucional da RITO, preferir os arquivos em `assets/brand/logos/site-and-institutional-high-res/` quando a peça exigir logo grande ou export de alta nitidez.
 - Não substituir o logo oficial por releitura, simplificação, vetorização derivada ou variação reconstruída sem aprovação humana explícita.
 - Se houver dúvida entre fidelidade ao logo e nitidez, priorizar fidelidade e escalar em vez de “corrigir” a marca por conta própria.
 - Não usar logo raster pequeno ampliado como hero.

@@ -14,7 +14,7 @@ rito-brevo.php
 ops/instagram/instagram-access.local.md
 ops/instagram/story-schedule.*.json
 !ops/instagram/story-schedule.plan.template.json
-ops/web/registrobr-access.local.md
+ops/website/registrobr-access.local.md
 ops/ai-os/whatsapp/.session/
 ops/ai-os/whatsapp/runs/
 ops/ai-os/whatsapp/waha/.sessions/
@@ -34,20 +34,20 @@ scripts/meta-story-scheduler/.playwright/
 
 # Arquivos criativos pesados ficam no Google Drive e entram no Git apenas
 # pelo manifesto em assets/drive/asset-manifest.json.
-assets/**/*.png
-assets/**/*.jpg
-assets/**/*.jpeg
-assets/**/*.webp
-assets/**/*.gif
-assets/**/*.mp4
-assets/**/*.mov
-assets/**/*.pdf
-assets/**/*.zip
-assets/**/*.docx
-assets/**/*.xlsx
-assets/**/*.pptx
-!assets/**/*.md
-!assets/**/*.json
+assets/deliverables/**/*.png
+assets/deliverables/**/*.jpg
+assets/deliverables/**/*.jpeg
+assets/deliverables/**/*.webp
+assets/deliverables/**/*.gif
+assets/deliverables/**/*.mp4
+assets/deliverables/**/*.mov
+assets/deliverables/**/*.pdf
+assets/deliverables/**/*.zip
+assets/deliverables/**/*.docx
+assets/deliverables/**/*.xlsx
+assets/deliverables/**/*.pptx
+!assets/deliverables/**/*.md
+!assets/deliverables/**/*.json
 
 # PNGs institucionais de alta resolução ficam no Drive; manter no Git só README.
-assets/brand/logos/site/*.png
+assets/brand/logos/site-and-institutional-high-res/*.png

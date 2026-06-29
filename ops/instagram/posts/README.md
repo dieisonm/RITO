@@ -37,7 +37,7 @@ Os primeiros posts devem:
 
 ## Pacote visual final
 
-As artes prontas ficam em `assets/social/instagram-launch/`.
+As artes prontas ficam em `assets/deliverables/social-assets/instagram-launch/`.
 
 A direção visual e editorial oficial inferida do trio aprovado fica em:
 

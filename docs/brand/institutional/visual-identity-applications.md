@@ -144,8 +144,8 @@ Criar um padrão visual reconhecível para posts, capas, cards e chamadas.
 
 ## Regra de família por contexto
 
-- Site e materiais institucionais atuais: manter a família original em `assets/brand/logos/site/`.
-- Sistemas, dashboards, apps e interfaces de produto: usar a família de `assets/brand/logos/product/`.
+- Site e materiais institucionais atuais: manter a família original em `logos/`.
+- Sistemas, dashboards, apps e interfaces de produto: usar a família de `assets/brand/logos/systems-and-apps/`.
 - Quando houver dúvida, tratar o contexto como institucional se for comunicação externa e como produto se for interface de uso.
 
 ## Direção prática para produção

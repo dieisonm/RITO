@@ -4,10 +4,10 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "assets" / "social" / "instagram-launch"
-SRC = ROOT / "assets" / "social" / "source-images" / "instagram-launch"
-LOGO = ROOT / "assets" / "brand" / "logos" / "site" / "rito_monogram_r_clean_2048.png"
-WORDMARK = ROOT / "assets" / "brand" / "logos" / "site" / "rito_sistemas_wordmark_01.png"
+OUT = ROOT / "deliverables" / "social-assets" / "instagram-launch"
+SRC = ROOT / "deliverables" / "social-assets" / "source-images" / "instagram-launch"
+LOGO = ROOT / "logos" / "rito_monogram_r_clean_2048.png"
+WORDMARK = ROOT / "logos" / "rito_sistemas_wordmark_01.png"
 
 W, H = 1080, 1350
 

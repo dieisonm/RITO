@@ -11,7 +11,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT_DIR = ROOT / "assets" / "business-kit" / "editable-xlsx"
+OUT_DIR = ROOT / "deliverables" / "business-kit" / "editable-xlsx"
 OUT_FILE = OUT_DIR / "rito-pricing-calculator.xlsx"
 
 BRAND_DARK = "0D2430"

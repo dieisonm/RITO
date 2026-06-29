@@ -133,39 +133,39 @@ Baseada no site e nos materiais atuais da marca.
 
 ### Arquivos-base
 
-- `assets/brand/logos/site/rito_monogram_r_01.png`
-- `assets/brand/logos/site/rito_monogram_r_02.png`
-- `assets/brand/logos/site/rito_sistemas_wordmark_01.png`
-- `assets/brand/logos/site/rito_sistemas_wordmark_02.png`
+- `assets/brand/logos/rito_monogram_r_01.png`
+- `assets/brand/logos/rito_monogram_r_02.png`
+- `assets/brand/logos/rito_sistemas_wordmark_01.png`
+- `assets/brand/logos/rito_sistemas_wordmark_02.png`
 
 ### Arquivos preferenciais em alta qualidade para a família atual
 
-- `assets/brand/logos/site/rito-monograma-petroleo-4x.png`
-- `assets/brand/logos/site/rito-monograma-branco-4x.png`
-- `assets/brand/logos/site/rito-wordmark-petroleo-4x.png`
-- `assets/brand/logos/site/rito-wordmark-branco-4x.png`
+- `assets/brand/logos/site-and-institutional-high-res/rito-monograma-petroleo-4x.png`
+- `assets/brand/logos/site-and-institutional-high-res/rito-monograma-branco-4x.png`
+- `assets/brand/logos/site-and-institutional-high-res/rito-wordmark-petroleo-4x.png`
+- `assets/brand/logos/site-and-institutional-high-res/rito-wordmark-branco-4x.png`
 
 ### Regra de preferência
 
-- Para peças institucionais, redes sociais, Canva, apresentações e materiais comerciais, preferir os arquivos em `assets/brand/logos/site/`.
-- O próprio site deve ser abastecido a partir desta pasta canônica durante o build.
+- Para peças institucionais, redes sociais, Canva, apresentações e materiais comerciais, preferir os arquivos em `assets/brand/logos/site-and-institutional-high-res/`.
+- Os PNGs antigos na raiz de `logos/` podem continuar existindo para compatibilidade com o site atual.
 
 ### Família secundária para sistemas e aplicativos
 
 - Uso preferencial: software, dashboards, aplicativos, interfaces internas, telas de login e componentes de produto.
-- Aplicação oficial: usar apenas os SVGs em `assets/brand/logos/product/`.
+- Aplicação oficial: usar apenas os SVGs em `assets/brand/logos/systems-and-apps/`.
 - Regra de convivência: manter a família atual no site e nos materiais institucionais até decisão explícita de migração.
 
 ### Arquivos-base para produto e UI
 
-- `assets/brand/logos/product/rito-monograma-r-escuro.svg`
-- `assets/brand/logos/product/rito-monograma-r-claro.svg`
-- `assets/brand/logos/product/rito-monograma-r-areia.svg`
-- `assets/brand/logos/product/rito-wordmark-claro.svg`
-- `assets/brand/logos/product/rito-wordmark-branco.svg`
-- `assets/brand/logos/product/rito-wordmark-areia.svg`
-- `assets/brand/logos/product/rito-assinatura-horizontal-claro.svg`
-- `assets/brand/logos/product/rito-assinatura-horizontal-branco.svg`
+- `assets/brand/logos/systems-and-apps/rito-monograma-r-escuro.svg`
+- `assets/brand/logos/systems-and-apps/rito-monograma-r-claro.svg`
+- `assets/brand/logos/systems-and-apps/rito-monograma-r-areia.svg`
+- `assets/brand/logos/systems-and-apps/rito-wordmark-claro.svg`
+- `assets/brand/logos/systems-and-apps/rito-wordmark-branco.svg`
+- `assets/brand/logos/systems-and-apps/rito-wordmark-areia.svg`
+- `assets/brand/logos/systems-and-apps/rito-assinatura-horizontal-claro.svg`
+- `assets/brand/logos/systems-and-apps/rito-assinatura-horizontal-branco.svg`
 
 ### Regras básicas
 

@@ -2,7 +2,7 @@
 
 ## Escopo
 
-Esta revisão avalia os materiais atuais em `docs/`, o kit final em `assets/business-kit/README.md` e a lógica visual e institucional do site, sem alterar nada em `site/`.
+Esta revisão avalia os materiais atuais em `docs/`, o kit final em `assets/deliverables/business-kit/README.md` e a lógica visual e institucional do site, sem alterar nada em `site/`.
 
 ## Síntese executiva
 
@@ -17,7 +17,7 @@ O maior descompasso está entre a marca do site e os entregáveis finais. O site
 - O site já traz uma base visual própria e coerente, com paleta institucional e tipografia definida em `site/assets/css/styles.css` e reforçada em `docs/brand/foundation.md`.
 - A estrutura documental está organizada por finalidade, o que facilita evolução futura e uso por agentes.
 - Há uma linha comercial mínima bem orientada, com briefing, proposta, orçamento, follow-up e materiais de apresentação.
-- O `README.md` do `assets/business-kit/` mostra que existe intenção de pacote final, não apenas arquivos soltos.
+- O `README.md` do `assets/deliverables/business-kit/` mostra que existe intenção de pacote final, não apenas arquivos soltos.
 
 ## Fragilidades atuais
 
@@ -25,7 +25,7 @@ O maior descompasso está entre a marca do site e os entregáveis finais. O site
 - O branding guide em `docs/brand/institutional/mini-brand-guide.md` ainda é conceitual demais. Falta especificar uso prático de cor, tipografia, hierarquia, contraste, aplicações para software e regras claras de consistência visual.
 - Os materiais ainda usam uma escrita visualmente e editorialmente simples demais. A ausência de acentuação em vários arquivos passa sensação de rascunho e reduz a percepção de acabamento.
 - A apresentação em `docs/sales/materials/rito-company-presentation-v1.md` está sólida como narrativa, mas visualmente ainda é apenas um roteiro. Falta direção de identidade, ritmo de slides, hierarquia visual e presença de marca.
-- O kit final em `assets/business-kit/README.md` organiza formatos, mas não garante qualidade de conteúdo. Existe embalagem, porém nem todos os artefatos já parecem “prontos para cliente”.
+- O kit final em `assets/deliverables/business-kit/README.md` organiza formatos, mas não garante qualidade de conteúdo. Existe embalagem, porém nem todos os artefatos já parecem “prontos para cliente”.
 - O gerador em `scripts/generate_final_business_assets.py` produz arquivos válidos, mas a composição visual ainda é básica em `DOCX`, `PDF` e `PPTX`, com uso de fontes e layouts genéricos para uma marca que já possui identidade definida.
 - Ainda não há um guia real de precificação dos serviços. Sem isso, a empresa pode vender com inconsistência e precificar projetos de forma pouco padronizada.
 
