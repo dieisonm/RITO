@@ -15,6 +15,7 @@ ops/instagram/instagram-access.local.md
 ops/instagram/story-schedule.*.json
 !ops/instagram/story-schedule.plan.template.json
 ops/website/registrobr-access.local.md
+ops/web/registrobr-access.local.md
 ops/ai-os/whatsapp/.session/
 ops/ai-os/whatsapp/runs/
 ops/ai-os/whatsapp/waha/.sessions/
@@ -51,3 +52,24 @@ assets/deliverables/**/*.pptx
 
 # PNGs institucionais de alta resolução ficam no Drive; manter no Git só README.
 assets/brand/logos/site-and-institutional-high-res/*.png
+
+# Assets criativos atuais ficam no Drive; no Git entram só SVGs, READMEs e manifestos.
+assets/brand/logos/*.png
+assets/brand/logos/site/*.png
+assets/business-kit/**/*.docx
+assets/business-kit/**/*.xlsx
+assets/business-kit/**/*.pptx
+assets/business-kit/**/*.pdf
+assets/social/**/*.png
+assets/social/**/*.jpg
+assets/social/**/*.jpeg
+assets/social/**/*.webp
+assets/social/**/*.gif
+assets/social/**/*.mp4
+assets/social/**/*.mov
+assets/social/**/*.pdf
+assets/social/**/*.zip
+!assets/brand/**/*.md
+!assets/brand/**/*.svg
+!assets/business-kit/**/*.md
+!assets/social/**/*.md

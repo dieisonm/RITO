@@ -66,6 +66,15 @@ Se a mudanca tocar arquivos do site, o GitHub Actions publica a branch `hostinge
 
 Se a mudanca tocar apenas `docs/`, `operations/`, `memory/`, `assets/drive/` ou outros arquivos administrativos, o deploy do site nao deve rodar.
 
+Checklist rapido antes de um push administrativo:
+
+- `git diff --cached --name-only` nao pode listar `site/**`
+- `git diff --cached --name-only` nao pode listar `logos/**`
+- `git diff --cached --name-only` nao pode listar `scripts/build_dist.sh`
+- `git diff --cached --name-only` nao pode listar `.github/workflows/deploy-hostinger.yml`
+
+Se o commit ficar restrito a docs, memoria, operacao interna, manifesto e regras de sincronizacao, ele atualiza o projeto sem acionar deploy do site.
+
 ## Publicacao manual da branch hostinger
 
 Use apenas quando precisar regerar a branch de deploy localmente:

@@ -7,8 +7,10 @@ Base principal da RITO Sistemas para site, documentação, operação e memória
 - `site/`: site institucional e arquivos publicos de runtime.
 - `docs/`: documentação estável de marca, vendas, site, operações e agentes.
 - `ops/`: operação viva, campanhas, WhatsApp, playbooks e rotinas locais.
-- `assets/brand/`: arquivos-fonte de marca para uso interno.
-- `assets/deliverables/`: estrutura dos entregáveis e mídias geradas.
+- `assets/brand/`: base de marca e logos fonte.
+- `assets/business-kit/`: editáveis e PDFs comerciais pesados.
+- `assets/social/`: peças e fontes pesadas de social media.
+- `assets/deliverables/`: estrutura leve, READMEs e trilha dos entregáveis.
 - `assets/drive/`: manifesto oficial dos arquivos pesados guardados no Google Drive.
 - `memory/`: memória durável versionada do projeto.
 - `scripts/`: automações, geração de assets, validações e publicação.
@@ -65,10 +67,11 @@ Se estiver usando `Git Deployment` na hospedagem comum, usar:
 
 Importante:
 
+- para trabalho humano, usar apenas `main`
+- `hostinger` existe apenas como branch tecnica publicada pelo workflow
 - a branch `hostinger` precisa manter historico linear
-- nao usar `push -f` recorrente nessa branch, porque a Hostinger tende a fazer `pull/merge` no deploy automatico
 - deploy so deve ser considerado concluido quando `https://ritosistemas.com/deploy-info.json` abrir e mostrar a mesma `asset_version` do `dist/deploy-info.json`
-- mudancas em `docs/`, `ops/`, `memory/`, `assets/` e arquivos administrativos nao disparam deploy do site
+- mudancas em `docs/`, `ops/`, `memory/`, `assets/drive/`, `assets/business-kit/`, `assets/social/` e arquivos administrativos nao devem disparar deploy do site
 
 ## Documentos principais
 
@@ -80,19 +83,48 @@ Importante:
 
 ## Arquivos grandes
 
-Arquivos criativos pesados, como imagens geradas, vídeos, PDFs e exports de campanha, devem ficar no Google Drive:
+Arquivos criativos pesados, como PNG, JPG, PDF, DOCX, XLSX, PPTX, exports de campanha e fontes de criação, devem ficar no Google Drive:
 
 ```text
-https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
+RITO (raiz): https://drive.google.com/drive/folders/1FkgsOUtxmFdLIGwRBSmpqrFQ7EpClzxi
+RITO/assets: https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
 ```
 
-O Git guarda a estrutura e o manifesto. Os binários pesados devem ser enviados ao Drive:
+O Git guarda apenas a estrutura, SVGs fonte, READMEs, scripts, memória e o manifesto. Os binários pesados devem ser enviados ao Drive:
 
 ```bash
-python3 scripts/drive_assets.py scan --roots assets/brand/logos/site-and-institutional-high-res assets/deliverables --write-manifest --write-queue
+python3 scripts/drive_assets.py scan --write-manifest --write-queue
 python3 scripts/drive_assets.py upload
 python3 scripts/drive_assets.py check
 ```
+
+Regra prática:
+
+- vai para Git: `site/`, `docs/`, `ops/`, `memory/`, `scripts/`, SVGs de marca, READMEs e `assets/drive/asset-manifest.json`
+- vai para Drive: PNG/JPG/PDF/DOCX/XLSX/PPTX pesados em `assets/brand/logos/`, `assets/business-kit/` e `assets/social/`
+- fica só local: segredos, sessões, caches, inbox bruto, `.env` e arquivos temporários
+
+## Atualização segura do Git sem disparar deploy do site
+
+Para mudanças só de documentação, memória, operação ou política de assets:
+
+```bash
+git checkout main
+git pull --ff-only origin main
+git status --short
+git add README.md docs/ memory/ assets/drive/ .gitignore scripts/drive_assets.py
+git diff --cached --name-only
+git push origin main
+```
+
+Antes do push, confirme que o diff staged não inclui:
+
+- `site/**`
+- `logos/**`
+- `scripts/build_dist.sh`
+- `.github/workflows/deploy-hostinger.yml`
+
+Se esses caminhos não estiverem staged, o workflow de deploy do site não deve rodar.
 
 ## Informacoes iniciais cadastradas
 

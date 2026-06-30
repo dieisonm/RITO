@@ -9,7 +9,7 @@ Use este checklist junto com `desktop-server-replication-runbook.md`.
 - Separar credenciais em canal seguro, sem colocar senhas no Git.
 - Confirmar que `memory/entries/` existe no clone.
 - Confirmar que `assets/drive/asset-manifest.json` existe no clone.
-- Usar Google Drive `RITO_Files` para arquivos grandes.
+- Usar Google Drive `RITO/assets` para arquivos grandes.
 - Confirmar que nenhuma automação de Instagram será usada.
 
 ## Instalar no PC servidor
@@ -89,7 +89,7 @@ python3 -B scripts/drive_assets.py check
 Pasta raiz:
 
 ```text
-https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
+https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
 ```
 
 ## Primeiro teste operacional

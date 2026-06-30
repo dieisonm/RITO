@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updated_at": "2026-06-28T11:52:57-03:00",
+  "updated_at": "2026-06-30T13:30:00-03:00",
   "drive_root": {
-    "name": "RITO_Files",
-    "folder_id": "1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o",
-    "url": "https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o"
+    "name": "RITO/assets",
+    "folder_id": "1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L",
+    "url": "https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L"
   },
   "policy": {
     "github_keeps": [

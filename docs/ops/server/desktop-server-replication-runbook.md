@@ -29,7 +29,7 @@ Motivo:
 Uso recomendado:
 
 - GitHub: fonte de verdade para código, docs, prompts, templates, site, scripts, memória versionada, manifestos e artefatos operacionais não sensíveis.
-- Google Drive: fonte de verdade para mídia pesada em `RITO_Files`.
+- Google Drive: fonte de verdade para mídia pesada em `RITO/assets`.
 - OneDrive navegador: bootstrap manual, baixar pastas auxiliares e contingência quando algo ainda não estiver versionado.
 - `memory/project-memory`: espelho versionável das memórias duráveis do projeto.
 - `project-memory` MCP: interface opcional para busca/escrita local, reconstruível a partir dos Markdown versionados.
@@ -74,12 +74,12 @@ Contém:
 
 ### Google Drive de assets
 
-Pasta raiz:
+Pasta raiz operacional:
 
 ```text
-Nome: RITO_Files
-ID: 1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
-URL: https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
+Nome: RITO/assets
+ID: 1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
+URL: https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
 ```
 
 Manifesto versionado:
@@ -100,7 +100,7 @@ Depois de subir manualmente um arquivo grande ao Drive, registrar:
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path assets/deliverables/social-assets/campanha/arte.png \
+  --path assets/social/campanha/arte.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```
@@ -451,14 +451,14 @@ Arquivos pesados não devem entrar no Git.
 
 Fluxo padrão:
 
-1. O asset nasce localmente em `assets/deliverables/` ou chega por download.
+1. O asset nasce localmente em `assets/brand/logos/`, `assets/business-kit/` ou `assets/social/`, ou chega por download e é movido para um desses caminhos canônicos.
 2. O scanner atualiza o manifesto e gera fila:
 
 ```bash
 python3 scripts/drive_assets.py scan --write-manifest --write-queue
 ```
 
-3. O operador sobe os arquivos pendentes para `RITO_Files` no Google Drive.
+3. O operador sobe os arquivos pendentes para `RITO/assets` no Google Drive.
 4. Se o upload foi feito via `scripts/drive_assets.py upload`, o manifesto é atualizado automaticamente.
 5. Se o upload foi manual, o Codex registra `drive_id` e URL no manifesto:
 
@@ -475,7 +475,7 @@ Regra:
 
 - se o servidor precisa usar um asset, ele lê o manifesto e baixa/abre pelo Drive;
 - se o asset precisa ir para o site, criar uma versão otimizada e leve em `site/`;
-- `assets/deliverables/**/*.png`, `jpg`, `webp`, `mp4`, `pdf` e `zip` ficam ignorados pelo Git.
+- PNG/JPG/PDF/DOCX/XLSX/PPTX pesados em `assets/brand/logos/`, `assets/business-kit/` e `assets/social/` ficam fora do Git e devem ser replicados no Drive.
 
 ## Sincronização de arquivos
 
@@ -552,7 +552,7 @@ Exemplos:
 - bug e correção de deploy;
 - aprendizado de WhatsApp.
 
-### Camada 2: memória versionada em `memory/project-memory`
+### Camada 2: memória versionada em `memory/entries`
 
 Esta é a fonte de verdade recomendada para Mac e servidor.
 
@@ -619,7 +619,7 @@ ops/ai-os/whatsapp/waha/.env
 ops/ai-os/whatsapp/waha/.sessions/
 ops/ai-os/whatsapp/.session/
 ops/instagram/instagram-access.local.md
-ops/website/registrobr-access.local.md
+ops/web/registrobr-access.local.md
 ops/ai-os/whatsapp/inbox/raw/*.jsonl
 ops/ai-os/whatsapp/inbox/conversations/*.jsonl
 ops/ai-os/whatsapp/inbox/pending/*.jsonl

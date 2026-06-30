@@ -33,7 +33,7 @@ Regras críticas:
 - não responder automaticamente conversas reais sem aprovação humana nesta fase;
 - não commitar credenciais, sessões, tokens, inbox bruto ou arquivos locais sensíveis;
 - usar GitHub como fonte principal de sincronização;
-- usar Google Drive `RITO_Files` para imagens, vídeos, PDFs e exports pesados;
+- usar Google Drive `RITO/assets` para imagens, vídeos, PDFs e exports pesados;
 - usar `assets/drive/asset-manifest.json` como registro oficial de assets grandes;
 - usar OneDrive navegador apenas como contingência manual;
 - registrar decisões duráveis em docs ou `memory/entries/`;

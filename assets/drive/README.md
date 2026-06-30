@@ -1,19 +1,23 @@
 # Google Drive Asset Store
 
-Esta pasta guarda a ponte entre o GitHub da RITO e os arquivos grandes salvos no Google Drive.
+Esta pasta documenta a réplica oficial dos assets pesados da RITO no Google Drive.
 
-## Decisão
+## Fonte de verdade
 
-- GitHub é a fonte de verdade para código, documentação, prompts, scripts, templates, memória e manifestos.
-- Google Drive é a fonte de verdade para arquivos pesados: imagens geradas, vídeos, PDFs, exports de campanha e imagens-fonte.
-- OneDrive via navegador fica apenas como contingência manual, não como mecanismo operacional do servidor.
+- Git guarda código, documentação, memória, scripts, READMEs, SVGs fonte e manifestos.
+- Google Drive guarda binários pesados e editáveis de trabalho.
+- arquivos nunca devem existir só localmente se ainda forem reutilizados pelo projeto.
 
-## Pasta raiz no Google Drive
+## Pastas canônicas no Google Drive
 
 ```text
-Nome: RITO_Files
-ID: 1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
-URL: https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o
+RITO (raiz)
+ID: 1FkgsOUtxmFdLIGwRBSmpqrFQ7EpClzxi
+URL: https://drive.google.com/drive/folders/1FkgsOUtxmFdLIGwRBSmpqrFQ7EpClzxi
+
+RITO/assets
+ID: 1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
+URL: https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L
 ```
 
 ## Manifesto
@@ -33,78 +37,89 @@ Ele registra:
 - dimensões quando possível;
 - campanha ou contexto;
 - status no Drive;
-- `file_id` e URL do Google Drive quando o upload estiver concluído.
+- `file_id` e URL do Google Drive quando o vínculo já tiver sido conferido.
 
-## Fluxo de trabalho
+## O que vai para Drive
+
+- PNG/JPG de `assets/brand/logos/` que não são runtime do site
+- tudo que for pesado em `assets/business-kit/`
+- tudo que for pesado em `assets/social/`
+- exports finais, fontes de campanha e editáveis comerciais
+
+## O que fica no Git
+
+- `site/`
+- `docs/`
+- `ops/`
+- `memory/`
+- `scripts/`
+- SVGs fonte em `assets/brand/logos/systems-and-apps/`
+- READMEs
+- `assets/drive/asset-manifest.json`
+
+## Fluxo padrão quando um novo arquivo é criado
 
 1. Gerar ou receber o asset localmente.
-2. Rodar o scanner:
+2. Salvar no caminho canônico:
+
+- logo/brand pesado: `assets/brand/logos/...`
+- material comercial pesado: `assets/business-kit/...`
+- peça social ou imagem-fonte: `assets/social/...`
+
+3. Rodar o scanner:
 
 ```bash
 python3 scripts/drive_assets.py scan --write-manifest --write-queue
 ```
 
-3. Fazer upload dos arquivos pendentes:
+4. Fazer upload dos arquivos pendentes:
 
 ```bash
 python3 scripts/drive_assets.py upload
 ```
 
-4. Se algum upload for feito manualmente, registrar o arquivo enviado:
+5. Se algum upload for feito manualmente, registrar ou revisar o manifesto.
+
+6. Commitar apenas manifesto e documentação, nunca os binários pesados.
+
+## Registro manual no manifesto
+
+Se algum upload for feito fora do script, registrar o arquivo enviado:
 
 ```bash
 python3 scripts/drive_assets.py register \
-  --path assets/deliverables/social-assets/exemplo.png \
+  --path assets/social/campanha/exemplo.png \
   --drive-id GOOGLE_DRIVE_FILE_ID \
   --drive-url https://drive.google.com/file/d/GOOGLE_DRIVE_FILE_ID/view
 ```
 
-5. Commitar o manifesto atualizado.
-
-## Upload automatizado
+## Upload automatizado com script
 
 O upload automatizado usa `rclone`.
 
-Remote configurado neste Mac:
+O script considera como raízes padrão:
 
 ```text
-rito-drive:
+assets/brand/logos
+assets/business-kit
+assets/social
 ```
 
-Destino:
-
-```text
-Google Drive / RITO_Files
-```
+Se `rclone` estiver configurado, o remote deve apontar para a conta nova e para a pasta `RITO` ou `RITO/assets`, conforme o setup local.
 
 Comandos úteis:
 
-```bash
+```text
 python3 scripts/drive_assets.py upload --dry-run
 python3 scripts/drive_assets.py upload
-rclone size rito-drive:
+python3 scripts/drive_assets.py check
 ```
 
-## Observação sobre o conector do Google Drive
+## Regra operacional
 
-O conector disponível no Codex consegue validar a pasta, listar arquivos e trabalhar com Docs/Sheets/Slides. Nesta sessão, ele não expôs upload binário genérico de PNG/JPG/PDF. Por isso, o upload binário foi resolvido com `rclone`.
+Se um arquivo novo for importante para continuidade do projeto:
 
-Alternativas se `rclone` não estiver configurado em outro computador:
-
-- Google Drive no navegador;
-- Google Drive Desktop;
-- futura ferramenta de upload binário quando disponível no Codex.
-
-Depois do upload, o manifesto continua sendo atualizado no Git para manter Mac e servidor sincronizados.
-
-## O que deve sair do Git
-
-- imagens pesadas em `assets/deliverables/`
-- binários comerciais como `docx`, `xlsx`, `pptx` e `pdf` em `assets/deliverables/business-kit/`
-- PNGs institucionais de alta resolução em `assets/brand/logos/site-and-institutional-high-res/`
-
-No Git devem ficar apenas:
-
-- o manifesto `assets/drive/asset-manifest.json`
-- os READMEs e estruturas de pasta
-- assets leves realmente necessários para runtime do site em `site/`
+- ele não pode ficar só local
+- ele deve ir para o caminho canônico local
+- ele deve ser replicado para `RITO/assets`
+- e a documentação/memória deve ser atualizada se isso mudar a operação

@@ -17,9 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "assets" / "drive" / "asset-manifest.json"
 QUEUE_DIR = ROOT / "ops" / "ai-os" / "asset-sync" / "upload-queue"
 DRIVE_ROOT = {
-    "name": "RITO_Files",
-    "folder_id": "1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o",
-    "url": "https://drive.google.com/drive/folders/1PrfwG1Sjawv4pF6ObxRAwKjpgX8iD00o",
+    "name": "RITO/assets",
+    "folder_id": "1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L",
+    "url": "https://drive.google.com/drive/folders/1t_ZfqPZl_-hhlzgPF3Lbnf3nOYPdZz3L",
 }
 MEDIA_EXTENSIONS = {
     ".png",
@@ -156,25 +156,22 @@ def should_skip(path: Path) -> bool:
 
 def infer_campaign(path: Path) -> str:
     parts = path.relative_to(ROOT).parts
-    if "social-assets" in parts:
-        index = parts.index("social-assets")
-        return "/".join(parts[index + 1 : -1]) or "social-assets"
+    if len(parts) >= 3 and parts[0] == "assets" and parts[1] == "social":
+        return "/".join(parts[1:-1]) or "social"
     if "business-kit" in parts:
         return "business-kit"
-    return parts[0] if parts else "general"
+    if len(parts) >= 3 and parts[0] == "assets" and parts[1] == "brand":
+        return "/".join(parts[1:-1]) or "brand"
+    return "/".join(parts[:-1]) if parts else "general"
 
 
 def infer_drive_folder(path: Path) -> str:
-    campaign = infer_campaign(path)
-    if campaign.startswith("instagram-stories"):
-        return "Social Assets/Instagram Stories"
-    if campaign.startswith("instagram-launch"):
-        return "Social Assets/Instagram Launch"
-    if campaign.startswith("meta-projeto-piloto"):
-        return "Social Assets/Meta Projeto Piloto"
-    if campaign == "business-kit":
-        return "Business Kit"
-    return "Assets/General"
+    try:
+        relative_to_assets = path.relative_to(ROOT / "assets")
+        parent = relative_to_assets.parent.as_posix()
+        return f"assets/{parent}" if parent != "." else "assets"
+    except ValueError:
+        return "assets/general"
 
 
 def make_asset(path: Path, existing: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -293,7 +290,7 @@ def update_uploaded_assets_from_lsjson(manifest: dict[str, Any], remote_items: l
                 "status": "uploaded",
                 "file_id": file_id,
                 "url": drive_file_url(file_id),
-                "folder": str(Path(relative_path).parent).replace(".", ""),
+                "folder": Path(relative_path).parent.as_posix(),
             }
         )
         asset["updated_at"] = now_iso()
@@ -452,7 +449,7 @@ def build_parser() -> argparse.ArgumentParser:
     scan.add_argument(
         "--roots",
         nargs="+",
-        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        default=["assets/brand/logos", "assets/business-kit", "assets/social"],
         help="Pastas relativas ao repo para escanear.",
     )
     scan.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB.")
@@ -465,7 +462,7 @@ def build_parser() -> argparse.ArgumentParser:
     upload.add_argument(
         "--roots",
         nargs="+",
-        default=["assets/deliverables", "assets/brand/logos/site-and-institutional-high-res"],
+        default=["assets/brand/logos", "assets/business-kit", "assets/social"],
         help="Pastas relativas ao repo para rescan.",
     )
     upload.add_argument("--min-mb", default="0.5", help="Tamanho mínimo em MB no rescan.")
