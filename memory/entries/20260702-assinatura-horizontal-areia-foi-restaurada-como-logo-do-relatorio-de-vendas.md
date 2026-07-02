@@ -8,7 +8,7 @@ summary: "O logo correto do produto e a assinatura horizontal completa, com mono
 why: "A variante dourada havia desaparecido durante a migracao de pastas. O wordmark areia sem monograma foi registrado e publicado por engano como se fosse o logo correto."
 source: "codex-session"
 created_at: "2026-07-02T20:00:00.000Z"
-updated_at: "2026-07-02T20:00:00.000Z"
+updated_at: "2026-07-02T21:27:31.549Z"
 tags: ["relatorio-vendas","logo","brand","assinatura-horizontal","areia","migration-fix"]
 files: ["S:/RITO/Automations/RITO/assets/brand/logos/systems-and-apps/rito-assinatura-horizontal-areia.svg","S:/RITO/Projetos/relatorio-vendas-web/public/logos/rito-assinatura-horizontal-areia.svg","S:/RITO/Projetos/relatorio-vendas-web/src/components/app-shell.tsx","S:/RITO/Projetos/relatorio-vendas-web/src/components/route-skeleton.tsx","S:/RITO/Projetos/relatorio-vendas-web/src/components/login-form.tsx"]
 related_ids: ["20260702-logo-azul-foi-publicado-por-engano-e-corrigido-para-wordmark-areia","20260412-brand-sources-and-visual-system-are-canonical"]
@@ -31,3 +31,7 @@ A copia de runtime fica em
 `S:/RITO/Projetos/relatorio-vendas-web/public/logos/rito-assinatura-horizontal-areia.svg`.
 Nao substituir pela versao `rito-wordmark-areia.svg`, pois ela nao possui o
 monograma e nao e a assinatura completa aprovada para este produto.
+
+Depois da validacao humana, o logo foi ampliado discretamente: `w-48` na
+sidebar e no skeleton, e `w-72` no login. Essas dimensoes mantem a assinatura
+legivel sem disputar atencao com o titulo do produto.
