@@ -10,7 +10,7 @@ source: "codex"
 created_at: "2026-04-19T21:57:25.688Z"
 updated_at: "2026-04-19T21:57:25.688Z"
 tags: ["marketing","agents","growth","instagram","hardening","evaluation","canva"]
-files: ["/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/agents/agent-system/marketing-agent-engineering-research.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/agents/agent-system/marketing-agent-hardening-plan.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/reviews/instagram-launch-flow-audit-and-dod.md"]
+files: ["S:/RITO/Automations/RITO/docs/agents/agent-system/marketing-agent-engineering-research.md","S:/RITO/Automations/RITO/docs/agents/agent-system/marketing-agent-hardening-plan.md","S:/RITO/Automations/RITO/docs/reviews/instagram-launch-flow-audit-and-dod.md"]
 related_ids: []
 issue: ""
 pr: ""

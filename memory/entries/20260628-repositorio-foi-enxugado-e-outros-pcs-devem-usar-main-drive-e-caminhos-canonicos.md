@@ -10,7 +10,7 @@ source: "codex-session"
 created_at: "2026-06-28T12:00:00.000Z"
 updated_at: "2026-06-28T12:00:00.000Z"
 tags: ["repo-structure","sync","github-first","google-drive","onboarding","canonical-paths"]
-files: ["/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/README.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/README.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/server/README.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/server/other-computer-onboarding.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/drive/asset-manifest.json"]
+files: ["S:/RITO/Automations/RITO/README.md","S:/RITO/Automations/RITO/docs/README.md","S:/RITO/Automations/RITO/docs/ops/server/README.md","S:/RITO/Automations/RITO/docs/ops/server/other-computer-onboarding.md","S:/RITO/Automations/RITO/assets/drive/asset-manifest.json"]
 related_ids: ["20260517-pc-servidor-rito-deve-sincronizar-por-github-e-usar-onedrive.md","20260518-rito-passa-a-usar-github-first-com-google-drive-para-assets-"]
 issue: ""
 pr: ""

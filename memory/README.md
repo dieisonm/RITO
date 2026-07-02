@@ -1,5 +1,9 @@
 # Project Memory Versionada
 
+> Fonte canonica no Windows: `S:/RITO/Automations/RITO/memory`.
+> A copia antiga em `C:/Users/Dieison/OneDrive/Documentos/Google Drive/Projetos/RITO/memory`
+> e somente legado e nao deve receber novas entradas.
+
 Esta pasta é o espelho versionado das memórias duráveis do projeto RITO.
 
 ## Objetivo
@@ -8,10 +12,10 @@ Garantir que o Mac principal e o PC servidor tenham a mesma base de decisões, b
 
 ## Fonte
 
-As entradas foram espelhadas de:
+As entradas duraveis ficam em:
 
 ```text
-Automations/project-memory/data/projects/RITO/entries/
+S:/RITO/Automations/RITO/memory/entries/
 ```
 
 ## Regra

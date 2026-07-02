@@ -15,7 +15,7 @@ A partir deste teste, a RITO passa a poder gerar imagens de campanhas, stories, 
 
 ## Original Codex
 
-- `/Users/I858224/.codex/generated_images/019d7319-6746-7562-95ba-90d21587807a/ig_01de04c1f44b83e7016a0a0abe7b788194a666247cda6cae8d.png`
+- `C:/Users/Dieison/.codex/generated_images/019d7319-6746-7562-95ba-90d21587807a/ig_01de04c1f44b83e7016a0a0abe7b788194a666247cda6cae8d.png`
 
 ## Prompt usado
 

@@ -6,8 +6,8 @@ Guardar ativos prontos para presença institucional da RITO em redes sociais.
 
 ## Avatares gerados
 
-- [rito-company-avatar-light-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/deliverables/social-assets/profile-images/rito-company-avatar-light-1080.png)
-- [rito-company-avatar-soft-1080.png](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/deliverables/social-assets/profile-images/rito-company-avatar-soft-1080.png)
+- [rito-company-avatar-light-1080.png](profile-images/rito-company-avatar-light-1080.png)
+- [rito-company-avatar-soft-1080.png](profile-images/rito-company-avatar-soft-1080.png)
 
 ## Stories gerados
 

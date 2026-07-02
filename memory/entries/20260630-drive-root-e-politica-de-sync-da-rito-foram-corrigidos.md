@@ -10,7 +10,7 @@ source: "codex-session"
 created_at: "2026-06-30T13:30:00.000Z"
 updated_at: "2026-06-30T13:30:00.000Z"
 tags: ["google-drive","sync","git-policy","deploy-safety","documentation","assets"]
-files: ["/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/README.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/assets/drive/README.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/hostinger-deploy.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/server/other-computer-onboarding.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/ops/server/desktop-server-replication-runbook.md","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/scripts/drive_assets.py","/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/.gitignore"]
+files: ["S:/RITO/Automations/RITO/README.md","S:/RITO/Automations/RITO/assets/drive/README.md","S:/RITO/Automations/RITO/docs/ops/hostinger-deploy.md","S:/RITO/Automations/RITO/docs/ops/server/other-computer-onboarding.md","S:/RITO/Automations/RITO/docs/ops/server/desktop-server-replication-runbook.md","S:/RITO/Automations/RITO/scripts/drive_assets.py","S:/RITO/Automations/RITO/.gitignore"]
 related_ids: ["20260628-repositorio-foi-enxugado-e-outros-pcs-devem-usar-main-drive-e-caminhos-canonicos","20260518-deploy-do-site-e-git-only-pela-branch-hostinger","20260518-rito-passa-a-usar-github-first-com-google-drive-para-assets-"]
 issue: ""
 pr: ""

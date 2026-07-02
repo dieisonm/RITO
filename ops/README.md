@@ -19,4 +19,4 @@ Cada frente deve ter:
 
 ## Integracao com a base documental
 
-Os documentos estáveis ficam em [`docs/`](/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/docs/README.md). `ops/` existe para execução prática, acompanhamento e rotinas em andamento.
+Os documentos estáveis ficam em [`docs/`](../docs/README.md). `ops/` existe para execução prática, acompanhamento e rotinas em andamento.

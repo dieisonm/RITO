@@ -18,6 +18,7 @@ Esta pasta guarda a segunda familia oficial de logos da RITO para uso em softwar
 - `rito-wordmark-areia.svg`: wordmark de apoio para aplicacoes especiais.
 - `rito-assinatura-horizontal-claro.svg`: assinatura horizontal para headers, splash screens, telas de login e materiais de produto em fundo claro.
 - `rito-assinatura-horizontal-branco.svg`: assinatura horizontal para fundos escuros.
+- `rito-assinatura-horizontal-areia.svg`: assinatura horizontal dourada para produtos RITO em fundo petroleo; e a variante usada no Relatorio de Vendas.
 
 ## Uso recomendado
 

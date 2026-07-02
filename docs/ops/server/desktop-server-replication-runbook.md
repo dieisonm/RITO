@@ -110,7 +110,7 @@ python3 scripts/drive_assets.py register \
 No Mac principal, a raiz atual é:
 
 ```text
-/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations
+S:\RITO\Automations
 ```
 
 Pastas auxiliares relevantes:
