@@ -45,3 +45,7 @@ Investigando o bug 3 acima, foi descoberto que o cadastro legado da CAMNPAL tem 
 ## Verificacao
 
 Cada rodada de correcao seguiu o runbook padrao: `npx tsc --noEmit`, `npm run build`, `npm run lint`, deploy via `npm run deploy:cloudflare`, smoke test (`/login` 200, `/` -> 307). Bugs de producao foram diagnosticados ao vivo com `wrangler tail` (nenhum reproduzia localmente da mesma forma, ja que dependiam de volume real de dados ou de peculiaridades do runtime Cloudflare Workers). Dados de teste incorretamente gravados pelo bug de escrita imediata (13 clientes sinteticos, mudanca de vendedor em 8 clientes reais preexistentes e em 1 cliente sem historico) foram identificados e revertidos antes do deploy final, comparando contra `sales_transactions` (nunca tocadas pelo bug, ja que so client/vendor assignment era escrito cedo demais) para reconstruir o estado correto anterior.
+
+## Correcao (03/07/2026, mais tarde no mesmo dia)
+
+A consolidacao de clientes CAMNPAL com nome duplicado descrita acima **estava errada** e foi revertida. Ver `20260703-clientes-com-mesmo-nome-e-codigos-diferentes-sao-filiais-distintas-nunca-fundir` para a regra de negocio correta e como a reversao foi feita.
