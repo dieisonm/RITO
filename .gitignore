@@ -6,6 +6,7 @@ __pycache__/
 dist/
 release/
 .colima/
+Projetos/
 site/storage/contact_requests.jsonl
 .hostinger-ftp.env
 rito-secrets.local.php
