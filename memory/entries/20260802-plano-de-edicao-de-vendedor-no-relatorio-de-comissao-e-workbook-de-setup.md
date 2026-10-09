@@ -2,13 +2,13 @@
 id: "20260802-plano-de-edicao-de-vendedor-no-relatorio-de-comissao-e-workbook-de-setup"
 project: "RITO"
 type: "plan"
-status: "active"
-title: "Plano: edicao de vendedor direto no relatorio de comissao + workbook de setup local; estado detalhado migrado para docs/ do repo"
-summary: "Especificada (nao construida) a feature de editar vendedor direto na pre-visualizacao do relatorio de comissao (/comissoes): coluna de checkbox como na tela de importacao, filtro por nome de cliente, paginacao no cliente para mostrar TODAS as linhas (hoje mostra so 40), acao em massa de vendedor, Salvar via NOVO endpoint set-based POST /reatribuir que atualiza sales_transactions.vendor_id em UMA query + opcional apply_vendor_resolutions para valer daqui pra frente + tabela de auditoria commission_vendor_edits + invalidateCache, depois refazer o fetch do preview. Escopo padrao = cirurgico (so as linhas selecionadas), com toggle opcional 'tambem definir como vendedor padrao do cliente'. Tambem escritos docs de onboarding para continuar o projeto em outro computador."
+status: "completed"
+title: "Plano historico concluido: edicao de vendedor implementada em agosto; setup local documentado"
+summary: "Plano original de 02/08 concluido em 17d30be (16/08): /comissoes ja permite selecionar linhas e reatribuir vendedor sem reimportar, com paginacao, busca, auditoria e invalidacao de cache. O comportamento entregue difere do plano: tambem atualiza a carteira futura por padrao; 'so para esse relatorio' desliga essa atualizacao. A proposta abaixo e historica. Estado revisado e pendencias em 20261009-relatorio-vendas-estado-revisado-e-pendencias.md e docs/current-state.md do app; docs/local-setup.md orienta troca de computador e recuperacao do env privado."
 why: "O usuario quer poder corrigir vendedores errados sem re-importar (a correcao de junho/2026 teve que ser feita na mao no banco). E vai continuar o projeto em outra maquina, entao pediu que tudo importante ficasse documentado em git (que ele carrega antes de trabalhar). Detalhe critico descoberto: a memoria RITO versionada estava parada em 2026-07-02 — todo o arco do relatorio-vendas depois disso (fluxo de importacao, overhaul de UI, fix de CPU, revamp de analytics, e os fixes de hoje) so estava na auto-memoria local do Claude Code, nao neste git. Por isso o estado detalhado agora vive em docs/ do repo relatorio-vendas-web (que viaja no clone) e estas entradas registram o essencial na memoria RITO."
 source: "claude-code-session"
 created_at: "2026-08-02T00:00:00-03:00"
-updated_at: "2026-08-02T00:00:00-03:00"
+updated_at: "2026-10-09T00:00:00-03:00"
 tags: ["relatorio-vendas","comissao","plano","documentacao","setup","onboarding"]
 files: ["S:/RITO/Projetos/relatorio-vendas-web/docs/comissao-edit-vendor-plan.md","S:/RITO/Projetos/relatorio-vendas-web/docs/local-setup.md","S:/RITO/Projetos/relatorio-vendas-web/docs/current-state.md"]
 related_ids: ["20260802-relatorio-vendas-tres-correcoes-criticas-de-importacao-e-comissao","20260802-correcao-manual-de-vendedores-trocados-no-relatorio-de-junho-claramax"]
@@ -18,6 +18,13 @@ commit: "b38bb02"
 ---
 
 ## Feature planejada (spec completa no repo)
+
+**Atualizacao de 09/10/2026:** a feature foi implementada em `17d30be`.
+O resumo do frontmatter e os itens abaixo descrevem a proposta original,
+nao o backlog atual. Diferenca entregue: por padrao tambem muda a carteira
+futura; "so para esse relatorio" desliga isso. Estado revisado completo em
+`20261009-relatorio-vendas-estado-revisado-e-pendencias.md` e em
+`docs/current-state.md` do app.
 
 `docs/comissao-edit-vendor-plan.md` (no repo relatorio-vendas-web, commit b38bb02) tem a spec resumivel e retomavel. Resumo:
 

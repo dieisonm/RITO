@@ -29,3 +29,19 @@ S:/RITO/Automations/RITO/memory/entries/
 ## Sincronização
 
 Para restaurar em outro computador, basta manter esta pasta no clone do repositório e apontar o Codex para `memory/entries/`.
+
+## Relatorio de vendas web
+
+Estado revisado em 09/10/2026:
+[`entries/20261009-relatorio-vendas-estado-revisado-e-pendencias.md`](entries/20261009-relatorio-vendas-estado-revisado-e-pendencias.md).
+O detalhe canonico vive em `docs/current-state.md` no repo separado
+`dieisonm/relatorio-vendas-web` (`master`); esta memoria viaja no repo RITO
+(`main`). Atualizar ambos ao concluir mudancas relevantes. Memoria local de
+MCP/Claude sem commit nao e sincronizacao entre computadores.
+
+Nesta maquina o app fica em
+`/Users/I858224/Library/CloudStorage/OneDrive-SAPSE/Procurement/Automations/RITO/Projetos/relatorio-vendas-web`.
+O clone e ignorado pelo Git RITO; seus docs precisam ser commitados no Git do
+app. No RITO, fazer stage explicito de `memory/**`; esse escopo nao aciona
+o workflow Hostinger. O app tem publicacao manual via OpenNext/Cloudflare;
+atualizar memoria/documentacao nao exige executar deploy.
