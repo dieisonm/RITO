@@ -37,8 +37,10 @@ registros completos anteriores a reversao. `data/` e ignorado no Git.
   sobre o cliente correto e ajuste da deteccao, nao exclusao de todo o lote.
 - Novo arquivo tem blocos 0067 (614 linhas, 39028.92) e 0099 (94 linhas,
   4791.66). Parser atual le 708 movimentos, soma 43820.58, sem perda de datas;
-  nao preserva bloco e ignora abatimentos finais de 1.5%, cuja regra precisa
-  ser confirmada. Nao atribuir esses blocos a vendedores por suposicao.
+  nao preserva bloco e ignora abatimentos finais de 1.5%. Decisao posterior
+  do usuario em 12/10: continuar ignorando headers e esse abatimento; ele
+  classifica vendedores e calcula o abatimento manualmente. Plano atual:
+  `20261012-plano-de-importacao-atomica-filiais-e-historico-de-tentativas.md`.
 - Tornar cadastro/classificacao e confirmacao uma transacao unica. Revisar
   historico de tentativas, refresh apos sucesso e opcao de reverter imports.
 - Nao reenviar o arquivo antes de tratar a colisao: a falha pode repetir
