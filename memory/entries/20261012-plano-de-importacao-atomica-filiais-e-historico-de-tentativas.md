@@ -16,6 +16,11 @@ related_ids: ["20260703-clientes-com-mesmo-nome-e-codigos-diferentes-sao-filiais
 Plano tecnico canonico no repo do app:
 `docs/import-integrity-plan.md`. Estado resumido: `docs/current-state.md`.
 
+Atualizacao posterior de 12/10: identidade das filiais e RPC atomica foram
+implementadas/testadas/publicadas; historico consultavel e reparo legado
+permanecem pendentes. Entrega em
+`20261012-importacao-atomica-publicada-e-reparo-10310-proposto.md`.
+
 ## Decisoes que prevalecem
 
 - Identidade de cliente por empresa/codigo; codigos diferentes com nome igual

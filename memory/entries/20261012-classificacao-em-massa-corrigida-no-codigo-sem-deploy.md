@@ -2,7 +2,7 @@
 id: "20261012-classificacao-em-massa-corrigida-no-codigo-sem-deploy"
 project: "RITO"
 type: "operation"
-status: "completed"
+status: "superseded"
 title: "Correcao implementada: classificacao em massa preserva filiais e API valida identidade; deploy pendente"
 summary: "A pedido do usuario, corrigidas as duas acoes em massa da importacao: sameImportClient impede agrupar codigos/IDs diferentes por nome e cada linha constroi sua propria resolucao, sem copiar clientId/newClient de outra filial. API valida todas as resolucoes antes de qualquer RPC de negocio, incluindo modos futuro/retroativo, rejeitando cliente de outra empresa/filial ou novo codigo diferente da origem. Regressao com UI e rota reais em memoria passou, assim como tsc e build; lint sem erros (14 avisos preexistentes em pdf-polyfills). Codigo/docs compartilhados pelo Git. Sem deploy, migration ou correcao de dados nesta etapa; RPC unica, historico e reparo legado continuam pendentes."
 why: "Usuario pediu corrigir o erro grave de salvar classificacao/cadastro de uma filial em outra, apos confirmar a regra de codigos distintos mesmo com nome igual."
@@ -13,6 +13,10 @@ tags: ["relatorio-vendas", "importacao", "filiais", "correcao", "regressao", "de
 commit: "32c2b28"
 related_ids: ["20261012-plano-de-importacao-atomica-filiais-e-historico-de-tentativas", "20261012-reversao-dos-efeitos-parciais-da-importacao-claramax"]
 ---
+
+Atualizacao posterior de 12/10: esta correcao foi publicada junto ao rollback
+automatico. Estado atual em
+`20261012-importacao-atomica-publicada-e-reparo-10310-proposto.md`.
 
 Arquivos do app: `src/lib/import-client-identity.ts`,
 `src/components/import-preview.tsx`, `src/app/api/importar/confirmar/route.ts`.
