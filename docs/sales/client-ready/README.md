@@ -29,6 +29,10 @@ Transformar a base comercial e operacional em materiais que possam ser usados no
 - Sempre que o cliente trouxer um caso novo, o briefing deve ser preenchido antes da proposta.
 - Se houver mudanca de escopo, refaca a estimativa e ajuste a proposta antes de reenviar.
 
+## Ofertas de preço fechado
+
+Para Site Express, Automação Rápida e Painel de Controle, use as fichas de `docs/sales/ofertas/` e `briefing-rapido-ofertas.md` no lugar do briefing completo e da estimativa.
+
 ## Arquivos desta pasta
 
 - `first-contact-playbook.md`
@@ -37,3 +41,4 @@ Transformar a base comercial e operacional em materiais que possam ser usados no
 - `estimate-final-template.md`
 - `follow-up-sequence-final.md`
 - `proposal-send-checklist.md`
+- `briefing-rapido-ofertas.md`

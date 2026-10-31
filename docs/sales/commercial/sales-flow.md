@@ -12,6 +12,17 @@ Padronizar o fluxo comercial da RITO Sistemas para atender micro e pequenas empr
 - Informar sempre que o orçamento inicial é gratuito e sem compromisso.
 - Manter a conversa focada em necessidade real, prazo, impacto e viabilidade.
 
+## Fluxo curto das ofertas (preço fechado)
+
+1. Primeiro contato: identificar se uma oferta de `docs/sales/ofertas/` resolve.
+2. Enviar a ficha da oferta e o briefing rápido (`docs/sales/client-ready/briefing-rapido-ofertas.md`).
+3. Confirmar o escopo em uma mensagem curta e enviar o contrato simplificado.
+4. Receber 50% de entrada por Pix e o material do cliente; o prazo começa a contar.
+5. Entregar, fazer a rodada de ajustes, receber o saldo e oferecer a manutenção mensal.
+6. Registrar o cliente e o resultado na base (`ops/ai-os/growth/prospecting/base-prospeccao-rito.xlsx` ou planilha de clientes).
+
+Use o fluxo abaixo (sob medida) só quando o pedido não couber em uma oferta.
+
 ## Fluxo recomendado
 
 ### 1. Primeiro contato

@@ -48,6 +48,22 @@ Oi, tudo bem? Aqui é a RITO Sistemas.
 Recebi sua mensagem e posso ajudar na análise. Se me passar uma descrição simples do processo ou da dificuldade, eu já consigo organizar os próximos passos.
 ```
 
+## Caminho rápido: ofertas de preço fechado
+
+Antes do briefing longo, veja se uma das ofertas resolve (`docs/sales/ofertas/`). Se resolver, mande a ficha e o briefing rápido (`briefing-rapido-ofertas.md`).
+
+| O cliente diz | Oferta |
+| --- | --- |
+| "Não tenho site", "meu site está velho", "só tenho Instagram/WhatsApp" | Site Express |
+| "Perco tempo copiando dados", "esqueço de cobrar", "faço o mesmo relatório toda semana" | Automação Rápida |
+| "Não sei quanto vendi", "controlo tudo numa planilha", "quero ver os números" | Painel de Controle |
+
+```text
+Pelo que você contou, isso cabe no nosso [NOME DA OFERTA]: [PROMESSA DA FICHA]. O prazo é de [PRAZO] e o valor é [PREÇO], com 50% de entrada por Pix e 50% na entrega. Te mando o que está incluído e 5 perguntas rápidas para começarmos?
+```
+
+Se o pedido não couber em nenhuma oferta, siga o fluxo sob medida abaixo.
+
 ## Perguntas de triagem rápida
 
 Use apenas o que for necessário para entender o contexto.

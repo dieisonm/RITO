@@ -64,6 +64,32 @@ O atendimento pode ser remoto, o que facilita o contato com clientes de diferent
 
 Basta enviar uma mensagem com seu nome, empresa, problema ou ideia e uma forma de contato. A partir disso, a RITO faz a analise inicial.
 
+## Ofertas de preço fechado
+
+### O que são as ofertas da RITO?
+
+Três serviços com escopo, prazo e preço definidos: Site Express, Automação Rápida e Painel de Controle. Servem para quem quer resolver uma necessidade específica rápido, sem orçamento demorado. Detalhes em `docs/sales/ofertas/`.
+
+### O domínio e a hospedagem estão incluídos no Site Express?
+
+Não. Eles ficam no nome do cliente, que paga direto ao provedor. A RITO ajuda a contratar e configurar.
+
+### Quando o prazo começa a contar?
+
+Depois da entrada de 50% e do recebimento do material pedido no briefing rápido.
+
+### Posso pedir alterações depois da entrega?
+
+Sim. Uma rodada de ajustes está incluída, pedida em até 7 dias após a entrega. Mudanças maiores entram como novo orçamento ou na manutenção mensal.
+
+### Como funciona o pagamento?
+
+50% de entrada por Pix para reservar a data e 50% na entrega, com nota fiscal.
+
+### E se o meu caso não couber em nenhuma oferta?
+
+A RITO faz uma análise gratuita e envia uma proposta sob medida.
+
 ## Versao curta para uso no site
 
 ### Voces fazem software sob medida?
