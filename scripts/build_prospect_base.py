@@ -39,7 +39,7 @@ COMPANY_FIELDS = [
 ]
 # Respostas humanas identificadas ao consolidar (2026-10-31), ausentes dos monitores antigos.
 HUMAN_REPLIES = {
-    "crust smash": ("resposta humana", "perguntou se a RITO tem sistema de gestão de pedidos para delivery (lead quente)"),
+    "crust smash": ("resposta humana", "perguntou sobre sistema de gestão de pedidos para delivery; o Dieison respondeu e conversou, a empresa não retornou e não quis seguir"),
     "jonas rodas e pneus": ("resposta humana", "respondeu e avisou que o link não abriu"),
     "trate clinica medica": ("resposta humana", "agradeceu depois da réplica curta"),
     "medklinik": ("resposta humana", "disse que não tem interesse no momento"),
@@ -201,7 +201,7 @@ def main() -> int:
             if company_name == "medklinik":
                 companies[cid]["opt_out_received"] = "sim (2026-05, sem interesse)"
             if company_name == "crust smash":
-                companies[cid]["proxima_acao_sugerida"] = "responder: sistema de gestão de pedidos para delivery"
+                companies[cid]["proxima_acao_sugerida"] = "encerrado: conversou, não quis seguir (registrado em 2026-10-31)"
 
     name_count = defaultdict(int)
     for record in companies.values():
