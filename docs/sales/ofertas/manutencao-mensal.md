@@ -2,7 +2,7 @@
 
 | Item | Detalhe |
 | --- | --- |
-| Preço | R$ [a definir]/mês |
+| Preço | **a partir de R$ 49/mês** |
 | Fidelidade | nenhuma; cancelamento com 30 dias de aviso |
 
 ## Inclui

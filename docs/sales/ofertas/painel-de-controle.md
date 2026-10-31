@@ -5,7 +5,7 @@
 | Item | Detalhe |
 | --- | --- |
 | Prazo | 10 dias úteis |
-| Preço | R$ [a definir] |
+| Preço | **a partir de R$ 390** (valor final após avaliar os dados e os indicadores) |
 | Pagamento | 50% de entrada por Pix, 50% na entrega |
 
 ## Inclui
