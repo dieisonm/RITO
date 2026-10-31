@@ -74,3 +74,14 @@ assets/social/**/*.zip
 !assets/brand/**/*.svg
 !assets/business-kit/**/*.md
 !assets/social/**/*.md
+
+# Base de prospecção consolidada (dados de contato, fora do Git; backup no OneDrive)
+ops/ai-os/growth/prospecting/base-prospeccao-rito.xlsx
+# Leads do formulário do site (dados pessoais, fora do Git)
+ops/ai-os/leads/*.jsonl
+# Originais dos lotes de outbound (dados de contato, fora do Git)
+_arquivo/2026-05-lotes-outbound/
+_arquivo/2026-10-instagram-automacao/story-schedule.*.json
+!_arquivo/2026-10-instagram-automacao/story-schedule.plan.template.json
+_arquivo/2026-10-instagram-automacao/meta-story-scheduler/node_modules/
+_arquivo/2026-10-instagram-automacao/meta-story-scheduler/.auth/

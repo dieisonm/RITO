@@ -4,80 +4,32 @@ Base principal da RITO Sistemas para site, documentação, operação e memória
 
 ## Estrutura
 
-- `site/`: site institucional e arquivos publicos de runtime.
 - `docs/`: documentação estável de marca, vendas, site, operações e agentes.
 - `ops/`: operação viva, campanhas, WhatsApp, playbooks e rotinas locais.
+- `ops/ai-os/growth/prospecting/base-prospeccao-rito.xlsx`: **base única de prospecção** (empresas, contatos e resultados), gerada por `scripts/build_prospect_base.py`. Fica fora do Git.
 - `assets/brand/`: base de marca e logos fonte.
 - `assets/business-kit/`: editáveis e PDFs comerciais pesados.
 - `assets/social/`: peças e fontes pesadas de social media.
 - `assets/deliverables/`: estrutura leve, READMEs e trilha dos entregáveis.
 - `assets/drive/`: manifesto oficial dos arquivos pesados guardados no Google Drive.
-- `memory/`: memória durável versionada do projeto.
-- `scripts/`: automações, geração de assets, validações e publicação.
+- `memory/`: memória durável antiga do projeto (a memória atual fica no vault Obsidian).
+- `scripts/`: automações de e-mail, caixa de entrada, base de prospecção, assets e precificação.
+- `_arquivo/`: histórico fora da operação ativa (ver `_arquivo/README.md`).
 
-## Como abrir o site
+## Site
 
-Abra `site/index.html` no navegador.
+O site institucional saiu deste repositório em 2026-10-26. Código, build e deploy ficam em `dieisonm/rito-site` (local: `~/Documents/Projects/Rito/dev/rito-site`); a Hostinger faz o Git Deployment da branch `hostinger` desse repositório. Não há mais build nem deploy a partir daqui.
 
-## Como gerar a versao de deploy
+## Caixas de e-mail
 
-Execute:
-
-```bash
-./scripts/build_dist.sh
-```
-
-O deploy operacional do site e feito somente por Git: o GitHub Actions publica a branch `hostinger`, e a Hostinger faz o deploy dessa branch.
-
-Para gerar um `.zip` pronto para upload:
-
-```bash
-./scripts/package_hostinger.sh
-```
-
-Para publicar a branch pronta para Git Deployment na Hostinger:
-
-```bash
-./scripts/publish_hostinger_branch.sh
-```
-
-Nao usar upload direto para publicar o site. Qualquer arquivo ou script que proponha publicacao direta na hospedagem deve ser tratado como legado invalido.
-
-## Fluxo recomendado de publicacao
-
-### Repositorio principal
-
-- Branch principal de desenvolvimento: `main`
-- Repositorio GitHub: `https://github.com/dieisonm/RITO`
-
-### Branch de deploy da Hostinger
-
-- Branch de deploy estatico: `hostinger`
-- Essa branch contem apenas os arquivos publicos do site
-- Objetivo: permitir deploy direto na Hostinger sem expor `docs/`, `scripts/` e outros arquivos internos
-
-### Configuracao na Hostinger
-
-Se estiver usando `Git Deployment` na hospedagem comum, usar:
-
-- Repositorio: `https://github.com/dieisonm/RITO.git`
-- Ramo: `hostinger`
-- Install Path: vazio, para publicar diretamente em `/public_html`
-- Implantacao automatica: webhook do GitHub ativo para `push` na branch `hostinger`
-
-Importante:
-
-- para trabalho humano, usar apenas `main`
-- `hostinger` existe apenas como branch tecnica publicada pelo workflow
-- a branch `hostinger` precisa manter historico linear
-- deploy so deve ser considerado concluido quando `https://ritosistemas.com/deploy-info.json` abrir e mostrar a mesma `asset_version` do `dist/deploy-info.json`
-- mudancas em `docs/`, `ops/`, `memory/`, `assets/drive/`, `assets/business-kit/`, `assets/social/` e arquivos administrativos nao devem disparar deploy do site
+- Ler: `python3 -I scripts/read_hostinger_inbox.py --account contato|comercial --limit 20` (somente leitura).
+- Mover para a lixeira: `python3 -I scripts/trash_hostinger_messages.py --account contato --from remetente@exemplo.com` (simulação) e `--apply` para mover.
+- Credenciais em `rito-secrets.local.php` (`hostinger_mailbox` e `hostinger_mailbox_comercial`), fora do Git.
 
 ## Documentos principais
 
 - `docs/brand/foundation.md`: posicionamento, tom, identidade, dominios e contatos.
 - `docs/site/site-content.md`: estrutura editorial e textos-base do site.
-- `docs/ops/hostinger-deploy.md`: passo a passo para publicacao na Hostinger.
 - `docs/ops/server/desktop-server-replication-runbook.md`: rotina do PC servidor 24/7.
 - `docs/ops/server/other-computer-onboarding.md`: retomada rapida do projeto em outro computador.
 
@@ -100,31 +52,9 @@ python3 scripts/drive_assets.py check
 
 Regra prática:
 
-- vai para Git: `site/`, `docs/`, `ops/`, `memory/`, `scripts/`, SVGs de marca, READMEs e `assets/drive/asset-manifest.json`
+- vai para Git: `docs/`, `ops/`, `memory/`, `scripts/`, SVGs de marca, READMEs e `assets/drive/asset-manifest.json`
 - vai para Drive: PNG/JPG/PDF/DOCX/XLSX/PPTX pesados em `assets/brand/logos/`, `assets/business-kit/` e `assets/social/`
 - fica só local: segredos, sessões, caches, inbox bruto, `.env` e arquivos temporários
-
-## Atualização segura do Git sem disparar deploy do site
-
-Para mudanças só de documentação, memória, operação ou política de assets:
-
-```bash
-git checkout main
-git pull --ff-only origin main
-git status --short
-git add README.md docs/ memory/ assets/drive/ .gitignore scripts/drive_assets.py
-git diff --cached --name-only
-git push origin main
-```
-
-Antes do push, confirme que o diff staged não inclui:
-
-- `site/**`
-- `logos/**`
-- `scripts/build_dist.sh`
-- `.github/workflows/deploy-hostinger.yml`
-
-Se esses caminhos não estiverem staged, o workflow de deploy do site não deve rodar.
 
 ## Informacoes iniciais cadastradas
 

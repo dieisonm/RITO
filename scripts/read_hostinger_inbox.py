@@ -20,21 +20,36 @@ from typing import Any, Dict, List, Optional, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 SMTP_CONFIG_PATH = ROOT / "rito-smtp.php"
+SECRETS_PATH = ROOT / "rito-secrets.local.php"
 
 
-def load_smtp_php_config() -> Dict[str, str]:
+def _pick(text: str, key: str, source: str) -> str:
+    match = re.search(rf"'{re.escape(key)}'\s*=>\s*'([^']*)'", text)
+    if not match:
+        raise RuntimeError(f"Config key not found in {source}: {key}")
+    return match.group(1)
+
+
+def load_smtp_php_config(account: str = "contato") -> Dict[str, str]:
+    """Mailbox credentials: rito-secrets.local.php ('hostinger_mailbox' block) first, rito-smtp.php as legacy fallback.
+    The 'hostinger' block in the secrets file is the hPanel account, not the mailbox, so it is not used here."""
+    if SECRETS_PATH.exists():
+        text = SECRETS_PATH.read_text(encoding="utf-8")
+        key = "hostinger_mailbox" if account == "contato" else f"hostinger_mailbox_{account}"
+        block = re.search(rf"'{key}'\s*=>\s*(?:\[|array\s*\()(.*?)(?:\]|\))\s*,", text, re.S)
+        if block:
+            return {
+                "username": _pick(block.group(1), "login", SECRETS_PATH.name),
+                "password": _pick(block.group(1), "password", SECRETS_PATH.name),
+                "imap_host": "imap.hostinger.com",
+                "imap_port": "993",
+            }
+    if not SMTP_CONFIG_PATH.exists():
+        raise RuntimeError(f"Mailbox credentials not found in {SECRETS_PATH.name} or {SMTP_CONFIG_PATH.name}")
     text = SMTP_CONFIG_PATH.read_text(encoding="utf-8")
-
-    def pick(key: str) -> str:
-        pattern = rf"'{re.escape(key)}'\s*=>\s*'([^']*)'"
-        match = re.search(pattern, text)
-        if not match:
-            raise RuntimeError(f"Config key not found in rito-smtp.php: {key}")
-        return match.group(1)
-
     return {
-        "username": pick("username"),
-        "password": pick("password"),
+        "username": _pick(text, "username", SMTP_CONFIG_PATH.name),
+        "password": _pick(text, "password", SMTP_CONFIG_PATH.name),
         "imap_host": "imap.hostinger.com",
         "imap_port": "993",
     }
@@ -171,6 +186,7 @@ def fetch_messages(
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Read Hostinger inbox via IMAP.")
+    parser.add_argument("--account", default="contato", choices=["contato", "comercial"], help="Caixa: contato@ ou comercial@. Default: contato")
     parser.add_argument("--mailbox", default="INBOX", help="Mailbox to inspect. Default: INBOX")
     parser.add_argument("--limit", type=int, default=10, help="Max messages to return. Default: 10")
     parser.add_argument("--unseen", action="store_true", help="Only fetch unread messages.")
@@ -193,7 +209,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON output.")
     args = parser.parse_args(argv)
 
-    config = load_smtp_php_config()
+    config = load_smtp_php_config(args.account)
     conn = imaplib.IMAP4_SSL(config["imap_host"], int(config["imap_port"]))
     try:
         conn.login(config["username"], config["password"])
@@ -212,6 +228,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             pass
 
     payload = {
+        "account": config["username"],
         "mailbox": args.mailbox,
         "unseen_only": args.unseen,
         "returned": len(messages),
