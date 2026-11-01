@@ -5,7 +5,7 @@
 | Item | Detalhe |
 | --- | --- |
 | Prazo | 5 dias úteis |
-| Preço | **a partir de R$ 290** (valor final após avaliar o fluxo) |
+| Preço | **a partir de R$ 490** (valor final após avaliar o fluxo) |
 | Pagamento | 50% de entrada por Pix, 50% na entrega |
 
 ## Inclui
