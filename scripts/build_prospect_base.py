@@ -44,7 +44,7 @@ HUMAN_REPLIES = {
     "trate clinica medica": ("resposta humana", "agradeceu depois da réplica curta"),
     "medklinik": ("resposta humana", "disse que não tem interesse no momento"),
 }
-STATUS_RANK = {"resposta humana": 5, "autoresposta": 4, "bounce": 3, "erro no envio": 2, "enviado": 1, "não contatado": 0}
+STATUS_RANK = {"cliente": 7, "sem interesse": 6, "resposta humana": 5, "autoresposta": 4, "bounce": 3, "erro no envio": 2, "enviado": 1, "não contatado": 0}
 
 
 def norm(text: str) -> str:
@@ -202,6 +202,25 @@ def main() -> int:
                 companies[cid]["opt_out_received"] = "sim (2026-05, sem interesse)"
             if company_name == "crust smash":
                 companies[cid]["proxima_acao_sugerida"] = "encerrado: conversou, não quis seguir (registrado em 2026-10-31)"
+
+    # Contatos registrados depois da consolidação (scripts/registrar_contato.py).
+    registered = OPS / "growth" / "prospecting" / "contatos-registrados.jsonl"
+    if registered.exists():
+        for line in registered.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            entry = json.loads(line)
+            key = entry.get("empresa", "")
+            cid = key if key in companies else by_name.get(norm(key))
+            if not cid:
+                cid = "novo-" + norm(key).replace(" ", "-")[:40]
+                companies.setdefault(cid, {"company_id": cid, "company_name": key})
+            contacts.append({"data": entry.get("data", ""), "company_id": cid,
+                             "lote": "", "canal": entry.get("canal", ""), "modelo": "",
+                             "resultado": entry.get("resultado", ""), "observacao": entry.get("observacao", ""),
+                             "fonte": "contatos-registrados.jsonl"})
+            if entry.get("nao_contatar"):
+                companies[cid]["do_not_contact"] = "sim"
 
     name_count = defaultdict(int)
     for record in companies.values():

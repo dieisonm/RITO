@@ -6,7 +6,7 @@ Arquitetura enxuta aprovada em 2026-11-01: **5 agentes**, um por passo do funil 
 | --- | --- | --- | --- |
 | 1 | **Prospecção** | encontra empresas em fontes públicas, sem Instagram, e grava na base única | `prompts/prospeccao-inteligencia-comercial-agent.md` |
 | 2 | **Contato** | escreve, revisa e envia mensagens em lotes pequenos, depois da aprovação | `prompts/disparo-outbound-agent.md` + `prompts/revisor-agent.md` + `review-checklists/prospecting-outbound-qa.md` |
-| 3 | **Triagem diária** | lê e-mails, formulário e WhatsApp, separa humano de automático, sugere respostas | `prompts/atendimento-relacionamento-agent.md` |
+| 3 | **Contatos do dia** | lê e-mails, formulário e WhatsApp, separa humano de automático, sugere respostas e registra na base | skill `rito-contatos-do-dia` (`Automations/.claude/skills/`) |
 | 4 | **Comercial** | transforma conversa em oferta: ficha, briefing, valor final, contrato | `prompts/commercial-agent.md` + `docs/sales/ofertas/` |
 | 5 | **Entrega** | acompanha a execução de cada oferta até a entrega e oferece manutenção | `prompts/operacoes-delivery-agent.md` |
 
