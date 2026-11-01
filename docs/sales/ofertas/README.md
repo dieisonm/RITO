@@ -18,4 +18,4 @@ Produtos de escopo, prazo e preço fechados para MEIs e pequenos negócios. Cada
 - O prazo conta a partir da entrada e do recebimento do material do cliente.
 - 1 rodada de ajustes incluída, pedida em até 7 dias após a entrega.
 - Nota fiscal emitida pela RITO Sistemas (CNPJ 66.723.374/0001-43).
-- Contrato simplificado de 1 página com o escopo da ficha.
+- Contrato simplificado de 1 página com o escopo da ficha: `docs/legal/contrato-ofertas-1-pagina.md`.

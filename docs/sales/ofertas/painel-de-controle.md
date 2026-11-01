@@ -25,4 +25,4 @@
 
 ## Prova
 
-Case real: o Relatório de Vendas que a RITO desenvolveu e mantém em produção para um cliente (painéis de vendas e comissões). Citar só depois da autorização do cliente.
+Case real (uso autorizado): `docs/sales/portfolio/case-relatorio-de-vendas.md`.
