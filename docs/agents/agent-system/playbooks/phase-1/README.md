@@ -24,3 +24,5 @@ Cada playbook descreve o fluxo prático do agente, os gatilhos, os critérios de
 - evitar buzzwords e promessas vagas
 - registrar aprendizados relevantes na memória persistente
 - escalar qualquer decisão sensível para revisão humana
+
+> Atualização 2026-11-01: a equipe foi reduzida a 5 agentes (ver `docs/agents/agent-system/README.md`); os arquivos que saíram estão em `_arquivo/2026-11-agentes/`.

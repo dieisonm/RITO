@@ -22,3 +22,5 @@ Os playbooks trabalham junto com:
 - `memory-protocol.md`
 - `handoff-rules.md`
 - `approval-matrix.md`
+
+> Atualização 2026-11-01: a equipe foi reduzida a 5 agentes (ver `docs/agents/agent-system/README.md`); os arquivos que saíram estão em `_arquivo/2026-11-agentes/`.

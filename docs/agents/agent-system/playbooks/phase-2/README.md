@@ -33,3 +33,5 @@ Cada playbook deve orientar o agente especialista em:
 ## Observação
 
 Os playbooks desta fase devem ser usados em conjunto com os prompts de cada agente e com a memória persistente do projeto.
+
+> Atualização 2026-11-01: a equipe foi reduzida a 5 agentes (ver `docs/agents/agent-system/README.md`); os arquivos que saíram estão em `_arquivo/2026-11-agentes/`.
