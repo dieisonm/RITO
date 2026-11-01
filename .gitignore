@@ -87,3 +87,6 @@ _arquivo/2026-10-instagram-automacao/meta-story-scheduler/node_modules/
 _arquivo/2026-10-instagram-automacao/meta-story-scheduler/.auth/
 ops/ai-os/growth/prospecting/contatos-registrados.jsonl
 ops/ai-os/inbox/ultima-checagem.json
+# Chave da conta de serviço do Google (Search Console e GA4, só leitura)
+google-service-account.local.json
+ops/ai-os/growth/relatorios/
