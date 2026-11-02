@@ -90,3 +90,4 @@ ops/ai-os/inbox/ultima-checagem.json
 # Chave da conta de serviço do Google (Search Console e GA4, só leitura)
 google-service-account.local.json
 ops/ai-os/growth/relatorios/
+ops/ai-os/growth/prospecting/empresas-novas.csv

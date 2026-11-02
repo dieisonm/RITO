@@ -2,13 +2,15 @@
 
 Arquitetura enxuta aprovada em 2026-11-01: **5 agentes**, um por passo do funil de venda e entrega. Detalhes e motivo no vault: `60 Projetos/Projetos de código/RITO/Documentos/2026-11-01 Inventário e arquitetura dos agentes.md`. A equipe antiga (16 agentes, abril e maio de 2026) está em `_arquivo/2026-11-agentes/`.
 
-| # | Agente | Faz | Base atual (até virar skill) |
+| # | Agente | Faz | Skill do Claude Code |
 | --- | --- | --- | --- |
-| 1 | **Prospecção** | encontra empresas em fontes públicas, sem Instagram, e grava na base única | `prompts/prospeccao-inteligencia-comercial-agent.md` |
-| 2 | **Contato** | escreve, revisa e envia mensagens em lotes pequenos, depois da aprovação | `prompts/disparo-outbound-agent.md` + `prompts/revisor-agent.md` + `review-checklists/prospecting-outbound-qa.md` |
-| 3 | **Contatos do dia** | lê e-mails, formulário e WhatsApp, separa humano de automático, sugere respostas e registra na base | skill `rito-contatos-do-dia` (`Automations/.claude/skills/`) |
-| 4 | **Comercial** | transforma conversa em oferta: ficha, briefing, valor final, contrato | `prompts/commercial-agent.md` + `docs/sales/ofertas/` |
-| 5 | **Entrega** | acompanha a execução de cada oferta até a entrega e oferece manutenção | `prompts/operacoes-delivery-agent.md` |
+| 1 | **Prospecção** | encontra empresas em fontes públicas, sem Instagram, e grava na base única (`empresas-novas.csv`) | `rito-prospeccao` |
+| 2 | **Contato** | escreve, revisa e envia mensagens em lotes pequenos, depois da aprovação; e-mail por `scripts/enviar_email.py`, WhatsApp manual por link `wa.me` | `rito-contato` |
+| 3 | **Contatos do dia** | lê as caixas de e-mail, separa humano de automático, sugere respostas e registra na base | `rito-contatos-do-dia` |
+| 4 | **Comercial** | transforma conversa em oferta: ficha, briefing, valor final, proposta, contrato, follow-up | `rito-comercial` |
+| 5 | **Entrega** | acompanha a execução de cada oferta até a entrega, cobrança do saldo e manutenção | `rito-entrega` |
+
+As skills ficam em `Automations/.claude/skills/` (onde as sessões rodam) e rodam só quando o Dieison pedir. Os prompts em `prompts/` ficam como referência dos critérios originais. Relatório do site: skill `rito-relatorio-google`.
 
 ## Regras que valem para todos
 
@@ -20,4 +22,4 @@ Arquitetura enxuta aprovada em 2026-11-01: **5 agentes**, um por passo do funil 
 
 ## Próximo passo
 
-Cada agente vira uma skill do Claude Code em `RITO/.claude/skills/<agente>/SKILL.md`, reaproveitando os critérios dos prompts acima. Métricas e Conteúdo entram na fase 9.
+Pendente: redesenho da infraestrutura de WhatsApp (app WhatsApp Business ou API oficial). Métricas e Conteúdo entram na fase 9.

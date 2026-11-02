@@ -53,6 +53,8 @@ def norm(text: str) -> str:
 
 
 def batch_of(filename: str) -> tuple[str, str]:
+    if filename == "empresas-novas.csv":
+        return "", "prospeccao-continua"
     date = filename[:10]
     match = re.search(r"batch-(\d{3})", filename)
     return date, (f"lote-{match.group(1)}" if match else "fila-whatsapp-sem-site")
@@ -104,6 +106,10 @@ def main() -> int:
     batch_dates: dict[str, str] = {}
 
     pilot_files = sorted(glob.glob(str(batches / "*-pilot.csv")))
+    # Empresas novas encontradas pelo agente de Prospecção depois da consolidação (fora do Git).
+    extra = OPS / "growth" / "prospecting" / "empresas-novas.csv"
+    if extra.exists():
+        pilot_files.append(str(extra))
     other_csvs = [f for f in sorted(glob.glob(str(batches / "*.csv"))) if f not in pilot_files]
     for path in pilot_files + other_csvs:
         date, batch = batch_of(Path(path).name)
