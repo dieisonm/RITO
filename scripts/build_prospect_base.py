@@ -36,7 +36,9 @@ COMPANY_FIELDS = [
     "suggested_offer_secondary", "offer_rationale", "outreach_angle", "confidence_business",
     "confidence_contact", "confidence_offer_fit", "source_primary_url", "source_secondary_urls",
     "source_risk_note", "do_not_contact", "opt_out_received", "last_verified_at",
+    "whatsapp_readiness", "primary_contact_channel",
 ]
+CLOSED = {"crust smash": "encerrado: conversou em maio e não quis seguir"}
 # Respostas humanas identificadas ao consolidar (2026-10-31), ausentes dos monitores antigos.
 HUMAN_REPLIES = {
     "crust smash": ("resposta humana", "perguntou sobre sistema de gestão de pedidos para delivery; o Dieison respondeu e conversou, a empresa não retornou e não quis seguir"),
@@ -228,11 +230,31 @@ def main() -> int:
             if entry.get("nao_contatar"):
                 companies[cid]["do_not_contact"] = "sim"
 
-    name_count = defaultdict(int)
-    for record in companies.values():
-        name_count[norm(record.get("company_name", ""))] += 1
+    # Mesma empresa em listas diferentes (ex.: lote e fila de WhatsApp sem site): fundir pelo nome.
+    canonical: dict[str, str] = {}
+    alias: dict[str, str] = {}
+    for cid in sorted(companies):
+        key = norm(companies[cid].get("company_name", ""))
+        if key and key in canonical:
+            keep = companies[canonical[key]]
+            for field, value in companies[cid].items():
+                empty = keep.get(field) in (None, "", "false", "False")
+                if value and value not in ("false", "False") and empty:
+                    keep[field] = value
+            keep["ids_antigos"] = ", ".join(filter(None, [keep.get("ids_antigos", ""), cid]))
+            company_batches[canonical[key]] |= company_batches[cid]
+            alias[cid] = canonical[key]
+        elif key:
+            canonical[key] = cid
+    for cid in alias:
+        companies.pop(cid)
+    for c in contacts:
+        c["company_id"] = alias.get(c["company_id"], c["company_id"])
 
-    # Status atual por empresa = melhor resultado registrado.
+    # Status atual por empresa = melhor resultado registrado; preparação da próxima rodada.
+    offer_words = [("Site Express", ("site", "landing", "presença", "presenca", "página", "pagina")),
+                   ("Automação Rápida", ("automa", "agenda", "atendimento", "whatsapp", "lembrete", "triagem", "crm")),
+                   ("Painel de Controle", ("dashboard", "painel", "controle", "indicador", "relatório", "relatorio"))]
     for cid, record in companies.items():
         rows = [c for c in contacts if c["company_id"] == cid]
         results = [c["resultado"] for c in rows if c["resultado"] in STATUS_RANK]
@@ -243,7 +265,34 @@ def main() -> int:
         record["ultimo_contato"] = max((c["data"] for c in rows if c["data"]), default="")
         record["canais_usados"] = ", ".join(sorted({c["canal"] for c in rows if c["canal"]}))
         record["proxima_acao"] = record.pop("proxima_acao_sugerida", "")
-        record["possivel_duplicado"] = "sim" if name_count[norm(record.get("company_name", ""))] > 1 else ""
+
+        name_key = norm(record.get("company_name", ""))
+        blocked = (record.get("do_not_contact") not in ("", None, "false", "False")
+                   or record.get("opt_out_received") not in ("", None, "false", "False")
+                   or record["status_atual"] in ("sem interesse", "cliente") or name_key in CLOSED)
+        bounced = any(c["resultado"] == "bounce" for c in rows)
+        if blocked:
+            record["elegivel_rodada2"], record["canal_rodada2"], record["prioridade_rodada2"] = "não", "", ""
+            record["proxima_acao"] = record["proxima_acao"] or CLOSED.get(name_key, "não contatar")
+        else:
+            record["elegivel_rodada2"] = "sim"
+            if record.get("public_email") and not bounced:
+                record["canal_rodada2"] = "e-mail"
+            elif record.get("normalized_whatsapp"):
+                record["canal_rodada2"] = "WhatsApp (manual)"
+            else:
+                record["canal_rodada2"] = "buscar contato"
+            if record["status_atual"] in ("resposta humana", "autoresposta"):
+                record["prioridade_rodada2"] = "A"
+            elif record["canal_rodada2"] == "buscar contato" or record["status_atual"] in ("bounce", "erro no envio"):
+                record["prioridade_rodada2"] = "C"
+            else:
+                record["prioridade_rodada2"] = "B"
+        text = norm(" ".join(str(record.get(f, "")) for f in ("suggested_offer_primary", "offer_rationale", "outreach_angle")))
+        offer = next((name for name, words in offer_words if any(w in text for w in words)), "")
+        if not record.get("website_url"):
+            offer = "Site Express"
+        record["oferta_rodada2"] = offer or "Automação Rápida"
 
     wb = Workbook()
     header_font = Font(bold=True, color="FFFFFF")
@@ -268,7 +317,7 @@ def main() -> int:
         return ws
 
     empresa_cols = ["company_id", "company_name", "segment", "city", "status_atual", "ultimo_contato", "canais_usados",
-                    "proxima_acao", "possivel_duplicado", "lotes"] + [f for f in COMPANY_FIELDS if f not in ("company_id", "company_name", "segment", "city")]
+                    "proxima_acao", "elegivel_rodada2", "prioridade_rodada2", "canal_rodada2", "oferta_rodada2", "ids_antigos", "lotes"] + [f for f in COMPANY_FIELDS if f not in ("company_id", "company_name", "segment", "city")]
     sheet("Empresas", empresa_cols, sorted(companies.values(), key=lambda r: r["company_id"]), first=True)
     for c in contacts:
         c["company_name"] = companies[c["company_id"]].get("company_name", "")
@@ -278,6 +327,11 @@ def main() -> int:
     dictionary = [
         {"coluna": "status_atual", "significado": "melhor resultado registrado: não contatado < enviado < erro no envio < bounce < autoresposta < resposta humana"},
         {"coluna": "proxima_acao", "significado": "preenchido à mão ou pelo agente de contato na próxima rodada"},
+        {"coluna": "elegivel_rodada2", "significado": "não = pediu para sair, sem interesse, cliente ou conversa encerrada"},
+        {"coluna": "prioridade_rodada2", "significado": "A = canal vivo (respondeu ou autoresposta); B = enviado ou não contatado com canal válido; C = bounce, erro ou sem contato"},
+        {"coluna": "canal_rodada2", "significado": "e-mail se houver e-mail sem bounce; senão WhatsApp (envio manual); senão buscar contato"},
+        {"coluna": "oferta_rodada2", "significado": "sem site → Site Express; senão pela oferta sugerida na prospecção (automação ou painel)"},
+        {"coluna": "ids_antigos", "significado": "IDs da mesma empresa em listas antigas, fundidos neste registro"},
         {"coluna": "do_not_contact / opt_out_received", "significado": "não contatar de novo quando preenchido"},
         {"coluna": "Contatos.resultado", "significado": "enviado, erro no envio, bounce, autoresposta, resposta humana, mensagem recebida"},
         {"coluna": "Contatos.fonte", "significado": "arquivo original de onde o registro saiu (arquivado em _arquivo/2026-05-lotes-outbound)"},
